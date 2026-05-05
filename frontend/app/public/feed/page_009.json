@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "feed_20260423_165426",
+      "kind": "event",
+      "date": "2026-04-23",
+      "created_at": "2026-04-23T07:54:26Z",
+      "text": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n\n\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。\n\n\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
+      "tweet": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n\n\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。\n\n\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260423_165426/index.html",
+      "legacy_id": "fixed-event-20260423_165426",
+      "image": "image/feed_20260423_165426.png",
+      "image_url": "image/feed_20260423_165426.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが落ちている以上、そのままにしておくわけにはいかない。 学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。 英訳: As long as poop is lying there, we cannot just leave it as it is.",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-23T07:58:42Z"
+    },
+    {
       "id": "feed_20260423_161308",
       "kind": "event",
       "date": "2026-04-23",
@@ -315,29 +335,12 @@
       "links": [],
       "avatar_image": "image/avatar/event.png",
       "permalink": "./posts/feed_20260422_212457/index.html"
-    },
-    {
-      "kind": "unko",
-      "text": "今日はとても立派なうんこを生成した。",
-      "tweet": "今日はとても立派なうんこを生成した。",
-      "place": "N2",
-      "published_at": "2026-04-22T11:57:00.827412Z",
-      "created_at": "2026-04-22T11:57:00.827412Z",
-      "updated_at": "2026-04-22T11:57:00.827412Z",
-      "avatar_image": "image/avatar/normal.png",
-      "image": "image/avatar/normal.png",
-      "fixed_image": "",
-      "links": [],
-      "weather": null,
-      "id": "feed_20260422_115700",
-      "image_url": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260422_115700/index.html"
     }
   ],
   "count": 20,
   "page": 9,
   "page_size": 20,
-  "total_items": 204,
+  "total_items": 205,
   "total_pages": 11,
   "next_feed_url": "./feed/page_010.json"
 }
