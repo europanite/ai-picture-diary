@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "feed_20260423_211240",
+      "kind": "event",
+      "date": "2026-04-23",
+      "created_at": "2026-04-23T12:12:40Z",
+      "text": "うんこがきれいに見える。\n\n\n学習ポイント: 「うんこ」の意味や使い方：具体的な物事に対して特定の部分を指す。\n\n\n英訳: It looks clean because of the poop.",
+      "tweet": "うんこがきれいに見える。\n\n\n学習ポイント: 「うんこ」の意味や使い方：具体的な物事に対して特定の部分を指す。\n\n\n英訳: It looks clean because of the poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260423_211240/index.html",
+      "legacy_id": "fixed-event-20260423_211240",
+      "image": "image/feed_20260423_211240.png",
+      "image_url": "image/feed_20260423_211240.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Create a clean, friendly illustration that matches this Japanese sentence exactly. Do not add any letters, captions, speech bubbles, watermark, or logo. Use a simple composition and make the scene directly reflect the sentence. Japanese sentence: うんこがきれいに見える。 学習ポイント: 「うんこ」の意味や使い方：具体的な物事に対して特定の部分を指す。 英訳: It looks clean because of the poop.",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-23T12:17:05Z"
+    },
+    {
       "id": "feed_20260423_210647",
       "kind": "event",
       "date": "2026-04-23",
@@ -352,24 +372,12 @@
       "links": [],
       "avatar_image": "image/avatar/normal.png",
       "permalink": "./posts/feed_20260423_002640/index.html"
-    },
-    {
-      "id": "feed_20260423_001436",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-22T15:14:36Z",
-      "text": "うんこが気持ち悪くて、先生の話題から離れざるを得なかった。",
-      "tweet": "うんこが気持ち悪くて、先生の話題から離れざるを得なかった。",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_001436/index.html"
     }
   ],
   "count": 20,
   "page": 9,
   "page_size": 20,
-  "total_items": 210,
+  "total_items": 211,
   "total_pages": 11,
   "next_feed_url": "./feed/page_010.json"
 }
