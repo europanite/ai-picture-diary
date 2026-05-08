@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260426_163015",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-26T07:30:15Z",
+      "text": "うんこが綺麗に見えました。\n\n\n学習ポイント: 「うんこ」の使用における感覚的な表現。この例では、普通の状況では見えないもの（すなわち排泄物）を突然明確にするという反差動的な手法を使用することで、読者に注意力を引く効果がある。\n\n\n英訳: It was suddenly clear to me that there is poop.",
+      "tweet": "うんこが綺麗に見えました。\n\n\n学習ポイント: 「うんこ」の使用における感覚的な表現。この例では、普通の状況では見えないもの（すなわち排泄物）を突然明確にするという反差動的な手法を使用することで、読者に注意力を引く効果がある。\n\n\n英訳: It was suddenly clear to me that there is poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_163015/index.html",
+      "study_point": "「うんこ」の使用における感覚的な表現。この例では、普通の状況では見えないもの（すなわち排泄物）を突然明確にするという反差動的な手法を使用することで、読者に注意力を引く効果がある。",
+      "translation_en": "It was suddenly clear to me that there is poop.",
+      "legacy_id": "fixed-event-20260426_163015",
+      "image": "image/feed_20260426_163015.png",
+      "image_url": "image/feed_20260426_163015.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが綺麗に見えました。 学習ポイント: 「うんこ」の使用における感覚的な表現。この例では、普通の状況では見えないもの（すなわち排泄物）を突然明確にするという反差動的な手法を使用することで、読者に注意力を引く効果がある。 英訳: It was suddenly clear to me that there is poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-26T07:34:37Z"
+    },
+    {
       "id": "feed_20260426_144043",
       "kind": "event",
       "date": "2026-04-26",
@@ -396,34 +418,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-25T10:48:21Z"
-    },
-    {
-      "id": "feed_20260425_185525",
-      "kind": "event",
-      "date": "2026-04-25",
-      "created_at": "2026-04-25T09:55:25Z",
-      "text": "今日の授業でうんこについて学んだ。\n\n\n学習ポイント: 「うんこ」が「排泄物」という意味を持つ。\n\n\n英訳: Today, I learned about 'poop' in class.",
-      "tweet": "今日の授業でうんこについて学んだ。\n\n\n学習ポイント: 「うんこ」が「排泄物」という意味を持つ。\n\n\n英訳: Today, I learned about 'poop' in class.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260425_185525/index.html",
-      "study_point": "「うんこ」が「排泄物」という意味を持つ。",
-      "translation_en": "Today, I learned about 'poop' in class.",
-      "legacy_id": "fixed-event-20260425_185525",
-      "image": "image/feed_20260425_185525.png",
-      "image_url": "image/feed_20260425_185525.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: 今日の授業でうんこについて学んだ。 学習ポイント: 「うんこ」が「排泄物」という意味を持つ。 英訳: Today, I learned about 'poop' in class., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-25T10:00:03Z"
     }
   ],
   "count": 20,
   "page": 8,
   "page_size": 20,
-  "total_items": 238,
+  "total_items": 239,
   "total_pages": 12,
   "next_feed_url": "./feed/page_009.json"
 }
