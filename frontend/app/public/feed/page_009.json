@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260425_054940",
+      "kind": "event",
+      "date": "2026-04-25",
+      "created_at": "2026-04-24T20:49:40Z",
+      "text": "うんこが好きな子供のいる家には、いつもうんこの匂いが残っている。\n\n\n学習ポイント: 「うんこ」は排泄物を指し、人間や動物にとって不要な排出物であることを示している。\n\n\n英訳: Children in a house with children who like to poop always have the smell of poop around.",
+      "tweet": "うんこが好きな子供のいる家には、いつもうんこの匂いが残っている。\n\n\n学習ポイント: 「うんこ」は排泄物を指し、人間や動物にとって不要な排出物であることを示している。\n\n\n英訳: Children in a house with children who like to poop always have the smell of poop around.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260425_054940/index.html",
+      "study_point": "「うんこ」は排泄物を指し、人間や動物にとって不要な排出物であることを示している。",
+      "translation_en": "Children in a house with children who like to poop always have the smell of poop around.",
+      "legacy_id": "fixed-event-20260425_054940",
+      "image": "image/feed_20260425_054940.png",
+      "image_url": "image/feed_20260425_054940.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが好きな子供のいる家には、いつもうんこの匂いが残っている。 学習ポイント: 「うんこ」は排泄物を指し、人間や動物にとって不要な排出物であることを示している。 英訳: Children in a house with children who like to poop always have the smell of poop around., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-24T20:54:07Z"
+    },
+    {
       "id": "feed_20260425_045404",
       "kind": "event",
       "date": "2026-04-25",
@@ -396,32 +418,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T13:12:45Z"
-    },
-    {
-      "id": "feed_20260423_213309",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T12:33:09Z",
-      "text": "うんこがきれいに掃除できる。\n\n\n学習ポイント: 「うんこ」は、体の中で生成される排泄物の代名詞です。\n\n\n英訳: Poop can clean itself.",
-      "tweet": "うんこがきれいに掃除できる。\n\n\n学習ポイント: 「うんこ」は、体の中で生成される排泄物の代名詞です。\n\n\n英訳: Poop can clean itself.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_213309/index.html",
-      "legacy_id": "fixed-event-20260423_213309",
-      "image": "image/feed_20260423_213309.png",
-      "image_url": "image/feed_20260423_213309.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Draw exactly the situation described by the Japanese sentence below. Use the sentence itself as the source of truth for who appears, what they do, what object is important, and what kind of scene it is. Do not use the study point, translation, or any extra explanation as image content. Do not add unrelated people, food, animals, buildings, decorations, letters, captions, speech bubbles, watermark, or logo. Keep the composition simple and make one still image that directly visualizes the sentence. Japanese sentence: うんこがきれいに掃除できる。 Ignore these extra feed fields if they are present after the sentence: study notes, learning points, translations, labels, metadata.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T12:37:46Z"
     }
   ],
   "count": 20,
   "page": 9,
   "page_size": 20,
-  "total_items": 231,
+  "total_items": 232,
   "total_pages": 12,
   "next_feed_url": "./feed/page_010.json"
 }
