@@ -2,7 +2,7 @@
   "updated_at": "2026-05-09T16:56:01Z",
   "items": [
     {
-      "id": "fixed-event-20260510_015601",
+      "id": "feed_20260510_015601",
       "kind": "event",
       "date": "2026-05-10",
       "created_at": "2026-05-09T16:56:01Z",
@@ -11,7 +11,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/fixed-event-20260510_015601/index.html"
+      "permalink": "./?post=feed_20260510_015601",
+      "legacy_id": "fixed-event-20260510_015601",
+      "image": "image/feed_20260510_015601.png",
+      "image_url": "image/feed_20260510_015601.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが食べられました。 英訳: The feces was eaten. 以上が条件に則った2行のみの回答です。, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-05-09T17:00:37Z"
     }
   ]
 }
