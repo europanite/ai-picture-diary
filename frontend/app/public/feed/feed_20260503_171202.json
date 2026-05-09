@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-05-03T08:12:02Z",
+  "items": [
+    {
+      "id": "feed_20260503_171202",
+      "kind": "event",
+      "date": "2026-05-03",
+      "created_at": "2026-05-03T08:12:02Z",
+      "text": "うんこが臭い。\n英訳: Smell comes from poop.",
+      "tweet": "うんこが臭い。\n英訳: Smell comes from poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20260503_171202",
+      "legacy_id": "fixed-event-20260503_171202",
+      "image": "image/feed_20260503_171202.png",
+      "image_url": "image/feed_20260503_171202.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが臭い。 英訳: Smell comes from poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-05-03T08:15:34Z"
+    }
+  ]
+}
