@@ -10,7 +10,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260510_055817/index.html"
+      "permalink": "./posts/feed_20260510_055817/index.html",
+      "legacy_id": "fixed-event-20260510_055817",
+      "image": "image/feed_20260510_055817.png",
+      "image_url": "image/feed_20260510_055817.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちて来そう。 英訳: If there is a puddle, it might fall. （ただし、「うんこ」を含む1文だけで、内容は「うんこ」に限定されています。）, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-05-09T21:02:43Z"
     },
     {
       "id": "feed_20260510_050250",
