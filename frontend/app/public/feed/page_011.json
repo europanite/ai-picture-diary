@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "kind": "unko",
+      "text": "今日はとても立派なうんこを生成した。",
+      "tweet": "今日はとても立派なうんこを生成した。",
+      "place": "N2",
+      "published_at": "2026-04-24T11:54:26.661611Z",
+      "created_at": "2026-04-24T11:54:26.661611Z",
+      "updated_at": "2026-04-24T11:54:26.661611Z",
+      "avatar_image": "image/avatar/normal.png",
+      "image": "image/avatar/normal.png",
+      "fixed_image": "",
+      "links": [],
+      "weather": null,
+      "id": "feed_20260424_115426",
+      "image_url": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260424_115426/index.html"
+    },
+    {
       "id": "feed_20260424_170410",
       "kind": "event",
       "date": "2026-04-24",
@@ -374,32 +391,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T07:58:42Z"
-    },
-    {
-      "id": "feed_20260423_161308",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T07:13:08Z",
-      "text": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n\n\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。\n\n\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "tweet": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n\n\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。\n\n\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_161308/index.html",
-      "legacy_id": "fixed-event-20260423_161308",
-      "image": "image/feed_20260423_165426.png",
-      "image_url": "image/feed_20260423_165426.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが落ちている以上、そのままにしておくわけにはいかない。 学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。 英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T07:58:42Z"
     }
   ],
   "count": 20,
   "page": 11,
   "page_size": 20,
-  "total_items": 263,
+  "total_items": 264,
   "total_pages": 14,
   "next_feed_url": "./feed/page_012.json"
 }
