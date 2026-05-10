@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260424_143647",
+      "kind": "event",
+      "date": "2026-04-24",
+      "created_at": "2026-04-24T05:36:47Z",
+      "text": "今日はうんこを食べました。\n\n\n学習ポイント: この文では「うんこ」が食べ物として扱われています。一般的に、「うんこ」は排泄物と解釈されますが、ここではその一部として表現されています。\n\n\n英訳: Today, I ate poop.",
+      "tweet": "今日はうんこを食べました。\n\n\n学習ポイント: この文では「うんこ」が食べ物として扱われています。一般的に、「うんこ」は排泄物と解釈されますが、ここではその一部として表現されています。\n\n\n英訳: Today, I ate poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260424_143647/index.html",
+      "study_point": "この文では「うんこ」が食べ物として扱われています。一般的に、「うんこ」は排泄物と解釈されますが、ここではその一部として表現されています。",
+      "translation_en": "Today, I ate poop.",
+      "legacy_id": "fixed-event-20260424_143647",
+      "image": "image/feed_20260424_143647.png",
+      "image_url": "image/feed_20260424_143647.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: 今日はうんこを食べました。 学習ポイント: この文では「うんこ」が食べ物として扱われています。一般的に、「うんこ」は排泄物と解釈されますが、ここではその一部として表現されています。 英訳: Today, I ate poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-24T05:40:10Z"
+    },
+    {
       "id": "feed_20260424_131028",
       "kind": "event",
       "date": "2026-04-24",
@@ -370,32 +392,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T06:46:15Z"
-    },
-    {
-      "id": "feed_20260423_144909",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T05:49:09Z",
-      "text": "うんこを隠したくないから、誰か探さなければならないだろう。\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n英訳: I don't want to hide the poop, so I might have to look for someone.",
-      "tweet": "うんこを隠したくないから、誰か探さなければならないだろう。\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n英訳: I don't want to hide the poop, so I might have to look for someone.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_144909/index.html",
-      "legacy_id": "fixed-event-20260423_144909",
-      "image": "image/feed_20260423_144909.png",
-      "image_url": "image/feed_20260423_144909.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこを隠したくないから、誰か探さなければならないだろう。 学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。 英訳: I don't want to hide the poop, so I might have to look for someone.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T05:53:48Z"
     }
   ],
   "count": 20,
   "page": 11,
   "page_size": 20,
-  "total_items": 261,
+  "total_items": 262,
   "total_pages": 14,
   "next_feed_url": "./feed/page_012.json"
 }
