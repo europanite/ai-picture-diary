@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260426_035432",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-25T18:54:32Z",
+      "text": "うんこを履いてたんだよ。\n\n\n学習ポイント: 「××を」構造で名詞を動詞前に使用すると、主語の名詞が強調されたり、文の流れが自然になる。この例では、'履いた'という動きに対して'うんこ'という名詞が強く強調されている。\n\n\n英訳: I was wearing poop.",
+      "tweet": "うんこを履いてたんだよ。\n\n\n学習ポイント: 「××を」構造で名詞を動詞前に使用すると、主語の名詞が強調されたり、文の流れが自然になる。この例では、'履いた'という動きに対して'うんこ'という名詞が強く強調されている。\n\n\n英訳: I was wearing poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_035432/index.html",
+      "study_point": "「××を」構造で名詞を動詞前に使用すると、主語の名詞が強調されたり、文の流れが自然になる。この例では、'履いた'という動きに対して'うんこ'という名詞が強く強調されている。",
+      "translation_en": "I was wearing poop.",
+      "legacy_id": "fixed-event-20260426_035432",
+      "image": "image/feed_20260426_035432.png",
+      "image_url": "image/feed_20260426_035432.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこを履いてたんだよ。 学習ポイント: 「××を」構造で名詞を動詞前に使用すると、主語の名詞が強調されたり、文の流れが自然になる。この例では、'履いた'という動きに対して'うんこ'という名詞が強く強調されている。 英訳: I was wearing poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-25T18:59:03Z"
+    },
+    {
       "id": "feed_20260426_023840",
       "kind": "event",
       "date": "2026-04-26",
@@ -412,34 +434,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-24T17:02:29Z"
-    },
-    {
-      "id": "feed_20260425_000916",
-      "kind": "event",
-      "date": "2026-04-25",
-      "created_at": "2026-04-24T15:09:16Z",
-      "text": "今日はうんこについて話すね。\n\n\n学習ポイント: 文末に疑问符を使用することで、文章の緊張感や疑問感を表現できる。。\n\n\n英訳: Today, let's talk about poop.",
-      "tweet": "今日はうんこについて話すね。\n\n\n学習ポイント: 文末に疑问符を使用することで、文章の緊張感や疑問感を表現できる。。\n\n\n英訳: Today, let's talk about poop.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260425_000916/index.html",
-      "study_point": "文末に疑问符を使用することで、文章の緊張感や疑問感を表現できる。。",
-      "translation_en": "Today, let's talk about poop.",
-      "legacy_id": "fixed-event-20260425_000916",
-      "image": "image/feed_20260425_000916.png",
-      "image_url": "image/feed_20260425_000916.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: 今日はうんこについて話すね。 学習ポイント: 文末に疑问符を使用することで、文章の緊張感や疑問感を表現できる。。 英訳: Today, let's talk about poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-24T15:13:56Z"
     }
   ],
   "count": 20,
   "page": 10,
   "page_size": 20,
-  "total_items": 267,
+  "total_items": 268,
   "total_pages": 14,
   "next_feed_url": "./feed/page_011.json"
 }
