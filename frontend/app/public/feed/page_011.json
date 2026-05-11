@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260425_112610",
+      "kind": "event",
+      "date": "2026-04-25",
+      "created_at": "2026-04-25T02:26:10Z",
+      "text": "うんこが消えて心配になった。\n\n\n学習ポイント: 『消えて』という表現で、既に存在している状態が無くなる様子を描写します。\n\n\n英訳: I was worried that the poop had disappeared.",
+      "tweet": "うんこが消えて心配になった。\n\n\n学習ポイント: 『消えて』という表現で、既に存在している状態が無くなる様子を描写します。\n\n\n英訳: I was worried that the poop had disappeared.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260425_112610/index.html",
+      "study_point": "『消えて』という表現で、既に存在している状態が無くなる様子を描写します。",
+      "translation_en": "I was worried that the poop had disappeared.",
+      "legacy_id": "fixed-event-20260425_112610",
+      "image": "image/feed_20260425_112610.png",
+      "image_url": "image/feed_20260425_112610.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが消えて心配になった。 学習ポイント: 『消えて』という表現で、既に存在している状態が無くなる様子を描写します。 英訳: I was worried that the poop had disappeared., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-25T02:30:46Z"
+    },
+    {
       "id": "feed_20260425_084020",
       "kind": "event",
       "date": "2026-04-25",
@@ -404,32 +426,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T20:58:11Z"
-    },
-    {
-      "id": "feed_20260424_040912",
-      "kind": "event",
-      "date": "2026-04-24",
-      "created_at": "2026-04-23T19:09:12Z",
-      "text": "今日、うんこがいっぱい出たよ。\n\n\n学習ポイント: 文型：「[状況] + が + [動作]」。この文型は一般的な体験を表現するために使用され、文脈に基づいて状況や動作が適切に記述されます。\n\n\n英訳: Today, I had a lot of poop.",
-      "tweet": "今日、うんこがいっぱい出たよ。\n\n\n学習ポイント: 文型：「[状況] + が + [動作]」。この文型は一般的な体験を表現するために使用され、文脈に基づいて状況や動作が適切に記述されます。\n\n\n英訳: Today, I had a lot of poop.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260424_040912/index.html",
-      "legacy_id": "fixed-event-20260424_040912",
-      "image": "image/feed_20260424_040912.png",
-      "image_url": "image/feed_20260424_040912.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Draw exactly the situation described by the Japanese sentence below. Use the sentence itself as the source of truth for who appears, what they do, what object is important, and what kind of scene it is. Do not use the study point, translation, or any extra explanation as image content. Do not add unrelated people, food, animals, buildings, decorations, letters, captions, speech bubbles, watermark, or logo. Keep the composition simple and make one still image that directly visualizes the sentence. Japanese sentence: 今日、うんこがいっぱい出たよ。 Ignore these extra feed fields if they are present after the sentence: study notes, learning points, translations, labels, metadata.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T19:13:36Z"
     }
   ],
   "count": 20,
   "page": 11,
   "page_size": 20,
-  "total_items": 275,
+  "total_items": 276,
   "total_pages": 14,
   "next_feed_url": "./feed/page_012.json"
 }
