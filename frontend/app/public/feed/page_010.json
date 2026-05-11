@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "feed_20260426_083423",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-25T23:34:23Z",
+      "text": "うんこを蹴られて怪我した。\n\n\n学習ポイント: 文型：『...を...する』を使用して動詞を表現します。\n\n\n英訳: I tripped over poop and got hurt.",
+      "tweet": "うんこを蹴られて怪我した。\n\n\n学習ポイント: 文型：『...を...する』を使用して動詞を表現します。\n\n\n英訳: I tripped over poop and got hurt.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_083423/index.html",
+      "study_point": "文型：『...を...する』を使用して動詞を表現します。",
+      "translation_en": "I tripped over poop and got hurt."
+    },
+    {
       "id": "feed_20260426_073845",
       "kind": "event",
       "date": "2026-04-26",
@@ -412,34 +426,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-24T22:43:24Z"
-    },
-    {
-      "id": "feed_20260425_064901",
-      "kind": "event",
-      "date": "2026-04-25",
-      "created_at": "2026-04-24T21:49:01Z",
-      "text": "うんこがでてきてしまった。\n\n\n学習ポイント: 『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。\n\n\n英訳: Something came out as a result of the stool.",
-      "tweet": "うんこがでてきてしまった。\n\n\n学習ポイント: 『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。\n\n\n英訳: Something came out as a result of the stool.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260425_064901/index.html",
-      "study_point": "『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。",
-      "translation_en": "Something came out as a result of the stool.",
-      "legacy_id": "fixed-event-20260425_064901",
-      "image": "image/feed_20260425_064901.png",
-      "image_url": "image/feed_20260425_064901.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこがでてきてしまった。 学習ポイント: 『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。 英訳: Something came out as a result of the stool., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-24T21:52:39Z"
     }
   ],
   "count": 20,
   "page": 10,
   "page_size": 20,
-  "total_items": 272,
+  "total_items": 273,
   "total_pages": 14,
   "next_feed_url": "./feed/page_011.json"
 }
