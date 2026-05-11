@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260425_175434",
+      "kind": "event",
+      "date": "2026-04-25",
+      "created_at": "2026-04-25T08:54:34Z",
+      "text": "うんこが綺麗にできるようになった。\n\n\n学習ポイント: 文型：「前置詞+形容詞」を使用した表現。\n\n\n英訳: I was able to make my poop look neat.",
+      "tweet": "うんこが綺麗にできるようになった。\n\n\n学習ポイント: 文型：「前置詞+形容詞」を使用した表現。\n\n\n英訳: I was able to make my poop look neat.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260425_175434/index.html",
+      "study_point": "文型：「前置詞+形容詞」を使用した表現。",
+      "translation_en": "I was able to make my poop look neat.",
+      "legacy_id": "fixed-event-20260425_175434",
+      "image": "image/feed_20260425_175434.png",
+      "image_url": "image/feed_20260425_175434.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが綺麗にできるようになった。 学習ポイント: 文型：「前置詞+形容詞」を使用した表現。 英訳: I was able to make my poop look neat., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-25T08:59:10Z"
+    },
+    {
       "id": "feed_20260425_161651",
       "kind": "event",
       "date": "2026-04-25",
@@ -408,32 +430,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T22:48:36Z"
-    },
-    {
-      "id": "feed_20260424_064638",
-      "kind": "event",
-      "date": "2026-04-24",
-      "created_at": "2026-04-23T21:46:38Z",
-      "text": "うんこが汚いから洗って。\n\n\n学習ポイント: 文型：「...の...を...する」。この文型では、動作や行為（ここでは「洗うこと」）とその対象（ここでは「うんこ」）を表現します。\n\n\n英訳: Wash it because poop is dirty.",
-      "tweet": "うんこが汚いから洗って。\n\n\n学習ポイント: 文型：「...の...を...する」。この文型では、動作や行為（ここでは「洗うこと」）とその対象（ここでは「うんこ」）を表現します。\n\n\n英訳: Wash it because poop is dirty.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260424_064638/index.html",
-      "legacy_id": "fixed-event-20260424_064638",
-      "image": "image/feed_20260424_064638.png",
-      "image_url": "image/feed_20260424_064638.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Draw exactly the situation described by the Japanese sentence below. Use the sentence itself as the source of truth for who appears, what they do, what object is important, and what kind of scene it is. Do not use the study point, translation, or any extra explanation as image content. Do not add unrelated people, food, animals, buildings, decorations, letters, captions, speech bubbles, watermark, or logo. Keep the composition simple and make one still image that directly visualizes the sentence. Japanese sentence: うんこが汚いから洗って。 Ignore these extra feed fields if they are present after the sentence: study notes, learning points, translations, labels, metadata.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T21:51:10Z"
     }
   ],
   "count": 20,
   "page": 11,
   "page_size": 20,
-  "total_items": 277,
+  "total_items": 278,
   "total_pages": 14,
   "next_feed_url": "./feed/page_012.json"
 }
