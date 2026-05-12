@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260426_044444",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-25T19:44:44Z",
+      "text": "今日の朝食でうんこが入っていた。\n\n\n学習ポイント: 文末に使用される文章形として、かきものを利用することがある。今日の朝食では具体的な例として、かきものを用いて述べた。\n\n\n英訳: There was poop in today's breakfast.",
+      "tweet": "今日の朝食でうんこが入っていた。\n\n\n学習ポイント: 文末に使用される文章形として、かきものを利用することがある。今日の朝食では具体的な例として、かきものを用いて述べた。\n\n\n英訳: There was poop in today's breakfast.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_044444/index.html",
+      "study_point": "文末に使用される文章形として、かきものを利用することがある。今日の朝食では具体的な例として、かきものを用いて述べた。",
+      "translation_en": "There was poop in today's breakfast.",
+      "legacy_id": "fixed-event-20260426_044444",
+      "image": "image/feed_20260426_044444.png",
+      "image_url": "image/feed_20260426_044444.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: 今日の朝食でうんこが入っていた。 学習ポイント: 文末に使用される文章形として、かきものを利用することがある。今日の朝食では具体的な例として、かきものを用いて述べた。 英訳: There was poop in today's breakfast., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-25T19:49:27Z"
+    },
+    {
       "id": "feed_20260426_035432",
       "kind": "event",
       "date": "2026-04-26",
@@ -412,34 +434,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-24T17:58:23Z"
-    },
-    {
-      "id": "feed_20260425_015750",
-      "kind": "event",
-      "date": "2026-04-25",
-      "created_at": "2026-04-24T16:57:50Z",
-      "text": "うんこが嫌いな子供もいる。\n\n\n学習ポイント: 『うんこ』は排泄物という意味で、人間の生理的行為や体調について述べる際に使われます。\n\n\n英訳: There are children who dislike poop.",
-      "tweet": "うんこが嫌いな子供もいる。\n\n\n学習ポイント: 『うんこ』は排泄物という意味で、人間の生理的行為や体調について述べる際に使われます。\n\n\n英訳: There are children who dislike poop.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260425_015750/index.html",
-      "study_point": "『うんこ』は排泄物という意味で、人間の生理的行為や体調について述べる際に使われます。",
-      "translation_en": "There are children who dislike poop.",
-      "legacy_id": "fixed-event-20260425_015750",
-      "image": "image/feed_20260425_015750.png",
-      "image_url": "image/feed_20260425_015750.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが嫌いな子供もいる。 学習ポイント: 『うんこ』は排泄物という意味で、人間の生理的行為や体調について述べる際に使われます。 英訳: There are children who dislike poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-24T17:02:29Z"
     }
   ],
   "count": 20,
   "page": 11,
   "page_size": 20,
-  "total_items": 288,
+  "total_items": 289,
   "total_pages": 15,
   "next_feed_url": "./feed/page_012.json"
 }
