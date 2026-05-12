@@ -2,7 +2,7 @@
   "updated_at": "2026-05-12T17:11:50Z",
   "items": [
     {
-      "id": "fixed-event-20260513_021150",
+      "id": "feed_20260513_021150",
       "kind": "event",
       "date": "2026-05-13",
       "created_at": "2026-05-12T17:11:50Z",
@@ -11,7 +11,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/fixed-event-20260513_021150/index.html"
+      "permalink": "./?post=feed_20260513_021150",
+      "legacy_id": "fixed-event-20260513_021150",
+      "image": "image/feed_20260513_021150.png",
+      "image_url": "image/feed_20260513_021150.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちると水に溶ける。 英訳: When poop falls, it dissolves in water. この2行のみを出力します。他には一切記載しておりません。, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-05-12T17:15:43Z"
     }
   ]
 }
