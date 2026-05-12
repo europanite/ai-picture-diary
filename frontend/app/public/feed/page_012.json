@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260424_170410",
+      "kind": "event",
+      "date": "2026-04-24",
+      "created_at": "2026-04-24T08:04:10Z",
+      "text": "うんこが汚いから今日は学校に行かない。\n\n\n学習ポイント: 文末に利用した「。」の働きとして、文章の意味や目的を強調します。\n\n\n英訳: Because the poop is dirty, I won't go to school today.",
+      "tweet": "うんこが汚いから今日は学校に行かない。\n\n\n学習ポイント: 文末に利用した「。」の働きとして、文章の意味や目的を強調します。\n\n\n英訳: Because the poop is dirty, I won't go to school today.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260424_170410/index.html",
+      "study_point": "文末に利用した「。」の働きとして、文章の意味や目的を強調します。",
+      "translation_en": "Because the poop is dirty, I won't go to school today.",
+      "legacy_id": "fixed-event-20260424_170410",
+      "image": "image/feed_20260424_170410.png",
+      "image_url": "image/feed_20260424_170410.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが汚いから今日は学校に行かない。 学習ポイント: 文末に利用した「。」の働きとして、文章の意味や目的を強調します。 英訳: Because the poop is dirty, I won't go to school today., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-24T08:08:51Z"
+    },
+    {
       "id": "feed_20260424_143647",
       "kind": "event",
       "date": "2026-04-24",
@@ -372,32 +394,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T07:58:42Z"
-    },
-    {
-      "id": "feed_20260423_154143",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T06:41:43Z",
-      "text": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "tweet": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_154143/index.html",
-      "legacy_id": "fixed-event-20260423_154143",
-      "image": "image/feed_20260423_154143.png",
-      "image_url": "image/feed_20260423_154143.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが落ちている以上、そのままにしておくわけにはいかない。 学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。 英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T06:46:15Z"
     }
   ],
   "count": 20,
   "page": 12,
   "page_size": 20,
-  "total_items": 282,
+  "total_items": 283,
   "total_pages": 15,
   "next_feed_url": "./feed/page_013.json"
 }

@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "feed_20260423_154143",
+      "kind": "event",
+      "date": "2026-04-23",
+      "created_at": "2026-04-23T06:41:43Z",
+      "text": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
+      "tweet": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260423_154143/index.html",
+      "legacy_id": "fixed-event-20260423_154143",
+      "image": "image/feed_20260423_154143.png",
+      "image_url": "image/feed_20260423_154143.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが落ちている以上、そのままにしておくわけにはいかない。 学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。 英訳: As long as poop is lying there, we cannot just leave it as it is.",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-23T06:46:15Z"
+    },
+    {
       "id": "feed_20260423_144909",
       "kind": "event",
       "date": "2026-04-23",
@@ -304,24 +324,12 @@
       "links": [],
       "avatar_image": "image/avatar/event.png",
       "permalink": "./posts/feed_20260422_205042/index.html"
-    },
-    {
-      "id": "feed_20260422_202736",
-      "kind": "event",
-      "date": "2026-04-22",
-      "created_at": "2026-04-22T11:27:36Z",
-      "text": "会話中に失敗した彼は、ついにうんこが靴下から滲んでいたことに気づき、隣の席の友人に驚くような表情で告げた。",
-      "tweet": "会話中に失敗した彼は、ついにうんこが靴下から滲んでいたことに気づき、隣の席の友人に驚くような表情で告げた。",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/event.png",
-      "permalink": "./posts/feed_20260422_202736/index.html"
     }
   ],
   "count": 20,
   "page": 13,
   "page_size": 20,
-  "total_items": 282,
+  "total_items": 283,
   "total_pages": 15,
   "next_feed_url": "./feed/page_014.json"
 }
