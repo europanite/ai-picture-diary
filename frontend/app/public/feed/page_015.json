@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "feed_20260423_093940",
+      "kind": "event",
+      "date": "2026-04-23",
+      "created_at": "2026-04-23T00:39:40Z",
+      "text": "うんこが臭くて、掃除機で吸い取った方がいいだろう。",
+      "tweet": "うんこが臭くて、掃除機で吸い取った方がいいだろう。",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260423_093940/index.html",
+      "legacy_id": "fixed-event-20260423_093940",
+      "image": "image/feed_20260423_093940.png",
+      "image_url": "image/feed_20260423_093940.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが臭くて、掃除機で吸い取った方がいいだろう。",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-23T00:44:03Z"
+    },
+    {
       "id": "feed_20260423_091418",
       "kind": "event",
       "date": "2026-04-23",
@@ -222,10 +242,10 @@
       "permalink": "./posts/feed_20260422_183019/index.html"
     }
   ],
-  "count": 16,
+  "count": 17,
   "page": 15,
   "page_size": 20,
-  "total_items": 316,
+  "total_items": 317,
   "total_pages": 16,
   "next_feed_url": ""
 }
