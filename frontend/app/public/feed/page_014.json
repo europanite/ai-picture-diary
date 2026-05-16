@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260424_205811",
+      "kind": "event",
+      "date": "2026-04-24",
+      "created_at": "2026-04-24T11:58:11Z",
+      "text": "うんこが落ちたので、地面に水しぶきが飛んだ。\n\n\n学習ポイント: 表現の組み立て方で使われる「の」の役割を説明します。この文では、'うんこが落ちて' と '地面に水しぶきが飛ぶ' の2つの状況が関連づけられて、一つの文にまとめられています。\n\n\n英訳: The water splashes flew up because the poop fell.",
+      "tweet": "うんこが落ちたので、地面に水しぶきが飛んだ。\n\n\n学習ポイント: 表現の組み立て方で使われる「の」の役割を説明します。この文では、'うんこが落ちて' と '地面に水しぶきが飛ぶ' の2つの状況が関連づけられて、一つの文にまとめられています。\n\n\n英訳: The water splashes flew up because the poop fell.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260424_205811/index.html",
+      "study_point": "表現の組み立て方で使われる「の」の役割を説明します。この文では、'うんこが落ちて' と '地面に水しぶきが飛ぶ' の2つの状況が関連づけられて、一つの文にまとめられています。",
+      "translation_en": "The water splashes flew up because the poop fell.",
+      "legacy_id": "fixed-event-20260424_205811",
+      "image": "image/feed_20260424_205811.png",
+      "image_url": "image/feed_20260424_205811.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちたので、地面に水しぶきが飛んだ。 学習ポイント: 表現の組み立て方で使われる「の」の役割を説明します。この文では、'うんこが落ちて' と '地面に水しぶきが飛ぶ' の2つの状況が関連づけられて、一つの文にまとめられています。 英訳: The water splashes flew up because the poop fell., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-24T12:02:28Z"
+    },
+    {
       "kind": "unko",
       "text": "今日はとても立派なうんこを生成した。",
       "tweet": "今日はとても立派なうんこを生成した。",
@@ -371,32 +393,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T10:37:52Z"
-    },
-    {
-      "id": "feed_20260423_165426",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T07:54:26Z",
-      "text": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n\n\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。\n\n\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "tweet": "うんこが落ちている以上、そのままにしておくわけにはいかない。\n\n\n学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。\n\n\n英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_165426/index.html",
-      "legacy_id": "fixed-event-20260423_165426",
-      "image": "image/feed_20260423_165426.png",
-      "image_url": "image/feed_20260423_165426.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが落ちている以上、そのままにしておくわけにはいかない。 学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べる表現である。 英訳: As long as poop is lying there, we cannot just leave it as it is.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T07:58:42Z"
     }
   ],
   "count": 20,
   "page": 14,
   "page_size": 20,
-  "total_items": 324,
+  "total_items": 325,
   "total_pages": 17,
   "next_feed_url": "./feed/page_015.json"
 }
