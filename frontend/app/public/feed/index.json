@@ -10,7 +10,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260516_170453/index.html"
+      "permalink": "./posts/feed_20260516_170453/index.html",
+      "legacy_id": "fixed-event-20260516_170453",
+      "image": "image/feed_20260516_170453.png",
+      "image_url": "image/feed_20260516_170453.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが黒いです。 英訳: The poop is black. 注意: このプログラムでは定形的な日本語と英語の対応しか生成せず、特定の単語（例：「うんこ」）を含む文だけでなく、「うんこ」という単語が使われていなければ英訳は生成されません。, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-05-16T08:08:37Z"
     },
     {
       "id": "feed_20260516_145559",
