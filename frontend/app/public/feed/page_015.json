@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260423_210647",
+      "kind": "event",
+      "date": "2026-04-23",
+      "created_at": "2026-04-23T12:06:47Z",
+      "text": "うんこがきれいに綺麗になった。\n\n\n学習ポイント: 文型：[名詞] + [助詞] + [名詞]\n\n\n英訳: The dirt was cleaned up.",
+      "tweet": "うんこがきれいに綺麗になった。\n\n\n学習ポイント: 文型：[名詞] + [助詞] + [名詞]\n\n\n英訳: The dirt was cleaned up.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260423_210647/index.html"
+    },
+    {
       "kind": "unko",
       "text": "今日はとても立派なうんこを生成した。",
       "tweet": "今日はとても立派なうんこを生成した。",
@@ -352,24 +364,12 @@
       "links": [],
       "avatar_image": "image/avatar/normal.png",
       "permalink": "./posts/feed_20260423_001436/index.html"
-    },
-    {
-      "id": "feed_20260422_235937",
-      "kind": "event",
-      "date": "2026-04-22",
-      "created_at": "2026-04-22T14:59:37Z",
-      "text": "うんこを蹴っておいたが、今思い出した。",
-      "tweet": "うんこを蹴っておいたが、今思い出した。",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260422_235937/index.html"
     }
   ],
   "count": 20,
   "page": 15,
   "page_size": 20,
-  "total_items": 329,
+  "total_items": 330,
   "total_pages": 17,
   "next_feed_url": "./feed/page_016.json"
 }
