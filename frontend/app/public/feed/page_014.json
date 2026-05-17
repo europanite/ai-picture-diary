@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260426_023840",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-25T17:38:40Z",
+      "text": "うんこが汚いから掃除しなきゃ。\n\n\n学習ポイント: 文型：『[動詞]する必要がある』\n\n\n英訳: Cleaning is necessary because the poop is dirty.",
+      "tweet": "うんこが汚いから掃除しなきゃ。\n\n\n学習ポイント: 文型：『[動詞]する必要がある』\n\n\n英訳: Cleaning is necessary because the poop is dirty.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_023840/index.html",
+      "study_point": "文型：『[動詞]する必要がある』",
+      "translation_en": "Cleaning is necessary because the poop is dirty.",
+      "legacy_id": "fixed-event-20260426_023840",
+      "image": "image/feed_20260426_023840.png",
+      "image_url": "image/feed_20260426_023840.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが汚いから掃除しなきゃ。 学習ポイント: 文型：『[動詞]する必要がある』 英訳: Cleaning is necessary because the poop is dirty., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-25T17:43:13Z"
+    },
+    {
       "id": "feed_20260426_014226",
       "kind": "event",
       "date": "2026-04-26",
@@ -412,34 +434,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-24T15:13:56Z"
-    },
-    {
-      "id": "feed_20260424_223010",
-      "kind": "event",
-      "date": "2026-04-24",
-      "created_at": "2026-04-24T13:30:10Z",
-      "text": "うんこが落ちてきちゃった。\n\n\n学習ポイント: 文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。\n\n\n英訳: The poop fell down.",
-      "tweet": "うんこが落ちてきちゃった。\n\n\n学習ポイント: 文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。\n\n\n英訳: The poop fell down.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260424_223010/index.html",
-      "study_point": "文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。",
-      "translation_en": "The poop fell down.",
-      "legacy_id": "fixed-event-20260424_223010",
-      "image": "image/feed_20260424_223010.png",
-      "image_url": "image/feed_20260424_223010.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちてきちゃった。 学習ポイント: 文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。 英訳: The poop fell down., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-24T13:34:39Z"
     }
   ],
   "count": 20,
   "page": 14,
   "page_size": 20,
-  "total_items": 346,
+  "total_items": 347,
   "total_pages": 18,
   "next_feed_url": "./feed/page_015.json"
 }
