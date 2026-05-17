@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "feed_20260426_233121",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-26T14:31:21Z",
+      "text": "うんこを蹴って大喜びした。\n英訳: Did a happy dance after kicking some poop.",
+      "tweet": "うんこを蹴って大喜びした。\n英訳: Did a happy dance after kicking some poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_233121/index.html",
+      "legacy_id": "fixed-event-20260426_233121",
+      "image": "image/feed_20260426_233121.png",
+      "image_url": "image/feed_20260426_233121.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこを蹴って大喜びした。 英訳: Did a happy dance after kicking some poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-26T14:34:55Z"
+    },
+    {
       "id": "feed_20260426_231521",
       "kind": "event",
       "date": "2026-04-26",
@@ -399,34 +419,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-25T16:47:00Z"
-    },
-    {
-      "id": "feed_20260426_004132",
-      "kind": "event",
-      "date": "2026-04-26",
-      "created_at": "2026-04-25T15:41:32Z",
-      "text": "今日の運動会でうんこが入った制服になった。\n\n\n学習ポイント: 文型：副詞的形容詞句。例文では「うんこが」が使用されており、動詞「入った」の前に位置している。\n\n\n英訳: Today's sports meeting ended with a uniform that had poop in it.",
-      "tweet": "今日の運動会でうんこが入った制服になった。\n\n\n学習ポイント: 文型：副詞的形容詞句。例文では「うんこが」が使用されており、動詞「入った」の前に位置している。\n\n\n英訳: Today's sports meeting ended with a uniform that had poop in it.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260426_004132/index.html",
-      "study_point": "文型：副詞的形容詞句。例文では「うんこが」が使用されており、動詞「入った」の前に位置している。",
-      "translation_en": "Today's sports meeting ended with a uniform that had poop in it.",
-      "legacy_id": "fixed-event-20260426_004132",
-      "image": "image/feed_20260426_004132.png",
-      "image_url": "image/feed_20260426_004132.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: 今日の運動会でうんこが入った制服になった。 学習ポイント: 文型：副詞的形容詞句。例文では「うんこが」が使用されており、動詞「入った」の前に位置している。 英訳: Today's sports meeting ended with a uniform that had poop in it., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-25T15:46:09Z"
     }
   ],
   "count": 20,
   "page": 13,
   "page_size": 20,
-  "total_items": 344,
+  "total_items": 345,
   "total_pages": 18,
   "next_feed_url": "./feed/page_014.json"
 }
