@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260425_064901",
+      "kind": "event",
+      "date": "2026-04-25",
+      "created_at": "2026-04-24T21:49:01Z",
+      "text": "うんこがでてきてしまった。\n\n\n学習ポイント: 『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。\n\n\n英訳: Something came out as a result of the stool.",
+      "tweet": "うんこがでてきてしまった。\n\n\n学習ポイント: 『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。\n\n\n英訳: Something came out as a result of the stool.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260425_064901/index.html",
+      "study_point": "『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。",
+      "translation_en": "Something came out as a result of the stool.",
+      "legacy_id": "fixed-event-20260425_064901",
+      "image": "image/feed_20260425_064901.png",
+      "image_url": "image/feed_20260425_064901.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこがでてきてしまった。 学習ポイント: 『の』は助詞であり、主語や被動化の表現として使用されます。例文では「うんこ」が名詞であるため、句中を接続する役割を果たします。 英訳: Something came out as a result of the stool., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-24T21:52:39Z"
+    },
+    {
       "id": "feed_20260425_054940",
       "kind": "event",
       "date": "2026-04-25",
@@ -398,32 +420,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T13:33:04Z"
-    },
-    {
-      "id": "feed_20260423_220809",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T13:08:09Z",
-      "text": "うんこが汚いから、手洗いしないと。\n\n\n学習ポイント: 日本語の複雑な文法構造や助詞（助词）を理解することで、異なる意味を表現することができます。例えば、この文章では「うんこ」を主語として、指示的助詞「か」を使って、「汚いから」という原因と結果の関係性を作り出しています。\n\n\n英訳: Dirty poop, you should not wash your hands.",
-      "tweet": "うんこが汚いから、手洗いしないと。\n\n\n学習ポイント: 日本語の複雑な文法構造や助詞（助词）を理解することで、異なる意味を表現することができます。例えば、この文章では「うんこ」を主語として、指示的助詞「か」を使って、「汚いから」という原因と結果の関係性を作り出しています。\n\n\n英訳: Dirty poop, you should not wash your hands.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_220809/index.html",
-      "legacy_id": "fixed-event-20260423_220809",
-      "image": "image/feed_20260423_220809.png",
-      "image_url": "image/feed_20260423_220809.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Draw exactly the situation described by the Japanese sentence below. Use the sentence itself as the source of truth for who appears, what they do, what object is important, and what kind of scene it is. Do not use the study point, translation, or any extra explanation as image content. Do not add unrelated people, food, animals, buildings, decorations, letters, captions, speech bubbles, watermark, or logo. Keep the composition simple and make one still image that directly visualizes the sentence. Japanese sentence: うんこが汚いから、手洗いしないと。 Ignore these extra feed fields if they are present after the sentence: study notes, learning points, translations, labels, metadata.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T13:12:45Z"
     }
   ],
   "count": 20,
   "page": 15,
   "page_size": 20,
-  "total_items": 352,
+  "total_items": 353,
   "total_pages": 18,
   "next_feed_url": "./feed/page_016.json"
 }
