@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260426_144043",
+      "kind": "event",
+      "date": "2026-04-26",
+      "created_at": "2026-04-26T05:40:43Z",
+      "text": "うんこが臭いから、窓を開けることにした。\n\n\n学習ポイント: 「〜から」の使い方：原因や理由を説明する表現\n\n\n英訳: I opened the window because the smell of feces was bad.",
+      "tweet": "うんこが臭いから、窓を開けることにした。\n\n\n学習ポイント: 「〜から」の使い方：原因や理由を説明する表現\n\n\n英訳: I opened the window because the smell of feces was bad.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260426_144043/index.html",
+      "study_point": "「〜から」の使い方：原因や理由を説明する表現",
+      "translation_en": "I opened the window because the smell of feces was bad.",
+      "legacy_id": "fixed-event-20260426_144043",
+      "image": "image/feed_20260426_144043.png",
+      "image_url": "image/feed_20260426_144043.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが臭いから、窓を開けることにした。 学習ポイント: 「〜から」の使い方：原因や理由を説明する表現 英訳: I opened the window because the smell of feces was bad., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-26T05:45:04Z"
+    },
+    {
       "id": "feed_20260426_114150",
       "kind": "event",
       "date": "2026-04-26",
@@ -396,34 +418,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-25T10:00:03Z"
-    },
-    {
-      "id": "feed_20260425_175434",
-      "kind": "event",
-      "date": "2026-04-25",
-      "created_at": "2026-04-25T08:54:34Z",
-      "text": "うんこが綺麗にできるようになった。\n\n\n学習ポイント: 文型：「前置詞+形容詞」を使用した表現。\n\n\n英訳: I was able to make my poop look neat.",
-      "tweet": "うんこが綺麗にできるようになった。\n\n\n学習ポイント: 文型：「前置詞+形容詞」を使用した表現。\n\n\n英訳: I was able to make my poop look neat.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260425_175434/index.html",
-      "study_point": "文型：「前置詞+形容詞」を使用した表現。",
-      "translation_en": "I was able to make my poop look neat.",
-      "legacy_id": "fixed-event-20260425_175434",
-      "image": "image/feed_20260425_175434.png",
-      "image_url": "image/feed_20260425_175434.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが綺麗にできるようになった。 学習ポイント: 文型：「前置詞+形容詞」を使用した表現。 英訳: I was able to make my poop look neat., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-25T08:59:10Z"
     }
   ],
   "count": 20,
   "page": 14,
   "page_size": 20,
-  "total_items": 357,
+  "total_items": 358,
   "total_pages": 18,
   "next_feed_url": "./feed/page_015.json"
 }
