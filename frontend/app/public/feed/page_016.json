@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "id": "feed_20260424_074501",
+      "kind": "event",
+      "date": "2026-04-24",
+      "created_at": "2026-04-23T22:45:01Z",
+      "text": "うんこが汚いから、手を洗ってください。\n\n\n学習ポイント: 文末記号の使用。本文では、文章の終わりに '?' を使用しています。\n\n\n英訳: Use of punctuation at the end of a sentence.",
+      "tweet": "うんこが汚いから、手を洗ってください。\n\n\n学習ポイント: 文末記号の使用。本文では、文章の終わりに '?' を使用しています。\n\n\n英訳: Use of punctuation at the end of a sentence.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260424_074501/index.html",
+      "legacy_id": "fixed-event-20260424_074501",
+      "image": "image/feed_20260424_074501.png",
+      "image_url": "image/feed_20260424_074501.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Draw exactly the situation described by the Japanese sentence below. Use the sentence itself as the source of truth for who appears, what they do, what object is important, and what kind of scene it is. Do not use the study point, translation, or any extra explanation as image content. Do not add unrelated people, food, animals, buildings, decorations, letters, captions, speech bubbles, watermark, or logo. Keep the composition simple and make one still image that directly visualizes the sentence. Japanese sentence: うんこが汚いから、手を洗ってください。 Ignore these extra feed fields if they are present after the sentence: study notes, learning points, translations, labels, metadata.",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-23T22:48:36Z"
+    },
+    {
       "id": "feed_20260424_064638",
       "kind": "event",
       "date": "2026-04-24",
@@ -368,32 +388,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T05:00:51Z"
-    },
-    {
-      "id": "feed_20260423_124734",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T03:47:34Z",
-      "text": "うんこを掃除する必要があるかどうか迷う。",
-      "tweet": "うんこを掃除する必要があるかどうか迷う。",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_124734/index.html",
-      "legacy_id": "fixed-event-20260423_124734",
-      "image": "image/feed_20260423_124734.png",
-      "image_url": "image/feed_20260423_124734.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこを掃除する必要があるかどうか迷う。",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T03:51:11Z"
     }
   ],
   "count": 20,
   "page": 16,
   "page_size": 20,
-  "total_items": 358,
+  "total_items": 359,
   "total_pages": 18,
   "next_feed_url": "./feed/page_017.json"
 }
