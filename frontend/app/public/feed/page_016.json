@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "id": "feed_20260424_223010",
+      "kind": "event",
+      "date": "2026-04-24",
+      "created_at": "2026-04-24T13:30:10Z",
+      "text": "うんこが落ちてきちゃった。\n\n\n学習ポイント: 文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。\n\n\n英訳: The poop fell down.",
+      "tweet": "うんこが落ちてきちゃった。\n\n\n学習ポイント: 文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。\n\n\n英訳: The poop fell down.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260424_223010/index.html",
+      "study_point": "文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。",
+      "translation_en": "The poop fell down.",
+      "legacy_id": "fixed-event-20260424_223010",
+      "image": "image/feed_20260424_223010.png",
+      "image_url": "image/feed_20260424_223010.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちてきちゃった。 学習ポイント: 文末の記号：文章の終わりを示す点句で、句読点（。！？）によって意味や関係性が異なる。 英訳: The poop fell down., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-04-24T13:34:39Z"
+    },
+    {
       "id": "feed_20260424_212754",
       "kind": "event",
       "date": "2026-04-24",
@@ -375,32 +397,12 @@
       "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-04-23T11:35:21Z"
-    },
-    {
-      "id": "feed_20260423_194613",
-      "kind": "event",
-      "date": "2026-04-23",
-      "created_at": "2026-04-23T10:46:13Z",
-      "text": "うんこが気持ちいいので、寝坊してしまった。\n\n\n学習ポイント: 『寝坊して』ので、遅れた。\n\n\n英訳: Because I felt good about the poop, I slept in and missed my alarm.",
-      "tweet": "うんこが気持ちいいので、寝坊してしまった。\n\n\n学習ポイント: 『寝坊して』ので、遅れた。\n\n\n英訳: Because I felt good about the poop, I slept in and missed my alarm.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260423_194613/index.html",
-      "legacy_id": "fixed-event-20260423_194613",
-      "image": "image/feed_20260423_194613.png",
-      "image_url": "image/feed_20260423_194613.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "illustration, clear composition, soft lighting, suitable for an event post, scene in Yokosuka, Japan. Inspired by: うんこが気持ちいいので、寝坊してしまった。 学習ポイント: 『寝坊して』ので、遅れた。 英訳: Because I felt good about the poop, I slept in and missed my alarm.",
-      "image_negative": "photorealistic, text, watermark, logo, low quality, blurry, underexposed, too dark",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-04-23T10:50:32Z"
     }
   ],
   "count": 20,
   "page": 16,
   "page_size": 20,
-  "total_items": 366,
+  "total_items": 367,
   "total_pages": 19,
   "next_feed_url": "./feed/page_017.json"
 }
