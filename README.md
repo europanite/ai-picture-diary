@@ -1,4 +1,4 @@
-# [N2](https://github.com/europanite/n2 "N2")
+# [ai-picture-diary](https://github.com/europanite/ai-picture-diary "ai-picture-diary")
 
 An automated picture diary driven by the local LLM and VLM.
 

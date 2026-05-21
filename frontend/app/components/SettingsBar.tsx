@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, useWindowDimensions, Linking, Alert, Platform } from "react-native";
 
-const REPO_URL = "https://github.com/europanite/n2";
+const REPO_URL = "https://github.com/europanite/ai-picture-diary";
 
 function Btn({ title, onPress }: { title: string; onPress: () => void }) {
   return (
@@ -44,7 +44,7 @@ async function openUrl(url: string) {
 
 type Props = { title?: string };
 
-export default function SettingsBar({ title = "N2" }: Props) {
+export default function SettingsBar({ title = "ai-picture-diary" }: Props) {
   const { width } = useWindowDimensions();
   const isNarrow = width < 520;
 

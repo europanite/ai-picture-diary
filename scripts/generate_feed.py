@@ -61,7 +61,7 @@ def build_entry(sentence: str, image_path: str, image_prompt: str | None) -> dic
         "kind": "unko",
         "text": sentence,
         "tweet": sentence,
-        "place": "N2",
+        "place": "ai-picture-diary",
         "published_at": now,
         "created_at": now,
         "updated_at": now,

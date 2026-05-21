@@ -9,7 +9,7 @@ import { AuthProvider } from "./context/Auth";
 import SettingsBar from "./components/SettingsBar";
 import HomeScreen from "./screens/HomeScreen";
 
-const APP_TITLE = "N2";
+const APP_TITLE = "ai-picture-diary";
 const GA_MEASUREMENT_ID = (process.env.EXPO_PUBLIC_GA_MEASUREMENT_ID ?? "").trim();
 
 function installGoogleAnalytics() {
