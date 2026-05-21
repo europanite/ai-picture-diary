@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Free disk space
         run: |
@@ -220,7 +220,7 @@ jobs:
 
       - name: Upload ingest debug artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ingest-debug-${{ github.run_id }}
           path: tmp/ingest-debug
@@ -233,7 +233,7 @@ jobs:
           tar -C . -czf /tmp/chroma-db.tgz chroma_db
 
       - name: Upload chroma_db artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: chroma-db
           path: /tmp/chroma-db.tgz

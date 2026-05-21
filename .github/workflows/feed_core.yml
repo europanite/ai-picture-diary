@@ -75,12 +75,12 @@ jobs:
       sha: ${{ steps.package.outputs.sha }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -218,7 +218,7 @@ jobs:
 
       - name: Upload generated feed state for downstream jobs
         if: steps.package.outputs.changed == '1'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: rag-feed-state-${{ github.run_id }}
           path: /tmp/rag-feed-state.tgz
@@ -234,13 +234,13 @@ jobs:
       sha: ${{ steps.publish.outputs.sha }}
     steps:
       - name: Checkout (main)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 0
 
       - name: Setup Python 3.12 (snapshot)
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -250,7 +250,7 @@ jobs:
           pip install requests
 
       - name: Download generated feed state
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: rag-feed-state-${{ github.run_id }}
           path: /tmp/rag-feed-state
@@ -374,7 +374,7 @@ jobs:
 
       - name: Upload generated state for downstream jobs
         if: steps.publish.outputs.changed == '1'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: pages-state-${{ github.run_id }}
           path: /tmp/pages-state.tgz
@@ -383,7 +383,7 @@ jobs:
 
       - name: Upload latest.json
         if: steps.publish.outputs.changed == '1'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: latest-json-${{ github.run_id }}
           path: ${{ env.ARTIFACT_LATEST_PATH }}
