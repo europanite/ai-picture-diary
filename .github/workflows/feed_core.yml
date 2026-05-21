@@ -218,7 +218,7 @@ jobs:
 
       - name: Upload generated feed state for downstream jobs
         if: steps.package.outputs.changed == '1'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: rag-feed-state-${{ github.run_id }}
           path: /tmp/rag-feed-state.tgz
@@ -374,7 +374,7 @@ jobs:
 
       - name: Upload generated state for downstream jobs
         if: steps.publish.outputs.changed == '1'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: pages-state-${{ github.run_id }}
           path: /tmp/pages-state.tgz
@@ -383,7 +383,7 @@ jobs:
 
       - name: Upload latest.json
         if: steps.publish.outputs.changed == '1'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: latest-json-${{ github.run_id }}
           path: ${{ env.ARTIFACT_LATEST_PATH }}

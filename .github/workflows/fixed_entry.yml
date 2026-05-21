@@ -296,7 +296,7 @@ jobs:
 
       - name: Upload fixed entry artifacts for downstream jobs
         if: steps.publish.outputs.changed == '1'
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: fixed-entry-state-${{ github.run_id }}
           path: /tmp/fixed-entry-state.tgz
