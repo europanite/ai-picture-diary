@@ -63,13 +63,21 @@ export default function SettingsBar({ title = "ai-picture-diary" }: Props) {
           padding: 6,
           alignItems: "center"
         }}>
-          <Text style={{ 
-            fontSize: 32, 
-            fontWeight: "512", 
-            color: "#fff"
-            }}>
+          <TouchableOpacity
+            onPress={() => openUrl(REPO_URL)}
+            accessibilityRole="link"
+            accessibilityLabel={`${title} GitHub repository`}
+          >
+            <Text
+              style={{
+                fontSize: 32,
+                fontWeight: "512",
+                color: "#fff",
+              }}
+            >
               {title}
-          </Text>
+            </Text>
+          </TouchableOpacity>
         </View>
       ) : (
         // WIDE: title pinned to center
@@ -81,7 +89,6 @@ export default function SettingsBar({ title = "ai-picture-diary" }: Props) {
 
           {/* Center title (overlay) */}
           <View
-            pointerEvents="none"
             style={{
               position: "absolute",
               left: 0,
@@ -92,12 +99,21 @@ export default function SettingsBar({ title = "ai-picture-diary" }: Props) {
               justifyContent: "center",
             }}
           >
-            <Text style={{ 
-              fontSize: 32, 
-              fontWeight: "512", 
-              color: 
-              "#fff" 
-            }}>{title}</Text>
+            <TouchableOpacity
+              onPress={() => openUrl(REPO_URL)}
+              accessibilityRole="link"
+              accessibilityLabel={`${title} GitHub repository`}
+            >
+              <Text
+                style={{
+                  fontSize: 32,
+                  fontWeight: "512",
+                  color: "#fff",
+                }}
+              >
+                {title}
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       )}
