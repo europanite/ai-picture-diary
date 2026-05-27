@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-05-27T18:31:52Z",
+  "items": [
+    {
+      "id": "fixed-event-20260528_033152",
+      "kind": "event",
+      "date": "2026-05-28",
+      "created_at": "2026-05-27T18:31:52Z",
+      "text": "うんこが臭いね。\n英訳: Smells bad.\n出力形式：\n1行目: うんこが臭いね。\n2行目: Smells bad.",
+      "tweet": "うんこが臭いね。\n英訳: Smells bad.\n出力形式：\n1行目: うんこが臭いね。\n2行目: Smells bad.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/fixed-event-20260528_033152/index.html"
+    }
+  ]
+}
