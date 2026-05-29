@@ -1,5 +1,7 @@
 # [ai-picture-diary](https://github.com/europanite/ai-picture-diary "ai-picture-diary")
 
+[![Feed](https://github.com/europanite/ai-picture-diary/actions/workflows/feed.yml/badge.svg)](https://github.com/europanite/ai-picture-diary/actions/workflows/feed.yml)
+
 An automated picture diary driven by the local LLM and VLM.
 
 ---
