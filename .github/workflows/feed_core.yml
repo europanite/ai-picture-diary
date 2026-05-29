@@ -250,7 +250,7 @@ jobs:
           pip install requests
 
       - name: Download generated feed state
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: rag-feed-state-${{ github.run_id }}
           path: /tmp/rag-feed-state
