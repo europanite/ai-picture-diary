@@ -33,12 +33,12 @@ def generate_sentence() -> str:
             return text
     except Exception:
         pass
-    return "今日はとても立派なうんこを生成した。"
+    return ""
 
 
 def generate_image(sentence: str) -> tuple[str, str | None]:
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
-    output_name = f"unko_{local_stamp()}.png"
+    output_name = f"diary_{local_stamp()}.png"
     output_path = IMAGE_DIR / output_name
 
     result = subprocess.run(
@@ -58,7 +58,7 @@ def generate_image(sentence: str) -> tuple[str, str | None]:
 def build_entry(sentence: str, image_path: str, image_prompt: str | None) -> dict:
     now = utc_now_iso_z()
     entry = {
-        "kind": "unko",
+        "kind": "diary",
         "text": sentence,
         "tweet": sentence,
         "place": "ai-picture-diary",

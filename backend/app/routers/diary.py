@@ -3,9 +3,9 @@ from pathlib import Path
 
 import requests
 from fastapi import APIRouter, HTTPException
-from schemas import UnkoGenerateRequest, UnkoGenerateResponse
+from schemas import DiaryGenerateRequest, DiaryGenerateResponse
 
-router = APIRouter(prefix="/unko", tags=["unko"])
+router = APIRouter(prefix="/diary", tags=["diary"])
 
 
 class GenerationError(RuntimeError):
@@ -13,7 +13,7 @@ class GenerationError(RuntimeError):
 
 
 def _load_prompt(topic: str) -> str:
-    prompt_path = Path(os.getenv("UNKO_PROMPT_PATH", "/local/prompt.txt"))
+    prompt_path = Path(os.getenv("PROMPT_PATH_POSITIVE", "/scripts/prompts/llm/positive.txt"))
     try:
         template = prompt_path.read_text(encoding="utf-8").strip()
     except OSError as exc:
@@ -33,8 +33,6 @@ def _normalize_output(text: str) -> str:
 def _validate_sentence(sentence: str) -> tuple[bool, str]:
     if not sentence:
         return False, "empty"
-    if "うんこ" not in sentence:
-        return False, "missing required word"
     if sentence.count("。") != 1:
         return False, "must be exactly one Japanese sentence"
     if len(sentence) < 12:
@@ -66,12 +64,12 @@ def _call_ollama(*, prompt: str, model: str, base_url: str, timeout_s: int, temp
 
 
 @router.get("/health")
-def unko_health() -> dict[str, str]:
+def diary_health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-@router.post("/generate", response_model=UnkoGenerateResponse)
-def generate_unko(payload: UnkoGenerateRequest) -> UnkoGenerateResponse:
+@router.post("/generate", response_model=DiaryGenerateResponse)
+def generate_sentence(payload: DiaryGenerateRequest) -> DiaryGenerateResponse:
     base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     model = os.getenv("RAG_MODEL", "qwen3:8b")
     timeout_s = int(os.getenv("OLLAMA_TIMEOUT_S", "120"))
@@ -90,7 +88,7 @@ def generate_unko(payload: UnkoGenerateRequest) -> UnkoGenerateResponse:
             sentence = _normalize_output(raw)
             ok, reason = _validate_sentence(sentence)
             if ok:
-                return UnkoGenerateResponse(sentence=sentence, model=model, retries_used=attempt)
+                return DiaryGenerateResponse(sentence=sentence, model=model, retries_used=attempt)
             last_error = f"validation failed: {reason}"
         except GenerationError as exc:
             last_error = str(exc)

@@ -29,11 +29,60 @@ import torch
 from diffusers import AutoPipelineForText2Image
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_VLM_PROMPT_PATH = PROJECT_ROOT / "scripts" / "prompts" / "vlm" / "positive.txt"
+DEFAULT_VLM_NEGATIVE_PROMPT_PATH = PROJECT_ROOT / "scripts" / "prompts" / "vlm" / "negative.txt"
+
+
+def _resolve_repo_path(value: str | None) -> Path | None:
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    path = Path(raw)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return path
+
+
+def _read_text_file(path: Path | None) -> str:
+    if path is None:
+        return ""
+    if not path.exists():
+        raise FileNotFoundError(f"prompt file not found: {path}")
+    return path.read_text(encoding="utf-8").strip()
+
+
+def _load_prompt_template(
+    *,
+    inline_env: str,
+    path_envs: tuple[str, ...],
+    default_path: Path,
+) -> str:
+    inline = os.environ.get(inline_env)
+    if inline is not None and inline.strip():
+        return inline.strip()
+
+    for env_name in path_envs:
+        path = _resolve_repo_path(os.environ.get(env_name))
+        if path is not None:
+            return _read_text_file(path)
+
+    return _read_text_file(default_path)
+
+
 MODEL_ID = os.environ.get("SDXL_MODEL_ID", "stabilityai/sdxl-turbo").strip()
 LORA_PATH = os.environ.get("LORA_PATH", "").strip()
 LORA_SCALE = float(os.environ.get("LORA_SCALE", "0.8"))
-PROMPT_TMPL = (os.environ.get("PROMPT"))
-NEGATIVE_TMPL = (os.environ.get("NEGATIVE"))
+PROMPT_TMPL = _load_prompt_template(
+    inline_env="PROMPT",
+    path_envs=("VLM_PROMPT_PATH",),
+    default_path=DEFAULT_VLM_PROMPT_PATH,
+)
+NEGATIVE_TMPL = _load_prompt_template(
+    inline_env="NEGATIVE",
+    path_envs=("VLM_NEGATIVE_PROMPT_PATH", "NEGATIVE_PROMPT_PATH"),
+    default_path=DEFAULT_VLM_NEGATIVE_PROMPT_PATH,
+)
 STEPS = int(os.environ.get("STEPS", "6"))
 GUIDANCE_SCALE = float(os.environ.get("GUIDANCE_SCALE", "2.0"))
 SEED_OVERRIDE = (os.environ.get("SEED"))
@@ -100,7 +149,11 @@ def _render(t: str, *, place: str, core: str) -> str:
     s = (t or "").strip()
     if not s:
         return ""
-    return s.replace("{core}", core)
+    return (
+        s
+        .replace("{core}", core)
+        .replace("{place}", place)
+    )
 
 def _first_nonempty_line(text: str) -> str:
     for line in str(text or "").splitlines():
@@ -389,7 +442,7 @@ def main() -> int:
 
         seed = int(SEED_OVERRIDE) if SEED_OVERRIDE.isdigit() else random.randint(0, 2**31 - 1)
         seed += SEED_OFFSET
-        prompt,negative = build_prompt(text, place)
+        prompt, negative = build_prompt(text, place)
 
         print(f"MODEL_ID={MODEL_ID}")
         print("mode=text2img")

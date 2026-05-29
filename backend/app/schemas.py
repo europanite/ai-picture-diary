@@ -36,13 +36,13 @@ class Token(BaseModel):
     token_type: str = "bearer"
 
 
-class UnkoGenerateRequest(BaseModel):
+class DiaryGenerateRequest(BaseModel):
     topic: str = Field("日常", min_length=1, max_length=80)
     max_retries: int = Field(3, ge=1, le=10)
     temperature: float = Field(0.9, ge=0.0, le=2.0)
 
 
-class UnkoGenerateResponse(BaseModel):
+class DiaryGenerateResponse(BaseModel):
     sentence: str
     model: str
     retries_used: int

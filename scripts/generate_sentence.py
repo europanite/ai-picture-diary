@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PROMPT_PATH = PROJECT_ROOT / "scripts" / "prompt.txt"
+DEFAULT_PROMPT_PATH = PROJECT_ROOT / "scripts" / "prompts" / "llm" / "positive.txt"
 
 def render_prompt(template: str, seed_text: str) -> str:
     base = str(seed_text or "").strip()
