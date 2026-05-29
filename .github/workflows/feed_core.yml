@@ -272,8 +272,8 @@ jobs:
           echo "LORA_SCALE=0.8" >> $GITHUB_ENV
           echo "STEPS=6" >> $GITHUB_ENV
           echo "GUIDANCE_SCALE=2.0" >> $GITHUB_ENV
-          echo "VLM_PROMPT_PATH=scripts/prompts/vlm/positive.txt" >> $GITHUB_ENV
-          echo "VLM_NEGATIVE_PROMPT_PATH=scripts/prompts/vlm/negative.txt" >> $GITHUB_ENV
+          echo "VLM_PROMPT_PATH=prompts/vlm/positive.txt" >> $GITHUB_ENV
+          echo "VLM_NEGATIVE_PROMPT_PATH=prompts/vlm/negative.txt" >> $GITHUB_ENV
 
       - name: Capture snapshot (rag image url preferred)
         if: steps.style.outputs.use_camera == '1'

@@ -13,7 +13,7 @@ class GenerationError(RuntimeError):
 
 
 def _load_prompt(topic: str) -> str:
-    prompt_path = Path(os.getenv("PROMPT_PATH_POSITIVE", "/scripts/prompts/llm/positive.txt"))
+    prompt_path = Path(os.getenv("PROMPT_PATH_POSITIVE", "/prompts/llm/positive.txt"))
     try:
         template = prompt_path.read_text(encoding="utf-8").strip()
     except OSError as exc:

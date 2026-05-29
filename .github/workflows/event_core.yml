@@ -112,7 +112,7 @@ jobs:
         env:
           OLLAMA_BASE_URL: "http://127.0.0.1:11434"
           OLLAMA_MODEL: ${{ env.OLLAMA_CHAT_MODEL }}
-          PROMPT_PATH: "scripts/prompts/llm/positive.txt"
+          PROMPT_PATH: "prompts/llm/positive.txt"
           REQUEST_TIMEOUT: "300"
           MAX_RETRIES: "3"
           AVATAR_IMAGE: ${{ inputs.avatar_image }}
@@ -201,7 +201,7 @@ jobs:
           pip install requests
 
       - name: Download fixed entry artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: fixed-entry-state-${{ github.run_id }}
           path: /tmp/fixed-entry-state
@@ -230,8 +230,8 @@ jobs:
           MIRROR_AUG: "1"
           SEED_OFFSET: "${{ github.run_number }}"
           SDXL_MODEL_ID: stabilityai/sdxl-turbo
-          VLM_PROMPT_PATH: scripts/prompts/vlm/positive.txt
-          VLM_NEGATIVE_PROMPT_PATH: scripts/prompts/vlm/negative.txt
+          VLM_PROMPT_PATH: prompts/vlm/positive.txt
+          VLM_NEGATIVE_PROMPT_PATH: prompts/vlm/negative.txt
         run: |
           set -euo pipefail
           test -f frontend/app/public/latest.json

@@ -56,8 +56,8 @@ services:
       TORCH_NUM_THREADS: ${TORCH_NUM_THREADS:-0}
       PROMPT: ${PROMPT:-}
       NEGATIVE: ${NEGATIVE:-}
-      VLM_PROMPT_PATH:          ${VLM_PROMPT_PATH:-scripts/prompts/vlm/positive.txt}
-      VLM_NEGATIVE_PROMPT_PATH: ${VLM_NEGATIVE_PROMPT_PATH:-scripts/prompts/vlm/negative.txt}
+      VLM_PROMPT_PATH:          ${VLM_PROMPT_PATH:-prompts/vlm/positive.txt}
+      VLM_NEGATIVE_PROMPT_PATH: ${VLM_NEGATIVE_PROMPT_PATH:-prompts/vlm/negative.txt}
     command: ["sh", "illustrate/app/run.sh"]
     restart: "no"
   backend:
@@ -108,7 +108,7 @@ services:
       OLLAMA_NUM_THREAD: ${OLLAMA_NUM_THREAD:-4}
       OLLAMA_NUM_PREDICT: ${OLLAMA_NUM_PREDICT:-128}
       OLLAMA_TEMPERATURE: ${OLLAMA_TEMPERATURE:-0.8}
-      PROMPT_PATH_POSITIVE: ${PROMPT_PATH_POSITIVE:-/scripts/prompts/llm/positive.txt}
+      PROMPT_PATH_POSITIVE: ${PROMPT_PATH_POSITIVE:-/prompts/llm/positive.txt}
     ports:
       - "${BACKEND_PORT}:${BACKEND_PORT}"
     depends_on:

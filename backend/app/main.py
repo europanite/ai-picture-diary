@@ -3,13 +3,14 @@ import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 
+from backend.app.routers import diary
 import rag_store
 from database import engine
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from models import Base
-from routers import auth, rag, unko
+from routers import auth, rag
 from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
@@ -58,7 +59,7 @@ def create_app() -> FastAPI:
 
     app.include_router(auth.router)
     app.include_router(rag.router)
-    app.include_router(unko.router)
+    app.include_router(diary.router)
 
 
     # static /public
