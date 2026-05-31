@@ -67,7 +67,7 @@ jobs:
 
       - name: Configure AWS credentials via OIDC
         if: ${{ env.RAG_CHROMA_SOURCE == 's3' }}
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-region: ${{ vars.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
