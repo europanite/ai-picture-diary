@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260602_052339",
+      "kind": "event",
+      "date": "2026-06-02",
+      "created_at": "2026-06-01T20:23:39Z",
+      "text": "うんこが汚いです。\n英訳: B\nsmelly poop exists.",
+      "tweet": "うんこが汚いです。\n英訳: B\nsmelly poop exists.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260602_052339/index.html"
+    },
+    {
       "id": "feed_20260601_224517",
       "kind": "event",
       "date": "2026-06-01",
@@ -717,7 +729,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 41,
+  "count": 42,
   "page_size": 20,
   "total_pages": 3,
   "first_feed_url": "./feed/page_000.json",
