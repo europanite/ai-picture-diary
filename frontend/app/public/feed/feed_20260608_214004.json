@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-06-08T12:40:04Z",
+  "items": [
+    {
+      "id": "fixed-event-20260608_214004",
+      "kind": "event",
+      "date": "2026-06-08",
+      "created_at": "2026-06-08T12:40:04Z",
+      "text": "出力します。ランダムシード値に基づいて生成された例文とその英訳を提供いたします。\n英訳: 1行目: うんこが落ちた。\n2行目: The poop fell down.",
+      "tweet": "出力します。ランダムシード値に基づいて生成された例文とその英訳を提供いたします。\n英訳: 1行目: うんこが落ちた。\n2行目: The poop fell down.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/fixed-event-20260608_214004/index.html"
+    }
+  ]
+}
