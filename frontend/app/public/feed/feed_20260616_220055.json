@@ -2,7 +2,7 @@
   "updated_at": "2026-06-16T13:00:55Z",
   "items": [
     {
-      "id": "fixed-event-20260616_220055",
+      "id": "feed_20260616_220055",
       "kind": "event",
       "date": "2026-06-16",
       "created_at": "2026-06-16T13:00:55Z",
@@ -11,7 +11,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/fixed-event-20260616_220055/index.html"
+      "permalink": "./?post=feed_20260616_220055",
+      "legacy_id": "fixed-event-20260616_220055",
+      "image": "image/feed_20260616_220055.png",
+      "image_url": "image/feed_20260616_220055.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: 出力形式に従って作成します。 英訳: 1行目: うんこが大きすぎたので、犬が噛んでしまった。 2行目: The poop was too big, so the dog chewed it up., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-06-16T13:05:29Z"
     }
   ]
 }
