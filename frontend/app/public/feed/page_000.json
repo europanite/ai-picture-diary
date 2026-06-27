@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260627_125802",
+      "kind": "event",
+      "date": "2026-06-27",
+      "created_at": "2026-06-27T03:58:02Z",
+      "text": "出力形式に従って作成した例示を次に示します：。\n英訳: うんこは便盆に入れる。\nPoop goes in the potty.",
+      "tweet": "出力形式に従って作成した例示を次に示します：。\n英訳: うんこは便盆に入れる。\nPoop goes in the potty.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260627_125802/index.html"
+    },
+    {
       "id": "feed_20260627_025554",
       "kind": "event",
       "date": "2026-06-27",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-06-20T17:45:05Z"
-    },
-    {
-      "id": "feed_20260620_193747",
-      "kind": "event",
-      "date": "2026-06-20",
-      "created_at": "2026-06-20T10:37:47Z",
-      "text": "うんこが道にあり、人々が困った顔をしました。\n英訳: People looked confused as poop was found on the road.",
-      "tweet": "うんこが道にあり、人々が困った顔をしました。\n英訳: People looked confused as poop was found on the road.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260620_193747/index.html",
-      "legacy_id": "fixed-event-20260620_193747",
-      "image": "image/feed_20260620_193747.png",
-      "image_url": "image/feed_20260620_193747.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが道にあり、人々が困った顔をしました。 英訳: People looked confused as poop was found on the road., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-06-20T10:42:36Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 116,
+  "total_items": 117,
   "total_pages": 6,
   "next_feed_url": "./feed/page_001.json"
 }
