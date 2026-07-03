@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260703_124748",
+      "kind": "event",
+      "date": "2026-07-03",
+      "created_at": "2026-07-03T03:47:48Z",
+      "text": "1行目: うんこをThrowはやくThrow。\n英訳: 2行目: Hurry to throw the poop.",
+      "tweet": "1行目: うんこをThrowはやくThrow。\n英訳: 2行目: Hurry to throw the poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260703_124748/index.html"
+    },
+    {
       "id": "feed_20260703_025635",
       "kind": "event",
       "date": "2026-07-03",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-06-26T18:00:40Z"
-    },
-    {
-      "id": "feed_20260626_195733",
-      "kind": "event",
-      "date": "2026-06-26",
-      "created_at": "2026-06-26T10:57:33Z",
-      "text": "うんこがたくさんあります。\n英訳: There are many feces.",
-      "tweet": "うんこがたくさんあります。\n英訳: There are many feces.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260626_195733/index.html",
-      "legacy_id": "fixed-event-20260626_195733",
-      "image": "image/feed_20260626_195733.png",
-      "image_url": "image/feed_20260626_195733.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこがたくさんあります。 英訳: There are many feces., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-06-26T11:01:23Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 134,
+  "total_items": 135,
   "total_pages": 7,
   "next_feed_url": "./feed/page_001.json"
 }
