@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260708_030559",
+      "kind": "event",
+      "date": "2026-07-08",
+      "created_at": "2026-07-07T18:05:59Z",
+      "text": "うんこが気持ちいいです。\n英訳: Feeling good with poop.",
+      "tweet": "うんこが気持ちいいです。\n英訳: Feeling good with poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260708_030559/index.html"
+    },
+    {
       "id": "feed_20260707_201455",
       "kind": "event",
       "date": "2026-07-07",
@@ -371,32 +383,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-07-01T11:34:21Z"
-    },
-    {
-      "id": "feed_20260701_132318",
-      "kind": "event",
-      "date": "2026-07-01",
-      "created_at": "2026-07-01T04:23:18Z",
-      "text": "出力形式に従います：。\n英訳: 1行目: うんこが汚いから洗おう。\n2行目: I'll wash because the poop is dirty.",
-      "tweet": "出力形式に従います：。\n英訳: 1行目: うんこが汚いから洗おう。\n2行目: I'll wash because the poop is dirty.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260701_132318/index.html",
-      "legacy_id": "fixed-event-20260701_132318",
-      "image": "image/feed_20260701_132318.png",
-      "image_url": "image/feed_20260701_132318.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: 出力形式に従います：。 英訳: 1行目: うんこが汚いから洗おう。 2行目: I'll wash because the poop is dirty., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-07-01T04:27:47Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 148,
+  "total_items": 149,
   "total_pages": 8,
   "next_feed_url": "./feed/page_001.json"
 }
