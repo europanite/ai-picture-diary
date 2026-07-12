@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260712_122847",
+      "kind": "event",
+      "date": "2026-07-12",
+      "created_at": "2026-07-12T03:28:47Z",
+      "text": "出力形式に従います：。\n英訳: 1行目: うんこを捨てる前に、土嚢に入れておこう。\n2行目: Let's put the poop in a bag before we throw it away.",
+      "tweet": "出力形式に従います：。\n英訳: 1行目: うんこを捨てる前に、土嚢に入れておこう。\n2行目: Let's put the poop in a bag before we throw it away.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260712_122847/index.html"
+    },
+    {
       "id": "feed_20260712_020419",
       "kind": "event",
       "date": "2026-07-12",
@@ -371,32 +383,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-07-05T17:23:13Z"
-    },
-    {
-      "id": "feed_20260705_192302",
-      "kind": "event",
-      "date": "2026-07-05",
-      "created_at": "2026-07-05T10:23:02Z",
-      "text": "出力形式に従います:。\n英訳: うんこを蹴った。\nThe dirt was kicked.",
-      "tweet": "出力形式に従います:。\n英訳: うんこを蹴った。\nThe dirt was kicked.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260705_192302/index.html",
-      "legacy_id": "fixed-event-20260705_192302",
-      "image": "image/feed_20260705_192302.png",
-      "image_url": "image/feed_20260705_192302.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: 出力形式に従います:。 英訳: うんこを蹴った。 The dirt was kicked., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-07-05T10:27:27Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 161,
+  "total_items": 162,
   "total_pages": 9,
   "next_feed_url": "./feed/page_001.json"
 }
