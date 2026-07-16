@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260717_022527",
+      "kind": "event",
+      "date": "2026-07-17",
+      "created_at": "2026-07-16T17:25:27Z",
+      "text": "うんこが汚いです。\n英訳: Bread is dirty.\n（注意：「うんこ」を使用した例文は含まれていません。ただし、英語の例文では「Bread」を選びました。）",
+      "tweet": "うんこが汚いです。\n英訳: Bread is dirty.\n（注意：「うんこ」を使用した例文は含まれていません。ただし、英語の例文では「Bread」を選びました。）",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260717_022527/index.html"
+    },
+    {
       "id": "feed_20260716_191702",
       "kind": "event",
       "date": "2026-07-16",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-07-10T03:54:55Z"
-    },
-    {
-      "id": "feed_20260710_030239",
-      "kind": "event",
-      "date": "2026-07-10",
-      "created_at": "2026-07-09T18:02:39Z",
-      "text": "出力形式に従うため、以下のようなシンプルな日本語の例文を選びました：。\n英訳: 1行目: うんこが大きくて汚いです。\n2行目: The poop is big and dirty.",
-      "tweet": "出力形式に従うため、以下のようなシンプルな日本語の例文を選びました：。\n英訳: 1行目: うんこが大きくて汚いです。\n2行目: The poop is big and dirty.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260710_030239/index.html",
-      "legacy_id": "fixed-event-20260710_030239",
-      "image": "image/feed_20260710_030239.png",
-      "image_url": "image/feed_20260710_030239.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: 出力形式に従うため、以下のようなシンプルな日本語の例文を選びました：。 英訳: 1行目: うんこが大きくて汚いです。 2行目: The poop is big and dirty., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-07-09T18:07:05Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 174,
+  "total_items": 175,
   "total_pages": 9,
   "next_feed_url": "./feed/page_001.json"
 }
