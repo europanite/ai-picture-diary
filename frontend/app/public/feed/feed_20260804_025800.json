@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-08-03T17:58:00Z",
+  "items": [
+    {
+      "id": "fixed-event-20260804_025800",
+      "kind": "event",
+      "date": "2026-08-04",
+      "created_at": "2026-08-03T17:58:00Z",
+      "text": "出力形式に従います。以下の例を生成します。\n英訳: 1行目: うんこが大好きです。\n2行目: I love poop.",
+      "tweet": "出力形式に従います。以下の例を生成します。\n英訳: 1行目: うんこが大好きです。\n2行目: I love poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/fixed-event-20260804_025800/index.html"
+    }
+  ]
+}
