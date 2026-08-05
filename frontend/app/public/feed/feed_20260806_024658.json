@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-08-05T17:46:58Z",
+  "items": [
+    {
+      "id": "fixed-event-20260806_024658",
+      "kind": "event",
+      "date": "2026-08-06",
+      "created_at": "2026-08-05T17:46:58Z",
+      "text": "出力形式に従って以下のようなレスポンスを生成します。\n英訳: 1行目: うんこは嫌いです。\n2行目: I dislike poop.",
+      "tweet": "出力形式に従って以下のようなレスポンスを生成します。\n英訳: 1行目: うんこは嫌いです。\n2行目: I dislike poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/fixed-event-20260806_024658/index.html"
+    }
+  ]
+}
