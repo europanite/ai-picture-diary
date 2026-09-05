@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260905_204640",
+      "kind": "event",
+      "date": "2026-09-05",
+      "created_at": "2026-09-05T11:46:40Z",
+      "text": "うんこを拾う。\n英訳: One must pick up poop.",
+      "tweet": "うんこを拾う。\n英訳: One must pick up poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260905_204640/index.html"
+    },
+    {
       "id": "feed_20260905_125236",
       "kind": "event",
       "date": "2026-09-05",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-08-29T19:25:30Z"
-    },
-    {
-      "id": "feed_20260829_224538",
-      "kind": "event",
-      "date": "2026-08-29",
-      "created_at": "2026-08-29T13:45:38Z",
-      "text": "うんこが落ちてきいた。\n英訳: The poop fell on me.",
-      "tweet": "うんこが落ちてきいた。\n英訳: The poop fell on me.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260829_224538/index.html",
-      "legacy_id": "fixed-event-20260829_224538",
-      "image": "image/feed_20260829_224538.png",
-      "image_url": "image/feed_20260829_224538.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちてきいた。 英訳: The poop fell on me., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-08-29T13:50:28Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 318,
+  "total_items": 319,
   "total_pages": 16,
   "next_feed_url": "./feed/page_001.json"
 }
