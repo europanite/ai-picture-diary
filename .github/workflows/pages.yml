@@ -25,12 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ inputs.ref || 'main' }}
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -41,7 +41,7 @@ jobs:
           cat frontend/app/public/latest.json
 
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: "24"
           cache: "npm"
@@ -52,6 +52,20 @@ jobs:
         run: |
           set -euo pipefail
           npm ci
+          
+      - name: Generate sitemap
+        run: |
+          LASTMOD="$(git log -1 --format=%cs)"
+          cat > frontend/app/public/sitemap.xml <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+              <loc>https://europanite.github.io/ai-picture-diary/</loc>
+              <lastmod>${LASTMOD}</lastmod>
+            </url>
+          </urlset>
+          EOF
+          cat frontend/app/public/sitemap.xml
 
       - name: Export frontend web build
         working-directory: frontend/app
