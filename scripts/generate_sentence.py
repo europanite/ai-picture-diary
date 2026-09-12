@@ -12,7 +12,27 @@ from dotenv import load_dotenv
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PROMPT_PATH = PROJECT_ROOT / "scripts" / "prompts" / "llm" / "positive.txt"
+DEFAULT_PROMPT_PATH = PROJECT_ROOT / "prompts" / "llm" / "positive.txt"
+
+OUTPUT_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "text": {
+            "type": "string",
+            "description": "One Japanese N2-level example sentence containing うんこ",
+        },
+        "study_point": {
+            "type": "string",
+            "description": "One Japanese sentence explaining the N2 grammar used in text",
+        },
+        "translation_en": {
+            "type": "string",
+            "description": "One natural English translation of text",
+        },
+    },
+    "required": ["text", "study_point", "translation_en"],
+    "additionalProperties": False,
+}
 
 def render_prompt(template: str, seed_text: str) -> str:
     base = str(seed_text or "").strip()
@@ -64,6 +84,7 @@ def generate_once(base_url: str, model: str, prompt: str, timeout: int) -> str:
             "model": model,
             "prompt": prompt,
             "stream": False,
+            "format": OUTPUT_SCHEMA,
             "options": {
                 "temperature": 0.8,
             },
@@ -153,6 +174,8 @@ def is_valid_study_point(text: str, study_point: str) -> bool:
     if not study_point.strip():
         return False
 
+    if "『〜" not in study_point or "』" not in study_point:
+        return False
     return True
 
 def is_valid_translation_en(translation_en: str) -> bool:
@@ -241,11 +264,11 @@ def extract_json_payload(raw: str) -> dict[str, str]:
         raise ValueError(f"invalid translation_en field: {translation_en}")
 
     combined_text = "\n".join(
-        [
-            text,"\n",
-            f"学習ポイント: {study_point}","\n",
-            f"英訳: {translation_en}","\n",
-        ]
+        (
+            text,
+            f"学習ポイント: {study_point}",
+            f"英訳: {translation_en}",
+        )
     )
 
     return {
@@ -270,9 +293,9 @@ def main() -> int:
                 prompt=prompt,
                 timeout=int(settings["request_timeout"]),
             )
-            last_output = normalize_output(raw)
-            text = extract_text_payload(raw)
-            print(text)
+            last_output = raw.strip()
+            payload = extract_json_payload(raw)
+            print(payload["text"])
             return 0
 
         except (requests.RequestException, ValueError) as exc:
