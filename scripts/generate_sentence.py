@@ -20,14 +20,23 @@ OUTPUT_SCHEMA = {
         "text": {
             "type": "string",
             "description": "One Japanese N2-level example sentence containing うんこ",
+            "minLength": 12,
+            "maxLength": 90,
+            "pattern": "^[^\\r\\n。！？]*うんこ[^\\r\\n。！？]*[。！？]$",
         },
         "study_point": {
             "type": "string",
             "description": "One Japanese sentence explaining the N2 grammar used in text",
+            "minLength": 12,
+            "maxLength": 140,
+            "pattern": "^『〜[^』\\r\\n]+』[^\\r\\n。！？]*。$",
         },
         "translation_en": {
             "type": "string",
             "description": "One natural English translation of text",
+            "minLength": 4,
+            "maxLength": 180,
+            "pattern": "^[^\\r\\n.!?]+[.!?]$",
         },
     },
     "required": ["text", "study_point", "translation_en"],
@@ -232,12 +241,10 @@ def quality_check_mock(text: str) -> bool:
 
 
 def extract_json_payload(raw: str) -> dict[str, str]:
-    normalized = normalize_output(raw)
-
     try:
-        data = json.loads(normalized)
+        data = json.loads(raw)
     except json.JSONDecodeError as exc:
-        raise ValueError(f"output is not valid JSON: {normalized}") from exc
+        raise ValueError(f"output is not valid JSON: {raw}") from exc
 
     if not isinstance(data, dict):
         raise ValueError("output JSON must be an object")
@@ -285,6 +292,7 @@ def main() -> int:
     prompt = render_prompt(prompt_template, str(settings["prompt_seed"]))
 
     last_output = ""
+    last_error = ""
     for attempt in range(1, int(settings["max_retries"]) + 1):
         try:
             raw = generate_once(
@@ -299,9 +307,14 @@ def main() -> int:
             return 0
 
         except (requests.RequestException, ValueError) as exc:
-            print(f"[retry {attempt}] invalid output: {last_output or exc}", file=sys.stderr)
+            last_error = str(exc)
+            print(f"[retry {attempt}] {last_error}", file=sys.stderr)
+            if last_output:
+                print(f"Raw output: {last_output}", file=sys.stderr)
 
     print("Failed to generate a valid sentence text.", file=sys.stderr)
+    if last_error:
+        print(f"Last error: {last_error}", file=sys.stderr)
     if last_output:
         print(f"Last output: {last_output}", file=sys.stderr)
     return 1
