@@ -29,7 +29,7 @@ OUTPUT_SCHEMA = {
             "description": "One concise English sentence explaining the N2 grammar used in text",
             "minLength": 12,
             "maxLength": 220,
-            "pattern": "^The grammar pattern \\\"〜[^\\\"\\r\\n]+\\\" [^\\r\\n.!?]+[.!?]$",
+            "pattern": "^The grammar pattern 〜[^\\\"\\r\\n ]+ [^\\\"\\r\\n.!?]+[.!?]$",
         },
         "translation_en": {
             "type": "string",
@@ -170,11 +170,19 @@ def is_valid_study_point(text: str, study_point: str) -> bool:
     if "\n" in study_point or "\r" in study_point:
         return False
 
-    required_prefix = 'The grammar pattern "〜'
+    if '"' in study_point:
+        return False
+
+    required_prefix = "The grammar pattern 〜"
     if not study_point.startswith(required_prefix):
         return False
 
-    if '" ' not in study_point[len(required_prefix):]:
+    remainder = study_point[len(required_prefix):]
+    grammar_pattern, separator, explanation = remainder.partition(" ")
+    if not separator or not grammar_pattern or not explanation:
+        return False
+
+    if any(char.isspace() for char in grammar_pattern):
         return False
 
     if study_point[-1] not in ".!?":
