@@ -35,17 +35,17 @@ def test_is_valid_sentence_rejects_explanatory_prefix() -> None:
 def test_extract_json_payload_accepts_full_contract() -> None:
     raw = (
         '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。",'
+        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances or social expectations prevent someone from doing something.",'
         '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
     )
     payload = extract_json_payload(raw)
 
     assert payload["text"] == (
         "うんこが落ちている以上、そのままにしておくわけにはいかない。\n"
-        "学習ポイント: 『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。\n"
-        "英訳: As long as poop is lying there, we cannot just leave it as it is."
+        'Study point: The grammar pattern "〜わけにはいかない" means that circumstances or social expectations prevent someone from doing something.\n'
+        "English translation: As long as poop is lying there, we cannot just leave it as it is."
     )
-    assert "『〜わけにはいかない』" in payload["study_point"]
+    assert '"〜わけにはいかない"' in payload["study_point"]
     assert payload["translation_en"] == "As long as poop is lying there, we cannot just leave it as it is."
 
 
@@ -66,7 +66,7 @@ def test_extract_json_payload_rejects_empty_study_point() -> None:
 def test_extract_json_payload_rejects_empty_translation_en() -> None:
     raw = (
         '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。",'
+        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
         '"translation_en":""}'
     )
 
@@ -80,7 +80,7 @@ def test_extract_json_payload_rejects_empty_translation_en() -> None:
 def test_extract_json_payload_rejects_invalid_text_with_label() -> None:
     raw = (
         '{"text":"例文: うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。",'
+        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
         '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
     )
 
@@ -95,7 +95,7 @@ def test_extract_json_payload_accepts_multiline_json_after_normalization() -> No
     raw = """
     {
       "text": "うんこを放置しておくわけにはいかない。",
-      "study_point": "『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。",
+      "study_point": "The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",
       "translation_en": "We cannot simply leave the poop there."
     }
     """
@@ -108,7 +108,7 @@ def test_extract_json_payload_accepts_multiline_json_after_normalization() -> No
 def test_extract_json_payload_rejects_extra_keys() -> None:
     raw = (
         '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。",'
+        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
         '"translation_en":"As long as poop is lying there, we cannot just leave it as it is.",'
         '"extra":"ng"}'
     )
@@ -123,7 +123,7 @@ def test_extract_json_payload_rejects_extra_keys() -> None:
 def test_extract_json_payload_rejects_study_point_without_target_marker() -> None:
     raw = (
         '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"事情や常識のためにそうすることができないと述べるN2レベルの表現である。",'
+        '"study_point":"Circumstances prevent the action.",'
         '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
     )
 
@@ -137,7 +137,7 @@ def test_extract_json_payload_rejects_study_point_without_target_marker() -> Non
 def test_extract_json_payload_rejects_translation_with_label() -> None:
     raw = (
         '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"『〜わけにはいかない』は、事情や常識のためにそうすることができないと述べるN2レベルの表現である。",'
+        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
         '"translation_en":"English: As long as poop is lying there, we cannot just leave it as it is."}'
     )
 

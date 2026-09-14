@@ -26,10 +26,10 @@ OUTPUT_SCHEMA = {
         },
         "study_point": {
             "type": "string",
-            "description": "One Japanese sentence explaining the N2 grammar used in text",
+            "description": "One concise English sentence explaining the N2 grammar used in text",
             "minLength": 12,
-            "maxLength": 140,
-            "pattern": "^『〜[^』\\r\\n]+』[^\\r\\n。！？]*。$",
+            "maxLength": 220,
+            "pattern": "^The grammar pattern \\\"〜[^\\\"\\r\\n]+\\\" [^\\r\\n.!?]+[.!?]$",
         },
         "translation_en": {
             "type": "string",
@@ -170,21 +170,27 @@ def is_valid_study_point(text: str, study_point: str) -> bool:
     if "\n" in study_point or "\r" in study_point:
         return False
 
+    required_prefix = 'The grammar pattern "〜'
+    if not study_point.startswith(required_prefix):
+        return False
+
+    if '" ' not in study_point[len(required_prefix):]:
+        return False
+
+    if study_point[-1] not in ".!?":
+        return False
+
     banned_fragments = (
         "学習ポイント",
         "Study Point",
+        "Study point:",
         "ポイント:",
         "英訳",
-        "translation",
+        "Translation:",
     )
     if any(fragment in study_point for fragment in banned_fragments):
         return False
 
-    if not study_point.strip():
-        return False
-
-    if "『〜" not in study_point or "』" not in study_point:
-        return False
     return True
 
 def is_valid_translation_en(translation_en: str) -> bool:
@@ -273,8 +279,8 @@ def extract_json_payload(raw: str) -> dict[str, str]:
     combined_text = "\n".join(
         (
             text,
-            f"学習ポイント: {study_point}",
-            f"英訳: {translation_en}",
+            f"Study point: {study_point}",
+            f"English translation: {translation_en}",
         )
     )
 
