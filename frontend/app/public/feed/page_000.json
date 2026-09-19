@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260919_112042",
+      "kind": "event",
+      "date": "2026-09-19",
+      "created_at": "2026-09-19T02:20:42Z",
+      "text": "うんこを踏んで靴を洗う。\nStudy point: The grammar pattern 〜くて（から）はは、表示した状態が引き続き状態を表す。This grammar pattern is used to indicate a state that continues from a state that has already occurred.\nEnglish translation: Washing shoes with poop.",
+      "tweet": "うんこを踏んで靴を洗う。\nStudy point: The grammar pattern 〜くて（から）はは、表示した状態が引き続き状態を表す。This grammar pattern is used to indicate a state that continues from a state that has already occurred.\nEnglish translation: Washing shoes with poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260919_112042/index.html"
+    },
+    {
       "id": "feed_20260918_111815",
       "kind": "event",
       "date": "2026-09-18",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-09-10T04:08:04Z"
-    },
-    {
-      "id": "feed_20260910_041147",
-      "kind": "event",
-      "date": "2026-09-10",
-      "created_at": "2026-09-09T19:11:47Z",
-      "text": "うんこが落ちた。\n英訳: The poop fell.",
-      "tweet": "うんこが落ちた。\n英訳: The poop fell.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260910_041147/index.html",
-      "legacy_id": "fixed-event-20260910_041147",
-      "image": "image/feed_20260910_041147.png",
-      "image_url": "image/feed_20260910_041147.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが落ちた。 英訳: The poop fell., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-09-09T19:16:50Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 351,
+  "total_items": 352,
   "total_pages": 18,
   "next_feed_url": "./feed/page_001.json"
 }
