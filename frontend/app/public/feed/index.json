@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260925_113629",
+      "kind": "event",
+      "date": "2026-09-25",
+      "created_at": "2026-09-25T02:36:29Z",
+      "text": "うんこを捨てるときに手を洗うのはうんこを嫌がる子供にとって大切です。\nStudy point: The grammar pattern 〜にとって大切です is used to emphasize the importance of something for a specific person or group.\nEnglish translation: It is important for children who dislike poops to wash their hands when throwing away poop.",
+      "tweet": "うんこを捨てるときに手を洗うのはうんこを嫌がる子供にとって大切です。\nStudy point: The grammar pattern 〜にとって大切です is used to emphasize the importance of something for a specific person or group.\nEnglish translation: It is important for children who dislike poops to wash their hands when throwing away poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260925_113629/index.html"
+    },
+    {
       "id": "feed_20260925_011116",
       "kind": "event",
       "date": "2026-09-25",
@@ -7101,7 +7113,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 363,
+  "count": 364,
   "page_size": 20,
   "total_pages": 19,
   "first_feed_url": "./feed/page_000.json",
