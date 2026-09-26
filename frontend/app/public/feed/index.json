@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260926_113947",
+      "kind": "event",
+      "date": "2026-09-26",
+      "created_at": "2026-09-26T02:39:47Z",
+      "text": "うんこを捨てるのではなく、庭の隅で自然に分解させるべきです。\nStudy point: The grammar pattern 〜べきです。 (should do〜) は、相手に行動を勧めることや、より良い行動を促すために使われます。これは日本語の敬語文法の一部で、相手に敬意を表すことができます。例えば、『あなたは遅刻するのではなく、早起きして準備をするべきです。』と使うことができます。この文法は英語で『You should not do〜, but do〜 instead.\nEnglish translation: You should not throw the poop, but let it decompose naturally in the corner of the yard.",
+      "tweet": "うんこを捨てるのではなく、庭の隅で自然に分解させるべきです。\nStudy point: The grammar pattern 〜べきです。 (should do〜) は、相手に行動を勧めることや、より良い行動を促すために使われます。これは日本語の敬語文法の一部で、相手に敬意を表すことができます。例えば、『あなたは遅刻するのではなく、早起きして準備をするべきです。』と使うことができます。この文法は英語で『You should not do〜, but do〜 instead.\nEnglish translation: You should not throw the poop, but let it decompose naturally in the corner of the yard.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260926_113947/index.html"
+    },
+    {
       "id": "feed_20260926_011209",
       "kind": "event",
       "date": "2026-09-26",
@@ -7141,7 +7153,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 365,
+  "count": 366,
   "page_size": 20,
   "total_pages": 19,
   "first_feed_url": "./feed/page_000.json",
