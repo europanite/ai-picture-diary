@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260927_003013",
+      "kind": "event",
+      "date": "2026-09-27",
+      "created_at": "2026-09-26T15:30:13Z",
+      "text": "うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。\nStudy point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language.\nEnglish translation: Children who dislike poop tend to enjoy play to learn about poop.",
+      "tweet": "うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。\nStudy point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language.\nEnglish translation: Children who dislike poop tend to enjoy play to learn about poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260927_003013/index.html"
+    },
+    {
       "id": "feed_20260926_113947",
       "kind": "event",
       "date": "2026-09-26",
@@ -7161,7 +7173,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 366,
+  "count": 367,
   "page_size": 20,
   "total_pages": 19,
   "first_feed_url": "./feed/page_000.json",

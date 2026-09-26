@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260927_003013",
+      "kind": "event",
+      "date": "2026-09-27",
+      "created_at": "2026-09-26T15:30:13Z",
+      "text": "うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。\nStudy point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language.\nEnglish translation: Children who dislike poop tend to enjoy play to learn about poop.",
+      "tweet": "うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。\nStudy point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language.\nEnglish translation: Children who dislike poop tend to enjoy play to learn about poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260927_003013/index.html"
+    },
+    {
       "id": "feed_20260926_113947",
       "kind": "event",
       "date": "2026-09-26",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-09-16T15:59:45Z"
-    },
-    {
-      "id": "feed_20260916_112759",
-      "kind": "event",
-      "date": "2026-09-16",
-      "created_at": "2026-09-16T02:27:59Z",
-      "text": "うんこが大きすぎて、便器に入らなかった。\nStudy point: The grammar pattern 〜ては〜 means 'even though' or 'despite'.\nEnglish translation: Even though the poop was too big, it didn't fit into the toilet.",
-      "tweet": "うんこが大きすぎて、便器に入らなかった。\nStudy point: The grammar pattern 〜ては〜 means 'even though' or 'despite'.\nEnglish translation: Even though the poop was too big, it didn't fit into the toilet.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260916_112759/index.html",
-      "legacy_id": "fixed-event-20260916_112759",
-      "image": "image/feed_20260916_112759.png",
-      "image_url": "image/feed_20260916_112759.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこが大きすぎて、便器に入らなかった。 Study point: The grammar pattern 〜ては〜 means 'even though' or 'despite'. English translation: Even though the poop was too big, it didn't fit into the toilet., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-09-16T02:33:33Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 366,
+  "total_items": 367,
   "total_pages": 19,
   "next_feed_url": "./feed/page_001.json"
 }
