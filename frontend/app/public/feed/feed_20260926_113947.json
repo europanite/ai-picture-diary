@@ -2,7 +2,7 @@
   "updated_at": "2026-09-26T02:39:47Z",
   "items": [
     {
-      "id": "fixed-event-20260926_113947",
+      "id": "feed_20260926_113947",
       "kind": "event",
       "date": "2026-09-26",
       "created_at": "2026-09-26T02:39:47Z",
@@ -11,7 +11,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/fixed-event-20260926_113947/index.html"
+      "permalink": "./?post=feed_20260926_113947",
+      "legacy_id": "fixed-event-20260926_113947",
+      "image": "image/feed_20260926_113947.png",
+      "image_url": "image/feed_20260926_113947.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこを捨てるのではなく、庭の隅で自然に分解させるべきです。 Study point: The grammar pattern 〜べきです。 (should do〜) は、相手に行動を勧めることや、より良い行動を促すために使われます。これは日本語の敬語文法の一部で、相手に敬意を表すことができます。例えば、『あなたは遅刻するのではなく、早起きして準備をするべきです。』と使うことができます。この文法は英語で『You should not do〜, but do〜 instead., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-09-26T02:44:30Z"
     }
   ]
 }
