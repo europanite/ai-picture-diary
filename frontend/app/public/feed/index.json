@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20260928_010943",
+      "kind": "event",
+      "date": "2026-09-28",
+      "created_at": "2026-09-27T16:09:43Z",
+      "text": "うんこが汚いから、掃除をしましょう。\nStudy point: The grammar pattern 〜が...だから、...しましょう is used to introduce a reason for taking an action.\nEnglish translation: The うんこが汚いから、掃除をしましょう.",
+      "tweet": "うんこが汚いから、掃除をしましょう。\nStudy point: The grammar pattern 〜が...だから、...しましょう is used to introduce a reason for taking an action.\nEnglish translation: The うんこが汚いから、掃除をしましょう.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20260928_010943/index.html"
+    },
+    {
       "id": "feed_20260927_113713",
       "kind": "event",
       "date": "2026-09-27",
@@ -7201,7 +7213,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 368,
+  "count": 369,
   "page_size": 20,
   "total_pages": 19,
   "first_feed_url": "./feed/page_000.json",
