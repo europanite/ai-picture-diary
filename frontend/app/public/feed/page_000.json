@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261003_020633",
+      "kind": "event",
+      "date": "2026-10-03",
+      "created_at": "2026-10-02T17:06:33Z",
+      "text": "うんこをすすぐと、彼女は満足した表情を浮かべました。\nStudy point: The grammar pattern 〜と、は，表示動作或状态的两个动作或状态之间存在着因果关系，即前一个动作或状态导致了后一个动作或状态。例えば、AとB、BとC。この例では、うんこをすすぐ（彼女がうんこを洗った）と、彼女は満足した表情を浮かべた（彼女は満足した）が、うんこをすすぐが彼女に満足した表情を浮かべた結果となった。これは英語でThe washing of the stool caused her to show a satisfied expressionという形で表現することができます。この文法パターンは、日本語で因果関係を効果的に表現するのに役立ちます。英語話者にとっても、文脈からこのパターンが因果関係を意味することを理解することが容易です。例えば、JohnとHe went to the store, JohnとHe bought some snacks.\nEnglish translation: After she washed her bottom, she showed a satisfied expression.",
+      "tweet": "うんこをすすぐと、彼女は満足した表情を浮かべました。\nStudy point: The grammar pattern 〜と、は，表示動作或状态的两个动作或状态之间存在着因果关系，即前一个动作或状态导致了后一个动作或状态。例えば、AとB、BとC。この例では、うんこをすすぐ（彼女がうんこを洗った）と、彼女は満足した表情を浮かべた（彼女は満足した）が、うんこをすすぐが彼女に満足した表情を浮かべた結果となった。これは英語でThe washing of the stool caused her to show a satisfied expressionという形で表現することができます。この文法パターンは、日本語で因果関係を効果的に表現するのに役立ちます。英語話者にとっても、文脈からこのパターンが因果関係を意味することを理解することが容易です。例えば、JohnとHe went to the store, JohnとHe bought some snacks.\nEnglish translation: After she washed her bottom, she showed a satisfied expression.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261003_020633/index.html"
+    },
+    {
       "id": "feed_20261002_121408",
       "kind": "event",
       "date": "2026-10-02",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-09-23T02:40:46Z"
-    },
-    {
-      "id": "feed_20260923_010510",
-      "kind": "event",
-      "date": "2026-09-23",
-      "created_at": "2026-09-22T16:05:10Z",
-      "text": "うんこは人間の排泄物であり、尿と便の総称です。\nStudy point: The grammar pattern 〜の総称（totals）は、特定の種類をまとめた名詞の構成で、ここでは「うんこ」と「尿」という2つの種類をまとめています。この構文は日本語で複数の概念を一つの単語で表現する際によく使用されます。例：犬はペットの総称（totals）です。例えば、猫や鳥も犬の総称（totals）に含まれます。これは英語でもsimilarな表現が使われます。例えば、Dogs are part of the total of pets.\nEnglish translation: Dogs are part of the total of pets.",
-      "tweet": "うんこは人間の排泄物であり、尿と便の総称です。\nStudy point: The grammar pattern 〜の総称（totals）は、特定の種類をまとめた名詞の構成で、ここでは「うんこ」と「尿」という2つの種類をまとめています。この構文は日本語で複数の概念を一つの単語で表現する際によく使用されます。例：犬はペットの総称（totals）です。例えば、猫や鳥も犬の総称（totals）に含まれます。これは英語でもsimilarな表現が使われます。例えば、Dogs are part of the total of pets.\nEnglish translation: Dogs are part of the total of pets.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260923_010510/index.html",
-      "legacy_id": "fixed-event-20260923_010510",
-      "image": "image/feed_20260923_010510.png",
-      "image_url": "image/feed_20260923_010510.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこは人間の排泄物であり、尿と便の総称です。 Study point: The grammar pattern 〜の総称（totals）は、特定の種類をまとめた名詞の構成で、ここでは「うんこ」と「尿」という2つの種類をまとめています。この構文は日本語で複数の概念を一つの単語で表現する際によく使用されます。例：犬はペットの総称（totals）です。例えば、猫や鳥も犬の総称（totals）に含まれます。これは英語でもsimilarな表現が使われます。例えば、Dogs are p, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-09-22T16:10:00Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 378,
+  "total_items": 379,
   "total_pages": 19,
   "next_feed_url": "./feed/page_001.json"
 }
