@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261003_120018",
+      "kind": "event",
+      "date": "2026-10-03",
+      "created_at": "2026-10-03T03:00:18Z",
+      "text": "うんこを舐めないでください。\nStudy point: The grammar pattern 〜ないでください is commonly used in polite requests in Japanese.\nEnglish translation: Don't lick the poop, please.",
+      "tweet": "うんこを舐めないでください。\nStudy point: The grammar pattern 〜ないでください is commonly used in polite requests in Japanese.\nEnglish translation: Don't lick the poop, please.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261003_120018/index.html"
+    },
+    {
       "id": "feed_20261003_020633",
       "kind": "event",
       "date": "2026-10-03",
@@ -7421,7 +7433,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 379,
+  "count": 380,
   "page_size": 20,
   "total_pages": 19,
   "first_feed_url": "./feed/page_000.json",
