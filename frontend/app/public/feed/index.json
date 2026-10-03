@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261004_002753",
+      "kind": "event",
+      "date": "2026-10-04",
+      "created_at": "2026-10-03T15:27:53Z",
+      "text": "うんこを捨てるのは難しいです。\nStudy point: The grammar pattern 〜ないのは難しいです。 can express that something is difficult to do.\nEnglish translation: It's difficult to throw away the poop.",
+      "tweet": "うんこを捨てるのは難しいです。\nStudy point: The grammar pattern 〜ないのは難しいです。 can express that something is difficult to do.\nEnglish translation: It's difficult to throw away the poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261004_002753/index.html"
+    },
+    {
       "id": "feed_20261003_120018",
       "kind": "event",
       "date": "2026-10-03",
@@ -7441,9 +7453,9 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 380,
+  "count": 381,
   "page_size": 20,
-  "total_pages": 19,
+  "total_pages": 20,
   "first_feed_url": "./feed/page_000.json",
   "pages": [
     "./feed/page_000.json",
@@ -7464,6 +7476,7 @@
     "./feed/page_015.json",
     "./feed/page_016.json",
     "./feed/page_017.json",
-    "./feed/page_018.json"
+    "./feed/page_018.json",
+    "./feed/page_019.json"
   ]
 }
