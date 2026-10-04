@@ -2,7 +2,7 @@
   "updated_at": "2026-10-04T03:29:37Z",
   "items": [
     {
-      "id": "fixed-event-20261004_122937",
+      "id": "feed_20261004_122937",
       "kind": "event",
       "date": "2026-10-04",
       "created_at": "2026-10-04T03:29:37Z",
@@ -11,7 +11,15 @@
       "place": "",
       "links": [],
       "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/fixed-event-20261004_122937/index.html"
+      "permalink": "./?post=feed_20261004_122937",
+      "legacy_id": "fixed-event-20261004_122937",
+      "image": "image/feed_20261004_122937.png",
+      "image_url": "image/feed_20261004_122937.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこは人間以外の動物にとって必要な食べ物ではありません。 Study point: The grammar pattern 〜ないもの (na mono) は、特定の事物や状況に対する否定を表します。例えば、人間以外の動物にとってうんこは必要な食べ物ではありません。これは、日本語の否定表現の一つです。例えば、The grammary pattern 〜ないもの (na mono) is used to express a negative statement about a, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-10-04T03:34:21Z"
     }
   ]
 }
