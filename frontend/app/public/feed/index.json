@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261004_122937",
+      "kind": "event",
+      "date": "2026-10-04",
+      "created_at": "2026-10-04T03:29:37Z",
+      "text": "うんこは人間以外の動物にとって必要な食べ物ではありません。\nStudy point: The grammar pattern 〜ないもの (na mono) は、特定の事物や状況に対する否定を表します。例えば、人間以外の動物にとってうんこは必要な食べ物ではありません。これは、日本語の否定表現の一つです。例えば、The grammary pattern 〜ないもの (na mono) is used to express a negative statement about a specific thing or situation.\nEnglish translation: Not all animals except humans need poop as a food.",
+      "tweet": "うんこは人間以外の動物にとって必要な食べ物ではありません。\nStudy point: The grammar pattern 〜ないもの (na mono) は、特定の事物や状況に対する否定を表します。例えば、人間以外の動物にとってうんこは必要な食べ物ではありません。これは、日本語の否定表現の一つです。例えば、The grammary pattern 〜ないもの (na mono) is used to express a negative statement about a specific thing or situation.\nEnglish translation: Not all animals except humans need poop as a food.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261004_122937/index.html"
+    },
+    {
       "id": "feed_20261004_002753",
       "kind": "event",
       "date": "2026-10-04",
@@ -7461,7 +7473,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 381,
+  "count": 382,
   "page_size": 20,
   "total_pages": 20,
   "first_feed_url": "./feed/page_000.json",
