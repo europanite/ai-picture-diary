@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261007_122447",
+      "kind": "event",
+      "date": "2026-10-07",
+      "created_at": "2026-10-07T03:24:47Z",
+      "text": "うんこは人間の一部であり、体の一部である。\nStudy point: The grammar pattern 〜の一部であり、〜の一部である。 expresses the concept of being part of something.\nEnglish translation: The text mentions that feces is part of a person, and part of the body.",
+      "tweet": "うんこは人間の一部であり、体の一部である。\nStudy point: The grammar pattern 〜の一部であり、〜の一部である。 expresses the concept of being part of something.\nEnglish translation: The text mentions that feces is part of a person, and part of the body.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261007_122447/index.html"
+    },
+    {
       "id": "feed_20261007_023923",
       "kind": "event",
       "date": "2026-10-07",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-09-27T02:41:22Z"
-    },
-    {
-      "id": "feed_20260927_003013",
-      "kind": "event",
-      "date": "2026-09-27",
-      "created_at": "2026-09-26T15:30:13Z",
-      "text": "うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。\nStudy point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language.\nEnglish translation: Children who dislike poop tend to enjoy play to learn about poop.",
-      "tweet": "うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。\nStudy point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language.\nEnglish translation: Children who dislike poop tend to enjoy play to learn about poop.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20260927_003013/index.html",
-      "legacy_id": "fixed-event-20260927_003013",
-      "image": "image/feed_20260927_003013.png",
-      "image_url": "image/feed_20260927_003013.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこを嫌がる子どもは、うんこを知らせるための遊びを好むことが多いです。 Study point: The grammar pattern 〜が〜をすることが多いです is used to indicate a tendency or preference, which is a common feature in Japanese language. English translation: Children who dislike poop tend to enjoy p, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-09-26T15:35:11Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 386,
+  "total_items": 387,
   "total_pages": 20,
   "next_feed_url": "./feed/page_001.json"
 }
