@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261009_031343",
+      "kind": "event",
+      "date": "2026-10-09",
+      "created_at": "2026-10-08T18:13:43Z",
+      "text": "うんこを嫌うのは、うんこを嫌う人だけです。\nStudy point: The grammar pattern 〜ないのは、〜ない人だけです。 expresses that something is only true for a particular group of people.\nEnglish translation: The only people who don't like poop are the people who don't like poop.",
+      "tweet": "うんこを嫌うのは、うんこを嫌う人だけです。\nStudy point: The grammar pattern 〜ないのは、〜ない人だけです。 expresses that something is only true for a particular group of people.\nEnglish translation: The only people who don't like poop are the people who don't like poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261009_031343/index.html"
+    },
+    {
       "id": "feed_20261008_124503",
       "kind": "event",
       "date": "2026-10-08",
@@ -7621,7 +7633,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 389,
+  "count": 390,
   "page_size": 20,
   "total_pages": 20,
   "first_feed_url": "./feed/page_000.json",
