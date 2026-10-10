@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261010_122746",
+      "kind": "event",
+      "date": "2026-10-10",
+      "created_at": "2026-10-10T03:27:46Z",
+      "text": "うんこが臭うから、窓を開けて換気をすることを忘れないでください。\nStudy point: The grammar pattern 〜なから is used to indicate that something will happen or is likely to happen because of a previous action or condition.\nEnglish translation: Because the poop stinks, don't forget to open the window for ventilation.",
+      "tweet": "うんこが臭うから、窓を開けて換気をすることを忘れないでください。\nStudy point: The grammar pattern 〜なから is used to indicate that something will happen or is likely to happen because of a previous action or condition.\nEnglish translation: Because the poop stinks, don't forget to open the window for ventilation.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261010_122746/index.html"
+    },
+    {
       "id": "feed_20261010_024629",
       "kind": "event",
       "date": "2026-10-10",
@@ -7681,7 +7693,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 392,
+  "count": 393,
   "page_size": 20,
   "total_pages": 20,
   "first_feed_url": "./feed/page_000.json",
