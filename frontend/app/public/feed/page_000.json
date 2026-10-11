@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261012_020451",
+      "kind": "event",
+      "date": "2026-10-12",
+      "created_at": "2026-10-11T17:04:51Z",
+      "text": "うんこは便器に捨てられるべきです。\nStudy point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations.\nEnglish translation: It is supposed to be thrown away in the toilet.",
+      "tweet": "うんこは便器に捨てられるべきです。\nStudy point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations.\nEnglish translation: It is supposed to be thrown away in the toilet.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261012_020451/index.html"
+    },
+    {
       "id": "feed_20261011_120036",
       "kind": "event",
       "date": "2026-10-11",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-10-01T17:51:28Z"
-    },
-    {
-      "id": "feed_20261001_121217",
-      "kind": "event",
-      "date": "2026-10-01",
-      "created_at": "2026-10-01T03:12:17Z",
-      "text": "うんこをすすぐと、私の顔が汚れました。\nStudy point: The grammar pattern 〜と(...)と(...)は、二つの事実や結果を同時に述べるのに使われます。この文では、うんこをすすぐと、同時に私の顔が汚れましたという結果が述べられています。この文法は英語で'Both... and'という表現で表現できます。例えば、'Both the sun and the moon are in the sky tonight'というように使うことができます。日本語の文はそのまま英語に置き換えることができます。日本語: うんこをすすぐと、私の顔が汚れました。英語: Both I flushed my toilet and my face became dirty tonight.\nEnglish translation: Both I flushed my toilet and my face became dirty tonight.",
-      "tweet": "うんこをすすぐと、私の顔が汚れました。\nStudy point: The grammar pattern 〜と(...)と(...)は、二つの事実や結果を同時に述べるのに使われます。この文では、うんこをすすぐと、同時に私の顔が汚れましたという結果が述べられています。この文法は英語で'Both... and'という表現で表現できます。例えば、'Both the sun and the moon are in the sky tonight'というように使うことができます。日本語の文はそのまま英語に置き換えることができます。日本語: うんこをすすぐと、私の顔が汚れました。英語: Both I flushed my toilet and my face became dirty tonight.\nEnglish translation: Both I flushed my toilet and my face became dirty tonight.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261001_121217/index.html",
-      "legacy_id": "fixed-event-20261001_121217",
-      "image": "image/feed_20261001_121217.png",
-      "image_url": "image/feed_20261001_121217.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこをすすぐと、私の顔が汚れました。 Study point: The grammar pattern 〜と(...)と(...)は、二つの事実や結果を同時に述べるのに使われます。この文では、うんこをすすぐと、同時に私の顔が汚れましたという結果が述べられています。この文法は英語で'Both... and'という表現で表現できます。例えば、'Both the sun and the moon are in the sky tonight'というように使うことができます。日本語, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-10-01T03:16:46Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 395,
+  "total_items": 396,
   "total_pages": 20,
   "next_feed_url": "./feed/page_001.json"
 }

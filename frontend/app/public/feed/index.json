@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261012_020451",
+      "kind": "event",
+      "date": "2026-10-12",
+      "created_at": "2026-10-11T17:04:51Z",
+      "text": "うんこは便器に捨てられるべきです。\nStudy point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations.\nEnglish translation: It is supposed to be thrown away in the toilet.",
+      "tweet": "うんこは便器に捨てられるべきです。\nStudy point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations.\nEnglish translation: It is supposed to be thrown away in the toilet.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261012_020451/index.html"
+    },
+    {
       "id": "feed_20261011_120036",
       "kind": "event",
       "date": "2026-10-11",
@@ -7741,7 +7753,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 395,
+  "count": 396,
   "page_size": 20,
   "total_pages": 20,
   "first_feed_url": "./feed/page_000.json",
