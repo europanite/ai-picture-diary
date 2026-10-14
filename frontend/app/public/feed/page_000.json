@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261015_011427",
+      "kind": "event",
+      "date": "2026-10-15",
+      "created_at": "2026-10-14T16:14:27Z",
+      "text": "うんこをかくのは嫌だが、うんこをかくのがうまいのは認めざるを得ない。\nStudy point: The grammar pattern 〜ながらは、複雑な状況や行動の複数の要素を表す際に使用されます。例えば、この文では「うんこをかく」の二つの異なる側面、つまり「嫌いなこと」(うんこをかく)と「うまいこと」(うんこをかくのがうまい)を同時に示しています。英語ではこのような状況を表現する時に、このような複雑な要素を一つの文脈にまとめます。例えば、『I like playing basketball, but I don't like the practice sessions.\nEnglish translation: I like playing basketball, but I don't like the practice sessions.",
+      "tweet": "うんこをかくのは嫌だが、うんこをかくのがうまいのは認めざるを得ない。\nStudy point: The grammar pattern 〜ながらは、複雑な状況や行動の複数の要素を表す際に使用されます。例えば、この文では「うんこをかく」の二つの異なる側面、つまり「嫌いなこと」(うんこをかく)と「うまいこと」(うんこをかくのがうまい)を同時に示しています。英語ではこのような状況を表現する時に、このような複雑な要素を一つの文脈にまとめます。例えば、『I like playing basketball, but I don't like the practice sessions.\nEnglish translation: I like playing basketball, but I don't like the practice sessions.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261015_011427/index.html"
+    },
+    {
       "id": "feed_20261014_114814",
       "kind": "event",
       "date": "2026-10-14",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-10-04T16:17:40Z"
-    },
-    {
-      "id": "feed_20261004_122937",
-      "kind": "event",
-      "date": "2026-10-04",
-      "created_at": "2026-10-04T03:29:37Z",
-      "text": "うんこは人間以外の動物にとって必要な食べ物ではありません。\nStudy point: The grammar pattern 〜ないもの (na mono) は、特定の事物や状況に対する否定を表します。例えば、人間以外の動物にとってうんこは必要な食べ物ではありません。これは、日本語の否定表現の一つです。例えば、The grammary pattern 〜ないもの (na mono) is used to express a negative statement about a specific thing or situation.\nEnglish translation: Not all animals except humans need poop as a food.",
-      "tweet": "うんこは人間以外の動物にとって必要な食べ物ではありません。\nStudy point: The grammar pattern 〜ないもの (na mono) は、特定の事物や状況に対する否定を表します。例えば、人間以外の動物にとってうんこは必要な食べ物ではありません。これは、日本語の否定表現の一つです。例えば、The grammary pattern 〜ないもの (na mono) is used to express a negative statement about a specific thing or situation.\nEnglish translation: Not all animals except humans need poop as a food.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261004_122937/index.html",
-      "legacy_id": "fixed-event-20261004_122937",
-      "image": "image/feed_20261004_122937.png",
-      "image_url": "image/feed_20261004_122937.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこは人間以外の動物にとって必要な食べ物ではありません。 Study point: The grammar pattern 〜ないもの (na mono) は、特定の事物や状況に対する否定を表します。例えば、人間以外の動物にとってうんこは必要な食べ物ではありません。これは、日本語の否定表現の一つです。例えば、The grammary pattern 〜ないもの (na mono) is used to express a negative statement about a, plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-10-04T03:34:21Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 401,
+  "total_items": 402,
   "total_pages": 21,
   "next_feed_url": "./feed/page_001.json"
 }
