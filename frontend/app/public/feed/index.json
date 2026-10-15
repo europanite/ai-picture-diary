@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261015_112722",
+      "kind": "event",
+      "date": "2026-10-15",
+      "created_at": "2026-10-15T02:27:22Z",
+      "text": "うんこをすすぐと、手が汚れてしまいました。\nStudy point: The grammar pattern 〜と、Xすることができる means 'to be able to do something by doing something else', emphasizing the ability to do something as a result of doing another thing.\nEnglish translation: I got dirty by washing the poop.",
+      "tweet": "うんこをすすぐと、手が汚れてしまいました。\nStudy point: The grammar pattern 〜と、Xすることができる means 'to be able to do something by doing something else', emphasizing the ability to do something as a result of doing another thing.\nEnglish translation: I got dirty by washing the poop.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261015_112722/index.html"
+    },
+    {
       "id": "feed_20261015_011427",
       "kind": "event",
       "date": "2026-10-15",
@@ -7881,7 +7893,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 402,
+  "count": 403,
   "page_size": 20,
   "total_pages": 21,
   "first_feed_url": "./feed/page_000.json",
