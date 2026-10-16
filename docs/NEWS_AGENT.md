@@ -299,18 +299,23 @@ The scheduled pipeline uses the same Docker Compose services as local developmen
 2. Fetch RSS headlines and select three distinctive English news terms.
 3. Generate and validate a first-person English fictional diary.
 4. Publish it to `frontend/app/public/` with source articles and keyword scores.
-5. Optionally attempt SDXL illustration; rebuild feed pages regardless.
+5. Attempt a 512px SD-Turbo illustration on CPU; rebuild feed pages regardless.
 6. Commit generated public assets to `main`, then invoke the existing Pages
    deployment workflow. A failed text generation aborts publication; a failed
    optional image generation does not discard a validated diary.
 
 In the GitHub repository, **Actions → Feed → Run workflow** runs the pipeline
-manually. Use the optional **illustrate** input to try SDXL on a manually
-started workflow. **Scheduled runs produce text and its feed/page by default**.
-To also attempt daily illustrations, set the repository Actions variable
-`NEWS_IMAGE_ENABLED` to `true`. Hosted GitHub runners do not provide a GPU by
-default; SDXL on hosted CPU can be slow, run out of disk or memory, or fail.
-For reliable high-resolution illustrations consider a self-hosted GPU runner.
+manually. **Illustration is enabled by default** on both scheduled and manual
+runs. Disable it once with the manual **illustrate** input, or disable it on
+scheduled runs by setting the Actions variable `NEWS_IMAGE_ENABLED=false`.
+The hosted runner has no GPU: for scheduled runs the worker uses the smaller
+`stabilityai/sd-turbo` model at 512px with one sampling step and guidance 0.
+Actual CPU image generation still depends on memory, disk, and model access;
+the image stage is best-effort and does not block publication of a valid text
+entry. A GPU runner is preferable for high-quality, reliable illustration.
+
+News URLs and selection metrics remain in feed JSON for reproducibility, but
+links to the news articles are not shown in the website feed or post pages.
 
 The scheduled workflow must be **committed to the default branch** (currently
 assumed to be `main`), and Actions must be enabled. Set **Settings → Actions →

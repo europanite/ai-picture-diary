@@ -1956,7 +1956,7 @@ const getImageUrisForItem = useCallback(
                     <FeedBubbleImage uris={imageUris} />
                     <Text style={{ color: "#000000", marginTop: 8, fontSize: 16, lineHeight: 22 }}>{item.text}</Text>
 
-                    {Array.isArray(item.links) && item.links.length > 0 ? (
+                    {item.kind !== "news_diary" && Array.isArray(item.links) && item.links.length > 0 ? (
                       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 6, marginTop: 8 }}>
                         {item.links.slice(0, 2).map((link, idx) => (
                           <Pressable

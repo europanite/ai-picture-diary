@@ -85,7 +85,7 @@ NEGATIVE_TMPL = _load_prompt_template(
 )
 STEPS = int(os.environ.get("STEPS", "6"))
 GUIDANCE_SCALE = float(os.environ.get("GUIDANCE_SCALE", "2.0"))
-SEED_OVERRIDE = (os.environ.get("SEED"))
+SEED_OVERRIDE = (os.environ.get("SEED") or "").strip()
 SEED_OFFSET = int(os.environ.get("SEED_OFFSET", "0"))
 DEVICE = "cpu"  # GitHub Actions runner is typically CPU for this job
 

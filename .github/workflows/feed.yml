@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       illustrate:
-        description: 'Attempt local SDXL illustration on the hosted CPU runner'
+        description: 'Generate an illustration for the diary (default: on)'
         type: boolean
-        default: false
+        default: true
   workflow_call:
     inputs:
       slot:
@@ -19,10 +19,10 @@ on:
         type: string
         default: 'event'
       illustrate:
-        description: 'Attempt CPU illustration'
+        description: 'Generate an illustration for the diary'
         required: false
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
@@ -48,8 +48,8 @@ jobs:
       NEWS_OLLAMA_MODEL: qwen2.5:3b-instruct
       NEWS_MAX_RETRIES: '5'
       NEWS_REQUEST_TIMEOUT: '300'
-      # Enable optional scheduled SDXL only with NEWS_IMAGE_ENABLED=true.
-      SCHEDULED_IMAGE_ENABLED: ${{ vars.NEWS_IMAGE_ENABLED == 'true' }}
+      # Scheduled illustration is enabled by default. Set NEWS_IMAGE_ENABLED=false to disable.
+      SCHEDULED_IMAGE_ENABLED: ${{ vars.NEWS_IMAGE_ENABLED != 'false' }}
     steps:
       - name: Checkout default branch
         uses: actions/checkout@v7
@@ -108,9 +108,9 @@ jobs:
           print('Validated published English news diary:', items[0]['id'])
           PY
 
-      # SDXL-Turbo on GitHub-hosted CPU can be slow or run out of memory.
-      # A failed illustration never prevents publishing a validated text entry.
-      - name: Try to illustrate the newest entry (best effort)
+      # CPU image generation can be slow or run out of memory; use a smaller model on CI.
+      # An image failure will not discard a validated diary; logs will show the failure.
+      - name: Illustrate newest diary entry (CPU, best effort)
         if: ${{ (github.event_name == 'schedule' && env.SCHEDULED_IMAGE_ENABLED == 'true') || inputs.illustrate == true }}
         id: illustration
         timeout-minutes: 30
@@ -118,10 +118,25 @@ jobs:
         env:
           PATCH_JSON: '1'
           SEED_OFFSET: ${{ github.run_number }}
+          SDXL_MODEL_ID: stabilityai/sd-turbo
+          STEPS: '1'
+          GUIDANCE_SCALE: '0.0'
         run: |
           set -euo pipefail
           docker compose -f docker-compose.news.yml --profile illustration \
             run --rm --build diary-illustrate
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          public = Path('frontend/app/public')
+          latest = json.loads((public / 'feed/page_000.json').read_text())['items'][0]
+          image = public / 'image' / (latest['id'] + '.png')
+          snapshot = json.loads((public / 'feed' / (latest['id'] + '.json')).read_text())['items'][0]
+          assert image.is_file() and image.stat().st_size > 0, f'Image not generated: {image}'
+          assert snapshot.get('image'), 'Image not linked in feed snapshot'
+          print('Illustrated:', latest['id'], image)
+          PY
 
       - name: Rebuild pages after optional illustration
         run: |
