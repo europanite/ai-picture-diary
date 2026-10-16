@@ -21,7 +21,8 @@ def mock_distinctive_word_dependencies(monkeypatch):
             self.is_punct = False
             self.is_stop = text.lower() in {"and", "the", "of", "in"}
             self.pos_ = ("VERB" if text.lower() in {"attack", "investigate", "faces"}
-                         else "ADJ" if text.lower() in {"israeli", "olive", "quantum"}
+                         else "ADJ" if text.lower() in {"israeli", "olive", "quantum", "brazilian"}
+                         else "PROPN" if text.lower() == "amazon"
                          else "NOUN")
 
     class Tagger:
@@ -31,7 +32,8 @@ def mock_distinctive_word_dependencies(monkeypatch):
 
     freqs = {"israeli": 4.4, "settlers": 3.5, "olive": 4.2,
              "farmers": 4.3, "attack": 5.2, "quantum": 4.2,
-             "prototypes": 3.7, "robotics": 3.9, "company": 5.6}
+             "prototypes": 3.7, "robotics": 3.9, "company": 5.6,
+             "brazilian": 4.3, "amazon": 4.5, "deforestation": 3.3}
     monkeypatch.setattr(generate_sentence, "_news_nlp", lambda: Tagger())
     monkeypatch.setattr(generate_sentence, "_zipf_frequency", lambda w: freqs.get(w.lower(), 4.8))
 
@@ -359,8 +361,11 @@ def test_long_event_phrase_becomes_short_story_seed_without_losing_source():
 
 def test_named_entity_stays_verbatim_even_when_long():
     context = selection()
-    context["selected"][2]["kind"] = "named_entity"
-    assert story_keywords(context)[2] == "Israeli settlers attack olive farmers"
+    context["selected"][2].update({
+        "text": "International Monetary Fund", "kind": "named_entity", "entity_label": "ORG",
+    })
+    context["keywords"][2] = "International Monetary Fund"
+    assert story_keywords(context)[2] == "International Monetary Fund"
 
 
 def test_short_event_anchor_must_still_appear():
@@ -431,3 +436,71 @@ def test_publisher_rejects_tampered_story_keywords(tmp_path):
     with pytest.raises(ValueError, match="provenance"):
         publish(draft_path=draft_path, selection_path=selection_path,
                 public_dir=tmp_path / "public")
+
+
+def test_three_word_event_phrase_uses_distinctive_word():
+    """Regresses the scheduled run failure on Brazilian Amazon deforestation."""
+    context = selection()
+    context["selected"][2].update({
+        "text": "Brazilian Amazon deforestation", "kind": "noun_phrase",
+        "entity_label": None,
+    })
+    context["keywords"][2] = "Brazilian Amazon deforestation"
+    assert story_keywords(context) == ["Eva Marie Saint", "New Delhi", "deforestation"]
+    assert context["keywords"][2] == "Brazilian Amazon deforestation"
+    prompt = render_prompt(context, "{{STORY_KEYWORDS}} / {{NEWS_CONTEXT}}", "42")
+    assert '"deforestation"' in prompt
+    assert "Brazilian Amazon deforestation" in prompt
+
+
+def test_misclassified_event_entity_is_reduced():
+    context = selection()
+    context["selected"][2].update({
+        "text": "Brazilian Amazon deforestation", "kind": "named_entity", "entity_label": "LOC",
+    })
+    context["keywords"][2] = "Brazilian Amazon deforestation"
+    assert story_keywords(context)[2] == "deforestation"
+
+
+def test_short_entity_and_two_word_phrase_stay_intact():
+    context = selection()
+    context["selected"][2].update({"text": "olive farmers", "kind": "noun_phrase"})
+    context["keywords"][2] = "olive farmers"
+    assert story_keywords(context)[2] == "olive farmers"
+    context["selected"][2].update({"text": "World Health Organization", "kind": "named_entity"})
+    context["keywords"][2] = "World Health Organization"
+    assert story_keywords(context)[2] == "World Health Organization"
+
+
+def test_three_word_event_generated_and_published(tmp_path, monkeypatch):
+    context = selection()
+    context["selected"][2].update({"text": "Brazilian Amazon deforestation", "kind": "noun_phrase"})
+    context["keywords"][2] = "Brazilian Amazon deforestation"
+    selection_path = tmp_path / "selection.json"
+    selection_path.write_text(json.dumps(context), encoding="utf-8")
+    draft_path = tmp_path / "draft.json"
+    story = (
+        "I met Eva Marie Saint in New Delhi, where a colorful theater displayed a "
+        "painting about deforestation. I wandered into an imaginary garden full of "
+        "paper trees, and I helped the artists hang blue lanterns from the ceiling. "
+        "The exhibit was made of old newspapers and wooden boxes. After sunset, "
+        "we sat together and watched shadows move across the painted walls."
+    )
+
+    class FakeResponse:
+        def raise_for_status(self):
+            pass
+        def json(self):
+            return {"response": json.dumps({"text": story})}
+
+    monkeypatch.setattr("scripts.generate_sentence.requests.post", lambda *a, **k: FakeResponse())
+    monkeypatch.setenv("MAX_RETRIES", "1")
+    monkeypatch.setattr(sys, "argv", ["generate_sentence.py", "--context", str(selection_path),
+                                      "--output-json", str(draft_path)])
+    assert generate_main() == 0
+    draft = json.loads(draft_path.read_text(encoding="utf-8"))
+    assert draft["keywords"][2] == "Brazilian Amazon deforestation"
+    assert draft["story_keywords"][2] == "deforestation"
+    output = publish(draft_path=draft_path, selection_path=selection_path,
+                     public_dir=tmp_path / "public")
+    assert output["created"] is True

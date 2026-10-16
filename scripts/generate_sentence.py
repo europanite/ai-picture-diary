@@ -82,20 +82,38 @@ def distinctive_word(phrase: str, disallow: set[str] | None = None) -> str:
     return min(candidates)[-1]
 
 
-def story_keywords(context: dict) -> list[str]:
-    """Use rare content words for long events; preserve original news terms.
+def _event_like_phrase(selected: dict) -> bool:
+    """Identify headline descriptions without corrupting real names.
 
-    Multiword names and ordinary short noun phrases stay intact. A long
-    event-like clause is NOT pasted into the story. Its most distinctive
-    content word becomes the narrative anchor (e.g. `settlers`), while the
-    exact source phrase remains in `keywords` and `selected`.
+    Three-word event descriptions are as problematic as five-word ones.
+    A proper name normally ends in a capitalized name token (``Eva Marie
+    Saint``, ``International Monetary Fund``), whereas a headline topic
+    such as ``Brazilian Amazon deforestation`` ends in a lowercase noun.
+    Unclassified legacy entries remain unchanged for compatibility.
+    """
+    words = selected["text"].split()
+    if len(words) < 3:
+        return False
+    kind = selected.get("kind")
+    if kind == "noun_phrase":
+        return True
+    if kind in {"named_entity", "proper_noun"}:
+        return words[-1][:1].islower()
+    return False
+
+
+def story_keywords(context: dict) -> list[str]:
+    """Reduce descriptive news phrases to rare words; preserve source terms.
+
+    Keep complete names and short natural phrases, but turn multiword event
+    descriptions into a single corpus-ranked content word. All original
+    selected terms remain untouched in ``keywords`` and ``selected``.
     """
     seeds: list[str] = []
     blocked: set[str] = set()
     for selected in context["selected"]:
         phrase = selected["text"]
-        words = phrase.split()
-        if selected.get("kind") == "noun_phrase" and len(words) > 4:
+        if _event_like_phrase(selected):
             phrase = distinctive_word(phrase, blocked)
         if phrase.casefold() in blocked:
             raise ValueError("Expected three distinct story keywords")
@@ -230,6 +248,7 @@ def main() -> int:
             prompt_path = ROOT / prompt_path
         template = prompt_path.read_text(encoding="utf-8")
         narrative_seeds = story_keywords(context)
+        print("News diary story keywords: " + json.dumps(narrative_seeds, ensure_ascii=False), file=sys.stderr)
         prompt = render_prompt(context, template, os.getenv("PROMPT_SEED", "0"))
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
         print(f"News diary input error: {exc}", file=sys.stderr)
