@@ -31,7 +31,7 @@ type FeedItem = {
   place?: string;
   kind?: string;
   avatar_image?: string;
-  generated_at?: string; // ISO string (often Z)
+  generated_at?: string; // normalized posting datetime, ISO string (often Z)
   image?: string; // local path or absolute URL
   image_prompt?: string; // optional (for matching)
   links?: FeedLink[];
@@ -373,6 +373,23 @@ function formatJst(isoLike: string, withSeconds = false): string {
   return `${yyyy}-${mm}-${dd} ${hh}:${mi}${withSeconds ? `:${ss}` : ""} JST`;
 }
 
+function getPostingDatetime(item: any): string | undefined {
+  const candidates = [
+    item?.generated_at,
+    item?.created_at,
+    item?.published_at,
+    item?.updated_at,
+  ];
+
+  for (const candidate of candidates) {
+    if (typeof candidate === "string" && candidate.trim()) {
+      return candidate.trim();
+    }
+  }
+
+  return undefined;
+}
+
 function safeJsonParse(raw: string): unknown | null {
   try {
     return JSON.parse(raw) as unknown;
@@ -395,7 +412,7 @@ function normalizeFeed(parsed: unknown): Feed | null {
           if (!date || !text) return null;
           const id = typeof it?.id === "string" ? it.id : `${date}-${idx}`;
           const place = typeof it?.place === "string" ? it.place : undefined;
-          const generated_at = typeof it?.generated_at === "string" ? it.generated_at : undefined;
+          const generated_at = getPostingDatetime(it);
           const image =
             typeof it?.image === "string"
               ? it.image
@@ -444,7 +461,7 @@ function normalizeFeed(parsed: unknown): Feed | null {
     if (date && text) {
       const id = typeof obj.id === "string" ? obj.id : `${date}-0`;
       const place = typeof obj.place === "string" ? obj.place : undefined;
-      const generated_at = typeof obj.generated_at === "string" ? obj.generated_at : undefined;
+      const generated_at = getPostingDatetime(obj);
       const image =
         typeof obj?.image === "string"
           ? obj.image
@@ -483,7 +500,7 @@ function normalizeFeed(parsed: unknown): Feed | null {
         if (!date || !text) return null;
         const id = typeof it?.id === "string" ? it.id : `${date}-${idx}`;
         const place = typeof it?.place === "string" ? it.place : undefined;
-        const generated_at = typeof it?.generated_at === "string" ? it.generated_at : undefined;
+        const generated_at = getPostingDatetime(it);
           const image =
             typeof it?.image === "string"
               ? it.image

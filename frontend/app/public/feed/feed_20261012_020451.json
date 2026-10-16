@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-10-11T17:04:51Z",
+  "items": [
+    {
+      "id": "feed_20261012_020451",
+      "kind": "event",
+      "date": "2026-10-12",
+      "created_at": "2026-10-11T17:04:51Z",
+      "text": "うんこは便器に捨てられるべきです。\nStudy point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations.\nEnglish translation: It is supposed to be thrown away in the toilet.",
+      "tweet": "うんこは便器に捨てられるべきです。\nStudy point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations.\nEnglish translation: It is supposed to be thrown away in the toilet.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261012_020451",
+      "legacy_id": "fixed-event-20261012_020451",
+      "image": "image/feed_20261012_020451.png",
+      "image_url": "image/feed_20261012_020451.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "cinematic illustration, based on this short story: うんこは便器に捨てられるべきです。 Study point: The grammar pattern 〜べきです (〜be supposed to) is used to express suggestions or recommendations. English translation: It is supposed to be thrown away in the toilet., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sdxl-turbo",
+      "image_generated_at": "2026-10-11T17:09:16Z"
+    }
+  ]
+}
