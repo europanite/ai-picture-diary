@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "id": "feed_20261017_811a8df65588",
+      "kind": "news_diary",
+      "date": "2026-10-17",
+      "created_at": "2026-10-16T22:50:13Z",
+      "published_at": "2026-10-16T22:50:13Z",
+      "text": "I sat by the window, watching the rain lashing against the glass. The news of von der Leyen’s comments and New Delhi’s protests were swirling in my mind like storm clouds over Europe. Suddenly, a report about power plant attacks reached me – another reminder that this place could be next. I shivered, feeling the weight of these unpredictable storms bearing down on all of us.",
+      "tweet": "I sat by the window, watching the rain lashing against the glass. The news of von der Leyen’s comments and New Delhi’s protests were swirling in my mind like storm clouds over Europe. Suddenly, a report about power plant attacks reached me – another reminder that this place could be next. I shivered, feeling the weight of these unpredictable storms bearing down on all of us.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261017_811a8df65588/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/world/live/2026/oct/16/eu-von-der-leyen-russia-sanctions-diesel-fuel-zelenskyy-donald-trump-membership-migration-latest-news-updates",
+        "https://www.npr.org/2026/10/16/g-s1-148383/crowds-throng-new-delhi-and-wave-indian-flags-amid-escalating-protests",
+        "https://www.theguardian.com/world/2026/oct/16/attacks-on-ukraine-power-plants-show-russia-has-given-up-on-military-victory"
+      ],
+      "keywords": [
+        "von der Leyen",
+        "New Delhi",
+        "Power plant attacks"
+      ],
+      "story_keywords": [
+        "von der Leyen",
+        "New Delhi",
+        "attacks"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "EU’s support to Ukraine matters more than ever, von der Leyen says, as US relationship sours – as it happened",
+          "url": "https://www.theguardian.com/world/live/2026/oct/16/eu-von-der-leyen-russia-sanctions-diesel-fuel-zelenskyy-donald-trump-membership-migration-latest-news-updates",
+          "published_at": "2026-10-16T17:37:17+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Crowds throng New Delhi and wave Indian flags amid escalating protests",
+          "url": "https://www.npr.org/2026/10/16/g-s1-148383/crowds-throng-new-delhi-and-wave-indian-flags-amid-escalating-protests",
+          "published_at": "2026-10-16T13:26:43+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Power plant attacks reflect Russian blueprint to make Ukrainian cities unlivable",
+          "url": "https://www.theguardian.com/world/2026/oct/16/attacks-on-ukraine-power-plants-show-russia-has-given-up-on-military-victory",
+          "published_at": "2026-10-16T15:28:10+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.985711,
+        "mean_relevance": 5.10745,
+        "mean_specificity": 3.516667,
+        "mean_freshness": 0.739305,
+        "mean_distance": 0.950242,
+        "pairwise_distances": [
+          0.891413,
+          1.016336,
+          0.942978
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 38977738193,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      }
+    },
+    {
       "id": "feed_20261017_90ed42c38baf",
       "kind": "news_diary",
       "date": "2026-10-17",
@@ -425,32 +491,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-10-09T17:53:51Z"
-    },
-    {
-      "id": "feed_20261009_124545",
-      "kind": "event",
-      "date": "2026-10-09",
-      "created_at": "2026-10-09T03:45:45Z",
-      "text": "うんこを掃除するのも、うんこを置くのも、簡単です。\nStudy point: The grammar pattern 〜するのも、〜するのも can be used to express that both doing and not doing a particular action is easy.\nEnglish translation: It's easy to both sweep up the poop and put down the poop.",
-      "tweet": "うんこを掃除するのも、うんこを置くのも、簡単です。\nStudy point: The grammar pattern 〜するのも、〜するのも can be used to express that both doing and not doing a particular action is easy.\nEnglish translation: It's easy to both sweep up the poop and put down the poop.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261009_124545/index.html",
-      "legacy_id": "fixed-event-20261009_124545",
-      "image": "image/feed_20261009_124545.png",
-      "image_url": "image/feed_20261009_124545.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこを掃除するのも、うんこを置くのも、簡単です。 Study point: The grammar pattern 〜するのも、〜するのも can be used to express that both doing and not doing a particular action is easy. English translation: It's easy to both sweep up the poop and put down the poop., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-10-09T03:51:35Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 410,
+  "total_items": 411,
   "total_pages": 21,
   "next_feed_url": "./feed/page_001.json"
 }
