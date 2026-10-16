@@ -96,15 +96,22 @@ def build_index(items: list[dict[str, Any]]) -> dict[str, Any]:
 
 def build_post_html(item: dict[str, Any]) -> str:
     text = html.escape(str(item.get("text") or item.get("tweet") or ""))
-    study_point = html.escape(str(item.get("study_point") or ""))
-    translation_en = html.escape(str(item.get("translation_en") or ""))
+    keywords = [str(k) for k in item.get("keywords", []) if isinstance(k, str)]
+    sources = item.get("source_articles", [])
+    keyword_html = ", ".join(html.escape(k) for k in keywords)
+    source_html = "".join(
+        '<li><a href="' + html.escape(s["url"], quote=True) + '" rel="noopener noreferrer">'
+        + html.escape(s.get("publisher", "Source") + ": " + s.get("title", "")) + '</a></li>'
+        for s in sources
+        if isinstance(s, dict) and str(s.get("url", "")).startswith(("http://", "https://"))
+    )
     image = str(item.get("image") or item.get("image_url") or "").strip()
 
     image_html = f'<p><img src="{html.escape(image)}" alt="" style="max-width:100%;height:auto;" /></p>' if image else ""
 
     parts = [
         "<!doctype html>",
-        '<html lang="ja">',
+        '<html lang="en">',
         "<head>",
         '  <meta charset="utf-8" />',
         '  <meta name="viewport" content="width=device-width, initial-scale=1" />',
@@ -114,8 +121,9 @@ def build_post_html(item: dict[str, Any]) -> str:
         "  <main>",
         f"    <p>{text}</p>" if text else "",
         image_html,
-        f"    <p><strong>Study point:</strong> {study_point}</p>" if study_point else "",
-        f"    <p><strong>English:</strong> {translation_en}</p>" if translation_en else "",
+        f"    <p><strong>Keywords:</strong> {keyword_html}</p>" if keyword_html else "",
+        f"    <section><h2>News inspiration</h2><ul>{source_html}</ul></section>" if source_html else "",
+        "    <p><em>This diary is fictional. News headlines are creative prompts, not a factual narrative.</em></p>" if source_html else "",
         "  </main>",
         "</body>",
         "</html>",

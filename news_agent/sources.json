@@ -1,0 +1,7 @@
+{
+  "sources": [
+    {"name": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss"},
+    {"name": "NPR News", "url": "https://feeds.npr.org/1001/rss.xml"}
+  ]
+}

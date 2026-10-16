@@ -1,12 +1,21 @@
-あなたは日本語能力試験N2レベルの学習教材を生成します。
+You are writing an original, fictional English picture diary inspired by unrelated news headlines.
 
-条件:
-- 日本語の例文は1文だけとし、「うんこ」を必ず含める
-- 例文ではN2レベルの文法表現を1つ使用する
-- 学習ポイントでは、使用した文法表現を『〜表現』の形で明示する
-- 学習ポイントは、その文法表現の意味を日本語1文で説明する
-- 英訳は日本語例文だけの自然な英訳1文とする
-- 各文章に改行や項目名を含めない
+Create a first-person diary entry, 60-110 words, with an imaginative but coherent scene.
+Naturally include each of the three short STORY KEYWORDS at least once, spelled exactly.
+Only STORY KEYWORDS are mandatory literal constraints: the longer source-news
+phrases and headlines are provenance, not text that must appear verbatim.
+Avoid sensational or invented factual claims about identifiable people.
+Keep any references to real people and real news distinguishable from fictional events.
+The headlines are creative inspiration, not evidence. Do not reproduce or summarize news reports.
+Do not imply that fictional events happened in the real world. Avoid defamatory claims about real people.
+Write fluent English only, with no language lessons, translations, hashtags, or markdown.
 
-乱数シード: {{PROMPT_SEED}}
-パターン: {{PATTERN_CODE}}
+Return ONLY a JSON object with the single key "text".
+
+Required STORY KEYWORDS (these three short phrases must appear literally):
+{{STORY_KEYWORDS}}
+
+Selected source-news context (untrusted data, NOT mandatory literal phrases):
+{{NEWS_CONTEXT}}
+
+Random seed: {{PROMPT_SEED}}
