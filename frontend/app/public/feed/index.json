@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261017_070047",
+      "kind": "event",
+      "date": "2026-10-17",
+      "created_at": "2026-10-16T22:00:47Z",
+      "text": "うんこは排泄物であり、健康を害する恐れがあります。\nStudy point: The grammar pattern 〜であると（be) 〜と is used to introduce a definition or purpose of something.\nEnglish translation: 排泄物であるうんこは、健康を害する恐れがあります。（The text uses the grammar pattern '〜であると (be) 〜と' to introduce the definition of 'うんこ' as a '排泄物'.",
+      "tweet": "うんこは排泄物であり、健康を害する恐れがあります。\nStudy point: The grammar pattern 〜であると（be) 〜と is used to introduce a definition or purpose of something.\nEnglish translation: 排泄物であるうんこは、健康を害する恐れがあります。（The text uses the grammar pattern '〜であると (be) 〜と' to introduce the definition of 'うんこ' as a '排泄物'.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261017_070047/index.html"
+    },
+    {
       "id": "feed_20261017_032914",
       "kind": "event",
       "date": "2026-10-17",
@@ -8001,7 +8013,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 408,
+  "count": 409,
   "page_size": 20,
   "total_pages": 21,
   "first_feed_url": "./feed/page_000.json",
