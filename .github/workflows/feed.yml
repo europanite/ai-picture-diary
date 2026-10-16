@@ -1,125 +1,173 @@
 name: Feed
 
+# Scheduled runs use the default branch. Times are UTC: 03:17 = 12:17 JST.
+# Avoid :00 because GitHub reports increased schedule delays at the hour.
 on:
   schedule:
-    - cron: '0 0,12 * * *'
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+    inputs:
+      illustrate:
+        description: 'Attempt local SDXL illustration on the hosted CPU runner'
+        type: boolean
+        default: false
   workflow_call:
     inputs:
       slot:
-        description: "Which slot to run"
+        description: 'Kept for compatibility with existing callers; only event is supported'
         required: false
         type: string
-        default: "event"
-  workflow_dispatch:
-    inputs:
-      slot:
-        description: "Which slot to run"
+        default: 'event'
+      illustrate:
+        description: 'Attempt CPU illustration'
         required: false
-        default: "event"
-        type: choice
-        options:
-          - event
+        type: boolean
+        default: false
 
 permissions:
-  actions: read
   contents: write
+  actions: read
   pages: write
   id-token: write
 
+# Serialize this with the older manually triggered Feed Event workflow.
+concurrency:
+  group: feed
+  cancel-in-progress: false
+
 jobs:
-  select:
+  news-diary:
+    if: ${{ inputs.slot == '' || inputs.slot == 'event' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 110
     outputs:
-      slot: ${{ steps.sel.outputs.slot }}
-      should_run: ${{ steps.sel.outputs.should_run }}
-      window_id: ${{ steps.sel.outputs.window_id }}
-      reason: ${{ steps.sel.outputs.reason }}
+      changed: ${{ steps.commit.outputs.changed }}
+    env:
+      LOCAL_UID: '1001'
+      LOCAL_GID: '1001'
+      NEWS_OLLAMA_MODEL: qwen2.5:3b-instruct
+      NEWS_MAX_RETRIES: '5'
+      NEWS_REQUEST_TIMEOUT: '300'
+      # Enable optional scheduled SDXL only with NEWS_IMAGE_ENABLED=true.
+      SCHEDULED_IMAGE_ENABLED: ${{ vars.NEWS_IMAGE_ENABLED == 'true' }}
     steps:
-      - name: Checkout
+      - name: Checkout default branch
         uses: actions/checkout@v7
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0
+          persist-credentials: true
 
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-
-      - name: Select slot (schedule gate)
-        id: sel
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          REQUESTED_SLOT: ${{ inputs.slot || github.event.inputs.slot || 'event' }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_API_URL: ${{ github.api_url }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_RUN_ID: ${{ github.run_id }}
+      - name: Verify Docker Compose and disk
         run: |
           set -euo pipefail
+          docker compose version
+          df -h .
 
-          echo "EVENT_NAME=${EVENT_NAME}"
-          echo "REQUESTED_SLOT=${REQUESTED_SLOT:-}"
+      - name: Build news agent (CPU-only Python dependencies)
+        run: docker compose -f docker-compose.news.yml build news-agent
 
-          if [ "${REQUESTED_SLOT:-}" = "event" ]; then
-            {
-              echo "should_run=true"
-              echo "slot=event"
-              echo "window_id=manual_event"
-              echo "reason=explicit_event_selected"
-            } >> "${GITHUB_OUTPUT}"
-            exit 0
-          fi
-
-          if [ ! -f scripts/feed_schedule_gate.py ]; then
-            echo "scripts/feed_schedule_gate.py is missing" >&2
-            {
-              echo "should_run=false"
-              echo "slot="
-              echo "window_id="
-              echo "reason=missing_feed_schedule_gate_py"
-            } >> "${GITHUB_OUTPUT}"
-            exit 0
-          fi
-
-          set +e
-          python scripts/feed_schedule_gate.py \
-            --config .github/feed_schedule.json \
-            --event-name "${EVENT_NAME}" \
-            --requested-slot "${REQUESTED_SLOT:-}" \
-            --repo "${GITHUB_REPOSITORY}" \
-            --workflow-file "feed.yml" \
-            --github-api-url "${GITHUB_API_URL}" \
-            --github-token "${GITHUB_TOKEN}" \
-            --current-run-id "${GITHUB_RUN_ID}" \
-            --github-output "${GITHUB_OUTPUT}"
-          gate_rc=$?
-          set -e
-
-          if [ "$gate_rc" -ne 0 ]; then
-            echo "feed_schedule_gate.py failed with exit=${gate_rc}" >&2
-            {
-              echo "should_run=false"
-              echo "slot="
-              echo "window_id="
-              echo "reason=gate_failed_exit_${gate_rc}"
-            } >> "${GITHUB_OUTPUT}"
-          fi
-          
-      - name: Log selection
+      - name: Start Ollama and download the text model
         run: |
-          echo "should_run=${{ steps.sel.outputs.should_run }}"
-          echo "slot=${{ steps.sel.outputs.slot }}"
-          echo "window_id=${{ steps.sel.outputs.window_id }}"
-          echo "reason=${{ steps.sel.outputs.reason }}"
+          set -euo pipefail
+          docker compose -f docker-compose.news.yml up -d --wait ollama
+          docker compose -f docker-compose.news.yml exec -T ollama \
+            ollama pull "$NEWS_OLLAMA_MODEL"
 
-  sevent:
-    needs: select
-    if: needs.select.outputs.should_run == 'true' && needs.select.outputs.slot == 'event'
-    uses: ./.github/workflows/feed_slot_event.yml
+      - name: Collect fresh English news and select three keywords
+        env:
+          NEWS_SEED: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          docker compose -f docker-compose.news.yml run --rm \
+            --entrypoint python news-agent -m news_agent.cli \
+            --config news_agent/sources.json \
+            --output data/news/selection.json \
+            --mode balanced --seed "$NEWS_SEED"
+          test -s data/news/selection.json
+
+      - name: Generate validated English diary with Ollama
+        run: |
+          set -euo pipefail
+          docker compose -f docker-compose.news.yml run --rm diary-writer
+          test -s data/news/draft.json
+
+      - name: Publish news diary and rebuild feed pages
+        run: |
+          set -euo pipefail
+          docker compose -f docker-compose.news.yml run --rm diary-publish
+          test -s frontend/app/public/latest.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          index = json.loads(Path('frontend/app/public/feed/index.json').read_text())
+          items = index.get('items', [])
+          assert items and items[0]['kind'] == 'news_diary', 'Latest entry is not a news diary'
+          assert len(items[0]['source_articles']) == 3, 'Missing news provenance'
+          print('Validated published English news diary:', items[0]['id'])
+          PY
+
+      # SDXL-Turbo on GitHub-hosted CPU can be slow or run out of memory.
+      # A failed illustration never prevents publishing a validated text entry.
+      - name: Try to illustrate the newest entry (best effort)
+        if: ${{ (github.event_name == 'schedule' && env.SCHEDULED_IMAGE_ENABLED == 'true') || inputs.illustrate == true }}
+        id: illustration
+        timeout-minutes: 30
+        continue-on-error: true
+        env:
+          PATCH_JSON: '1'
+          SEED_OFFSET: ${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          docker compose -f docker-compose.news.yml --profile illustration \
+            run --rm --build diary-illustrate
+
+      - name: Rebuild pages after optional illustration
+        run: |
+          set -euo pipefail
+          docker compose -f docker-compose.news.yml run --rm diary-index
+
+      - name: Commit generated public assets to main
+        id: commit
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A -- frontend/app/public/latest.json frontend/app/public/feed
+          for asset_dir in posts image snapshot; do
+            if test -d "frontend/app/public/$asset_dir"; then
+              git add -A -- "frontend/app/public/$asset_dir"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo 'No public changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: publish news-driven AI picture diary'
+          git push origin HEAD:main
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Print illustration result
+        if: always()
+        run: |
+          echo 'Illustration outcome: ${{ steps.illustration.outcome }}'
+          echo 'A failed optional illustration does not invalidate the news diary.'
+
+      - name: Stop Ollama
+        if: always()
+        run: docker compose -f docker-compose.news.yml down || true
+
+  pages:
+    needs: news-diary
+    if: needs.news-diary.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    with:
+      ref: main
     permissions:
+      contents: read
       actions: read
-      contents: write
       pages: write
       id-token: write
     secrets: inherit
