@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "id": "feed_20261017_90ed42c38baf",
+      "kind": "news_diary",
+      "date": "2026-10-17",
+      "created_at": "2026-10-16T22:24:56Z",
+      "published_at": "2026-10-16T22:24:56Z",
+      "text": "Today I woke up to the sound of distant alarms. The headlines echoed through my thoughts like a fog – 'von der Leyen', 'Katie Zacharia', 'settlers'. In one corner, I read about Europe’s support for Ukraine under uncertain US ties; in another, Katie Zacharia announced her transition out. But it was the settlers' attack on olive farmers that truly caught me off guard. It felt like an unwelcome echo from yesterday's news, now intertwined with my own worries.",
+      "tweet": "Today I woke up to the sound of distant alarms. The headlines echoed through my thoughts like a fog – 'von der Leyen', 'Katie Zacharia', 'settlers'. In one corner, I read about Europe’s support for Ukraine under uncertain US ties; in another, Katie Zacharia announced her transition out. But it was the settlers' attack on olive farmers that truly caught me off guard. It felt like an unwelcome echo from yesterday's news, now intertwined with my own worries.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261017_90ed42c38baf/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/world/live/2026/oct/16/eu-von-der-leyen-russia-sanctions-diesel-fuel-zelenskyy-donald-trump-membership-migration-latest-news-updates",
+        "https://www.npr.org/2026/10/16/nx-s1-6005317/trump-casts-doubt-on-press-secretarys-future",
+        "https://www.theguardian.com/world/2026/oct/16/israeli-settlers-attack-olive-farmers-west-bank-washington-post-journalist-heidi-levine"
+      ],
+      "keywords": [
+        "von der Leyen",
+        "Katie Zacharia",
+        "Israeli settlers attack olive farmers"
+      ],
+      "story_keywords": [
+        "von der Leyen",
+        "Katie Zacharia",
+        "settlers"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "EU’s support to Ukraine matters more than ever, von der Leyen says, as US relationship sours – as it happened",
+          "url": "https://www.theguardian.com/world/live/2026/oct/16/eu-von-der-leyen-russia-sanctions-diesel-fuel-zelenskyy-donald-trump-membership-migration-latest-news-updates",
+          "published_at": "2026-10-16T17:37:17+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Katie Zacharia is 'transitioning out' as press secretary, White House says",
+          "url": "https://www.npr.org/2026/10/16/nx-s1-6005317/trump-casts-doubt-on-press-secretarys-future",
+          "published_at": "2026-10-16T18:08:33+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Israeli settlers attack olive farmers and Washington Post journalist in West Bank",
+          "url": "https://www.theguardian.com/world/2026/oct/16/israeli-settlers-attack-olive-farmers-west-bank-washington-post-journalist-heidi-levine",
+          "published_at": "2026-10-16T16:34:58+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.996577,
+        "mean_relevance": 5.239697,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.813856,
+        "mean_distance": 0.933743,
+        "pairwise_distances": [
+          0.818793,
+          0.926891,
+          1.055545
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 38975281192,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      }
+    },
+    {
       "id": "feed_20261017_070047",
       "kind": "event",
       "date": "2026-10-17",
@@ -8021,7 +8087,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 409,
+  "count": 410,
   "page_size": 20,
   "total_pages": 21,
   "first_feed_url": "./feed/page_000.json",
