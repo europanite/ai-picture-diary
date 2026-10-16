@@ -97,17 +97,17 @@ def build_index(items: list[dict[str, Any]]) -> dict[str, Any]:
 def build_post_html(item: dict[str, Any]) -> str:
     text = html.escape(str(item.get("text") or item.get("tweet") or ""))
     keywords = [str(k) for k in item.get("keywords", []) if isinstance(k, str)]
-    sources = item.get("source_articles", [])
     keyword_html = ", ".join(html.escape(k) for k in keywords)
-    source_html = "".join(
-        '<li><a href="' + html.escape(s["url"], quote=True) + '" rel="noopener noreferrer">'
-        + html.escape(s.get("publisher", "Source") + ": " + s.get("title", "")) + '</a></li>'
-        for s in sources
-        if isinstance(s, dict) and str(s.get("url", "")).startswith(("http://", "https://"))
-    )
+    # Preserve source metadata in feed JSON for reproducibility but keep the
+    # published diary page focused on the fiction and its illustration.
     image = str(item.get("image") or item.get("image_url") or "").strip()
+    # A standalone post lives under posts/<id>/index.html, two levels below
+    # public/. Root-relative image URLs would break on a project Pages subpath.
+    image_src = image
+    if image.lstrip("./").startswith("image/"):
+        image_src = "../../" + image.lstrip("./")
 
-    image_html = f'<p><img src="{html.escape(image)}" alt="" style="max-width:100%;height:auto;" /></p>' if image else ""
+    image_html = f'<p><img src="{html.escape(image_src, quote=True)}" alt="" style="max-width:100%;height:auto;" /></p>' if image else ""
 
     parts = [
         "<!doctype html>",
@@ -122,8 +122,7 @@ def build_post_html(item: dict[str, Any]) -> str:
         f"    <p>{text}</p>" if text else "",
         image_html,
         f"    <p><strong>Keywords:</strong> {keyword_html}</p>" if keyword_html else "",
-        f"    <section><h2>News inspiration</h2><ul>{source_html}</ul></section>" if source_html else "",
-        "    <p><em>This diary is fictional. News headlines are creative prompts, not a factual narrative.</em></p>" if source_html else "",
+        "    <p><em>Fictional diary entry.</em></p>" if item.get("kind") == "news_diary" else "",
         "  </main>",
         "</body>",
         "</html>",

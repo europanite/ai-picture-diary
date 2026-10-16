@@ -12,9 +12,9 @@ Each entry combines three keywords extracted from unrelated recent English-langu
 
 **Automated publishing:** GitHub Actions `Feed` runs every day at **12:17 JST**
 (03:17 UTC), collecting live English news, generating a fictional diary using
-Ollama, committing the feed, and deploying GitHub Pages. Optional SDXL images
-are disabled on scheduled hosted runners by default; set the repository variable
-`NEWS_IMAGE_ENABLED=true` to attempt them. See
+Ollama, generating a 512px SD-Turbo illustration on the hosted CPU runner,
+committing the feed, and deploying GitHub Pages. Image generation is enabled by
+default; set `NEWS_IMAGE_ENABLED=false` as a repository variable to disable it. See
 [Scheduled GitHub Actions](docs/NEWS_AGENT.md#scheduled-github-actions).
 
 To generate and publish a news-driven English diary on Linux with a running
@@ -27,7 +27,9 @@ docker compose -f docker-compose.news.yml run --rm diary-writer
 docker compose -f docker-compose.news.yml run --rm diary-publish
 ```
 
-Image generation is a separate optional stage; see the linked documentation.
+Locally, the image stage can be run with `diary-illustrate`, followed by
+`diary-index`. The web UI hides source links; source records are still retained
+in the feed JSON for audit and reproducibility.
 
 ---
 The project combines:

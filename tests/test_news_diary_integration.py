@@ -197,8 +197,11 @@ def test_publish_existing_feed_shape_and_html(tmp_path):
     assert index["items"][0]["id"] == result["id"]
     assert json.loads((public / "latest.json").read_text())["feed_url"] == "./feed/page_000.json"
     html = (public / "posts" / result["id"] / "index.html").read_text()
-    assert "News inspiration" in html and "fictional" in html
-    assert "example.com/story/2" in html
+    assert "Fictional diary entry" in html
+    assert "News inspiration" not in html
+    assert "example.com/story/2" not in html
+    # Provenance stays in the feed JSON, even though post HTML hides it.
+    assert entry["source_articles"][2]["url"] == "https://example.com/story/2"
 
 
 def test_repeated_publication_is_idempotent(tmp_path):
@@ -504,3 +507,86 @@ def test_three_word_event_generated_and_published(tmp_path, monkeypatch):
     output = publish(draft_path=draft_path, selection_path=selection_path,
                      public_dir=tmp_path / "public")
     assert output["created"] is True
+
+
+def test_illustration_worker_patches_news_snapshot_and_rebuilds_feed(tmp_path, monkeypatch):
+    """Simulate image inference without downloading a diffusion model."""
+    import base64
+    import runpy
+    import types
+
+    from scripts.build_feed_pages import main as rebuild_main
+
+    draft_path, selection_path = publish_fixture(tmp_path)
+    public = tmp_path / "public"
+    result = publish(draft_path=draft_path, selection_path=selection_path,
+                     public_dir=public, now=datetime(2026, 10, 17, 1, 25, tzinfo=timezone.utc))
+
+    class FakeGenerator:
+        def __init__(self, device):
+            assert device == "cpu"
+        def manual_seed(self, seed):
+            return self
+
+    torch_mock = types.ModuleType("torch")
+    torch_mock.Generator = FakeGenerator
+    torch_mock.float32 = "float32"
+    monkeypatch.setitem(sys.modules, "torch", torch_mock)
+
+    class FakeImage:
+        def save(self, path):
+            # Valid single-pixel PNG, not an inference result.
+            Path(path).write_bytes(base64.b64decode(
+                "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/"
+                "zbsAAAAASUVORK5CYII="))
+
+    class FakePipeline:
+        @classmethod
+        def from_pretrained(cls, model_id, torch_dtype):
+            assert model_id == "stabilityai/sd-turbo"
+            assert torch_dtype == "float32"
+            return cls()
+        def to(self, device):
+            return self
+        def __call__(self, **kwargs):
+            assert kwargs["num_inference_steps"] == 1
+            assert kwargs["guidance_scale"] == 0.0
+            return types.SimpleNamespace(images=[FakeImage()])
+
+    diffusers_mock = types.ModuleType("diffusers")
+    diffusers_mock.AutoPipelineForText2Image = FakePipeline
+    monkeypatch.setitem(sys.modules, "diffusers", diffusers_mock)
+    import os
+    root = Path(__file__).resolve().parents[1]
+    monkeypatch.setenv("LATEST_PATH", str(public / "latest.json"))
+    monkeypatch.setenv("OUT_DIR", str(public / "image"))
+    monkeypatch.setenv("SDXL_MODEL_ID", "stabilityai/sd-turbo")
+    monkeypatch.setenv("STEPS", "1")
+    monkeypatch.setenv("GUIDANCE_SCALE", "0.0")
+    monkeypatch.setenv("VLM_PROMPT_PATH", str(root / "prompts/vlm/positive.txt"))
+    monkeypatch.setenv("VLM_NEGATIVE_PROMPT_PATH", str(root / "prompts/vlm/negative.txt"))
+    monkeypatch.setenv("PATCH_JSON", "1")
+    monkeypatch.setenv("SEED_OFFSET", "0")
+    monkeypatch.delenv("PROMPT", raising=False)
+    monkeypatch.delenv("NEGATIVE", raising=False)
+    monkeypatch.delenv("LORA_PATH", raising=False)
+    monkeypatch.delenv("SEED", raising=False)
+    monkeypatch.chdir(root)
+
+    with pytest.raises(SystemExit) as code:
+        runpy.run_path(str(root / "scripts/illustrate.py"), run_name="__main__")
+    assert code.value.code == 0
+
+    feed_path = public / "feed" / f"{result['id']}.json"
+    item = json.loads(feed_path.read_text())["items"][0]
+    assert item["image"] == f"image/{result['id']}.png"
+    assert (public / "image" / f"{result['id']}.png").exists()
+
+    monkeypatch.setattr(sys, "argv", ["build_feed_pages.py", "--public-dir", str(public)])
+    assert rebuild_main() == 0
+    index_item = json.loads((public / "feed/index.json").read_text())["items"][0]
+    assert index_item["image"] == f"image/{result['id']}.png"
+    post = (public / "posts" / result["id"] / "index.html").read_text()
+    assert f'src="../../image/{result["id"]}.png"' in post
+    assert "News inspiration" not in post
+    assert "example.com/story/0" not in post
