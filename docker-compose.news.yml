@@ -1,0 +1,141 @@
+# Standalone, opt-in Compose project: does not start the existing app stack.
+name: ai-picture-diary-news
+
+services:
+  # Ollama stays on the private Compose network. Models are retained between
+  # runs in a named volume; no host service or open TCP port is required.
+  ollama:
+    image: ollama/ollama:0.13.5
+    init: true
+    volumes:
+      - news_ollama_models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 10s
+      retries: 24
+      start_period: 20s
+
+  news-agent:
+    image: ai-picture-diary-news-agent:local
+    build:
+      context: .
+      dockerfile: news_agent/Dockerfile
+    init: true
+    working_dir: /workspace
+    # Match the host user's UID/GID so output JSON is not root-owned.
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    volumes:
+      - ./:/workspace
+      - news_hf_cache:/hf-cache
+    environment:
+      HF_HOME: /hf-cache
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      PYTHONUNBUFFERED: "1"
+    command:
+      - --config
+      - news_agent/sources.json
+      - --output
+      - data/news/selection.json
+      - --mode
+      - balanced
+      - --seed
+      - "42"
+
+  # Generates a validated diary draft from the existing selection.json.
+  # Host networking is intentionally Linux-specific: use the host's running
+  # Ollama API, such as a separately started Docker Compose Ollama service.
+  diary-writer:
+    image: ai-picture-diary-news-agent:local
+    build:
+      context: .
+      dockerfile: news_agent/Dockerfile
+    init: true
+    working_dir: /workspace
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    volumes:
+      - ./:/workspace
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_BASE_URL: "${NEWS_OLLAMA_URL:-http://ollama:11434}"
+      OLLAMA_MODEL: "${NEWS_OLLAMA_MODEL:-qwen2.5:3b-instruct}"
+      MAX_RETRIES: "${NEWS_MAX_RETRIES:-3}"
+      REQUEST_TIMEOUT: "${NEWS_REQUEST_TIMEOUT:-300}"
+      NEWS_DIARY_PROMPT_PATH: prompts/llm/positive.txt
+      PYTHONUNBUFFERED: "1"
+    entrypoint: ["python", "-m", "scripts.generate_sentence"]
+    command:
+      - --context
+      - data/news/selection.json
+      - --output-json
+      - data/news/draft.json
+
+  # Publishes only validated drafts; updates the existing feed and HTML pages.
+  diary-publish:
+    image: ai-picture-diary-news-agent:local
+    build:
+      context: .
+      dockerfile: news_agent/Dockerfile
+    init: true
+    working_dir: /workspace
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    volumes:
+      - ./:/workspace
+    entrypoint: ["python", "-m", "scripts.publish_news_diary"]
+    command:
+      - --draft
+      - data/news/draft.json
+      - --selection
+      - data/news/selection.json
+      - --public-dir
+      - frontend/app/public
+      - --timezone
+      - Asia/Tokyo
+
+  # Optional image stage; invokes the existing illustration worker without
+  # starting the PostgreSQL/Expo/RAG services or requiring their .env keys.
+  diary-illustrate:
+    profiles: ["illustration"]
+    image: ai-picture-diary-illustrate:local
+    build:
+      context: ./illustrate
+      dockerfile: Dockerfile
+    init: true
+    working_dir: /repo
+    volumes:
+      - ./:/repo
+      - news_image_hf_cache:/root/.cache/huggingface
+    environment:
+      FEED_PATH: frontend/app/public
+      LATEST_PATH: frontend/app/public/latest.json
+      OUT_DIR: frontend/app/public/image
+      SDXL_MODEL_ID: "${SDXL_MODEL_ID:-stabilityai/sdxl-turbo}"
+      VLM_PROMPT_PATH: prompts/vlm/positive.txt
+      VLM_NEGATIVE_PROMPT_PATH: prompts/vlm/negative.txt
+      PATCH_JSON: "1"
+      MIRROR_AUG: "${MIRROR_AUG:-0}"
+      SEED_OFFSET: "${SEED_OFFSET:-0}"
+      STEPS: "${STEPS:-2}"
+      GUIDANCE_SCALE: "${GUIDANCE_SCALE:-2.0}"
+    command: ["sh", "illustrate/app/run.sh"]
+
+  # Rebuild pages after an illustration patches the new feed snapshot.
+  diary-index:
+    image: ai-picture-diary-news-agent:local
+    build:
+      context: .
+      dockerfile: news_agent/Dockerfile
+    init: true
+    working_dir: /workspace
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    volumes:
+      - ./:/workspace
+    entrypoint: ["python", "scripts/build_feed_pages.py"]
+    command: ["--public-dir", "frontend/app/public"]
+
+volumes:
+  news_hf_cache:
+  news_image_hf_cache:
+  news_ollama_models:

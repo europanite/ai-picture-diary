@@ -1,148 +1,48 @@
-# tests/test_validation.py
+"""English news-diary validation replaces the obsolete JLPT learning tests."""
+import json
+from pathlib import Path
 
-from scripts.generate_sentence import (
-    extract_json_payload,
-    is_valid_sentence,
-    normalize_output,
-)
+import pytest
 
-
-def test_normalize_output_merges_lines() -> None:
-    raw = " 彼は困惑し、\n うんこを踏んだことに気づいて沈黙した。 \n"
-    assert normalize_output(raw) == "彼は困惑し、 うんこを踏んだことに気づいて沈黙した。"
+from scripts.generate_sentence import parse_output, read_context, render_prompt
 
 
-def test_is_valid_sentence_accepts_single_sentence() -> None:
-    text = "彼は突然の腹痛に動揺し、うんこを我慢したまま面接に臨んだ。"
-    assert is_valid_sentence(text) is True
+def _context():
+    terms = ["satellite", "cabbage", "tourists"]
+    return {"keywords": terms, "selected": [
+        {"text": keyword, "publisher": "Example", "title": f"News about {keyword}", "url": f"https://example.test/{keyword}"}
+        for keyword in terms
+    ]}
 
 
-def test_is_valid_sentence_rejects_missing_keyword() -> None:
-    text = "彼は突然の腹痛に動揺し、そのまま面接に臨んだ。"
-    assert is_valid_sentence(text) is False
+def _entry():
+    return ("I woke up to find a satellite parked next to my cabbage patch. "
+            "A group of tourists gathered around the odd machine and asked me for directions. "
+            "I offered them tea while we waited for the spacecraft to take off. "
+            "Nobody believed what had happened, but my garden looked better than ever.")
 
 
-def test_is_valid_sentence_rejects_multiple_sentences() -> None:
-    text = "彼は困惑した。うんこを踏んだからだ。"
-    assert is_valid_sentence(text) is False
+def test_parse_diary_accepts_english_with_three_terms():
+    assert parse_output(json.dumps({"text": _entry()}), _context()["keywords"]) == _entry()
 
 
-def test_is_valid_sentence_rejects_explanatory_prefix() -> None:
-    text = "例文：彼はうんこを見て困惑した。"
-    assert is_valid_sentence(text) is False
+def test_parse_diary_rejects_missing_keyword():
+    with pytest.raises(ValueError, match="keywords"):
+        parse_output(json.dumps({"text": _entry().replace("cabbage", "lettuce")}), _context()["keywords"])
 
 
-def test_extract_json_payload_accepts_full_contract() -> None:
-    raw = (
-        '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances or social expectations prevent someone from doing something.",'
-        '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
-    )
-    payload = extract_json_payload(raw)
-
-    assert payload["text"] == (
-        "うんこが落ちている以上、そのままにしておくわけにはいかない。\n"
-        'Study point: The grammar pattern "〜わけにはいかない" means that circumstances or social expectations prevent someone from doing something.\n'
-        "English translation: As long as poop is lying there, we cannot just leave it as it is."
-    )
-    assert '"〜わけにはいかない"' in payload["study_point"]
-    assert payload["translation_en"] == "As long as poop is lying there, we cannot just leave it as it is."
+def test_parse_diary_rejects_extra_fields():
+    with pytest.raises(ValueError, match="only"):
+        parse_output(json.dumps({"text": _entry(), "translation_en": "No"}), _context()["keywords"])
 
 
-def test_extract_json_payload_rejects_empty_study_point() -> None:
-    raw = (
-        '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"",'
-        '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
-    )
-
-    try:
-        extract_json_payload(raw)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "invalid study_point field" in str(exc) or "study_point is empty" in str(exc)
+def test_read_context_rejects_unattributed_selection(tmp_path: Path):
+    path = tmp_path / "selection.json"
+    path.write_text(json.dumps({"keywords": ["satellite", "cabbage", "tourists"], "selected": []}))
+    with pytest.raises(ValueError, match="three selected"):
+        read_context(path)
 
 
-def test_extract_json_payload_rejects_empty_translation_en() -> None:
-    raw = (
-        '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
-        '"translation_en":""}'
-    )
-
-    try:
-        extract_json_payload(raw)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "invalid translation_en field" in str(exc) or "translation_en is empty" in str(exc)
-
-
-def test_extract_json_payload_rejects_invalid_text_with_label() -> None:
-    raw = (
-        '{"text":"例文: うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
-        '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
-    )
-
-    try:
-        extract_json_payload(raw)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "invalid text field" in str(exc)
-
-
-def test_extract_json_payload_accepts_multiline_json_after_normalization() -> None:
-    raw = """
-    {
-      "text": "うんこを放置しておくわけにはいかない。",
-      "study_point": "The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",
-      "translation_en": "We cannot simply leave the poop there."
-    }
-    """
-    payload = extract_json_payload(raw)
-
-    assert payload["text"] == "うんこを放置しておくわけにはいかない。"
-    assert payload["translation_en"] == "We cannot simply leave the poop there."
-
-
-def test_extract_json_payload_rejects_extra_keys() -> None:
-    raw = (
-        '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
-        '"translation_en":"As long as poop is lying there, we cannot just leave it as it is.",'
-        '"extra":"ng"}'
-    )
-
-    try:
-        extract_json_payload(raw)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "output keys must be exactly" in str(exc)
-
-
-def test_extract_json_payload_rejects_study_point_without_target_marker() -> None:
-    raw = (
-        '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"Circumstances prevent the action.",'
-        '"translation_en":"As long as poop is lying there, we cannot just leave it as it is."}'
-    )
-
-    try:
-        extract_json_payload(raw)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "invalid study_point field" in str(exc)
-
-
-def test_extract_json_payload_rejects_translation_with_label() -> None:
-    raw = (
-        '{"text":"うんこが落ちている以上、そのままにしておくわけにはいかない。",'
-        '"study_point":"The grammar pattern \\"〜わけにはいかない\\" means that circumstances prevent the action.",'
-        '"translation_en":"English: As long as poop is lying there, we cannot just leave it as it is."}'
-    )
-
-    try:
-        extract_json_payload(raw)
-        assert False, "expected ValueError"
-    except ValueError as exc:
-        assert "invalid translation_en field" in str(exc)
+def test_prompt_contains_grounded_keywords_and_sources():
+    prompt = render_prompt(_context(), "{{NEWS_CONTEXT}} / {{PROMPT_SEED}}", "123")
+    assert "cabbage" in prompt and '"publisher": "Example"' in prompt and "123" in prompt
