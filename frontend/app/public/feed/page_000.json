@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261017_004945",
+      "kind": "event",
+      "date": "2026-10-17",
+      "created_at": "2026-10-16T15:49:45Z",
+      "text": "うんこは人間の生活に欠かせないもので、トイレの存在が無ければうんこは外にでてはいけないのです。\nStudy point: The grammar pattern 〜のは〜で is used to emphasize a fact or principle.\nEnglish translation: The fact that poop is a necessary part of human life is emphasized with the grammar pattern 〜のは〜で.",
+      "tweet": "うんこは人間の生活に欠かせないもので、トイレの存在が無ければうんこは外にでてはいけないのです。\nStudy point: The grammar pattern 〜のは〜で is used to emphasize a fact or principle.\nEnglish translation: The fact that poop is a necessary part of human life is emphasized with the grammar pattern 〜のは〜で.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261017_004945/index.html"
+    },
+    {
       "id": "feed_20261016_112111",
       "kind": "event",
       "date": "2026-10-16",
@@ -379,32 +391,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sdxl-turbo",
       "image_generated_at": "2026-10-07T03:29:34Z"
-    },
-    {
-      "id": "feed_20261007_023923",
-      "kind": "event",
-      "date": "2026-10-07",
-      "created_at": "2026-10-06T17:39:23Z",
-      "text": "うんこをきれいにすることは、本当に難しいことです。\nStudy point: The grammar pattern 〜できる/できない is used here to express difficulty.\nEnglish translation: It's really difficult to clean up after oneself.",
-      "tweet": "うんこをきれいにすることは、本当に難しいことです。\nStudy point: The grammar pattern 〜できる/できない is used here to express difficulty.\nEnglish translation: It's really difficult to clean up after oneself.",
-      "place": "",
-      "links": [],
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261007_023923/index.html",
-      "legacy_id": "fixed-event-20261007_023923",
-      "image": "image/feed_20261007_023923.png",
-      "image_url": "image/feed_20261007_023923.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "cinematic illustration, based on this short story: うんこをきれいにすることは、本当に難しいことです。 Study point: The grammar pattern 〜できる/できない is used here to express difficulty. English translation: It's really difficult to clean up after oneself., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sdxl-turbo",
-      "image_generated_at": "2026-10-06T17:44:08Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 405,
+  "total_items": 406,
   "total_pages": 21,
   "next_feed_url": "./feed/page_001.json"
 }

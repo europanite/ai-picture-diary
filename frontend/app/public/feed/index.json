@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "id": "feed_20261017_004945",
+      "kind": "event",
+      "date": "2026-10-17",
+      "created_at": "2026-10-16T15:49:45Z",
+      "text": "うんこは人間の生活に欠かせないもので、トイレの存在が無ければうんこは外にでてはいけないのです。\nStudy point: The grammar pattern 〜のは〜で is used to emphasize a fact or principle.\nEnglish translation: The fact that poop is a necessary part of human life is emphasized with the grammar pattern 〜のは〜で.",
+      "tweet": "うんこは人間の生活に欠かせないもので、トイレの存在が無ければうんこは外にでてはいけないのです。\nStudy point: The grammar pattern 〜のは〜で is used to emphasize a fact or principle.\nEnglish translation: The fact that poop is a necessary part of human life is emphasized with the grammar pattern 〜のは〜で.",
+      "place": "",
+      "links": [],
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261017_004945/index.html"
+    },
+    {
       "id": "feed_20261016_112111",
       "kind": "event",
       "date": "2026-10-16",
@@ -7941,7 +7953,7 @@
       "image_generated_at": "2026-05-21T03:45:52Z"
     }
   ],
-  "count": 405,
+  "count": 406,
   "page_size": 20,
   "total_pages": 21,
   "first_feed_url": "./feed/page_000.json",
