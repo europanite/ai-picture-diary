@@ -66,7 +66,7 @@ python -m pytest -q tests/test_news_agent.py tests/test_validation.py
 
 ## GitHub Actions and provenance
 
-The existing `feed.yml` is scheduled once daily (03:00 UTC). Its `event_core.yml` job now calls the news collector before sentence generation. The fixed-entry workflow stores `keywords`, `source_articles`, and `selection` in each new feed entry. Public post pages show cited source links and a fiction disclaimer.
+The current `feed.yml` generates and publishes an English news-inspired diary on the main branch. It keeps `keywords`, `source_articles`, and `selection` in the feed JSON for reproducibility. The public UI does not need to display article links. The writing prompt receives only three dynamically selected story keywords, never article titles or publisher names.
 
 Edit `news_agent/sources.json` to add/remove RSS feeds. Failed sources are reported in `source_errors`; a run stops if it cannot obtain a valid triple. Sources remain credited by publisher, headline, article URL and publication time. Full copyrighted article bodies are neither scraped nor republished.
 
@@ -103,7 +103,7 @@ docker compose -f docker-compose.news.yml run --rm news-agent \
 
 ## Newsworthiness and specificity
 
-The previous token/bigram heuristic could select phrases like `damage should`, `fled`, and `fbi investigates`. The current POS/NER extractor instead prefers combinations such as `Starship`, `Texas`, and `cabbage virus` (illustrative examples, not current news). It will fail clearly if feeds cannot supply enough specific candidates rather than silently reverting to generic words.
+The current POS/NER extractor selects recognized proper names and noun phrases, without hardcoded sample headlines or example keywords. If the feeds contain too few suitable candidates, extraction fails instead of substituting predefined example words.
 
 Each selected keyword includes `kind` (`named_entity`, `proper_noun`, or `noun_phrase`), `specificity`, `freshness`, article source URL and publication time, plus aggregate `mean_relevance` and cosine distance in `selection.json`. Source freshness defaults to **48 hours** (`--max-age-hours` overrides this), and newer headlines receive higher ranking. The seed controls selection *only among quality-eligible combinations*.
 
@@ -117,15 +117,11 @@ Docker Compose execution and live-feed NLP output have not been verified in the 
 
 ## Entity normalization and headline relevance
 
-The collector now preserves punctuation in actual names (for example,
-`Jordon Steele-John` rather than `Jordon Steele John`). It can also recover
-adjacent proper nouns when the English NER model misses a multi-word name.
-Generic headline modifiers are removed from candidates such as
-`New White House` → `White House`, while known geographic prefixes like
-`New York` and `New Zealand` are preserved.
-
-Abstract noun phrases such as `surgery and cancer diagnosis` are excluded;
-concrete phrases such as `cabbage virus` remain eligible. Selected terms expose
+The collector preserves punctuation in actual names and recovers adjacent
+proper nouns when the named-entity model misses a multiword name. Headline
+modifiers are removed using POS/NER information, without a fixed list of
+place-name examples. Generic abstract descriptions are excluded; concrete
+concepts remain eligible. Selected terms expose
 `entity_label` (where NER provided one) and `title_position`, the normalized
 position of the mention in the headline. Higher-ranked entities include a
 small relevance bonus for their NER category and appearing near the beginning
@@ -210,7 +206,7 @@ SDXL generation have not yet been validated end to end**.
 ## Retry strategy for missing phrases (v6)
 
 A valid JSON response from Ollama may still omit one of the three news terms,
-particularly a long event headline such as `Israeli settlers attack olive farmers`.
+particularly a long event headline.
 The writer now reports the **specific missing phrase(s)** and sends the previous
 text back for targeted revision rather than retrying the unchanged prompt.
 Named entities still require literal matching. A longer event phrase can appear
@@ -237,13 +233,12 @@ News selections have two distinct fields in the draft and published feed:
 - `keywords`: untouched news extraction, used for provenance and source attribution.
 - `story_keywords`: short, literal narrative anchors, used for LLM prompting and
   publication validation. Named entities retain exact spelling. For a `noun_phrase`
-  longer than four words, a trained English POS tagger filters out verbs,
-  stopwords and generic terms. The remaining content words are ranked by
+  representing an event and containing at least three words, a trained English
+  POS tagger filters verbs, stopwords and generic terms. The remaining content words are ranked by
   English Zipf frequency (`wordfreq`); **lower-frequency meaningful words**
   take priority, independent of their position in the headline.
-  For example, `Israeli settlers attack olive farmers` can produce `settlers`
-  rather than mechanically taking the last two words. The exact result
-  depends on model tagging and word-frequency data.
+  The exact result depends on model tagging and word-frequency data,
+  not hand-authored example keywords.
 
 The selection deliberately trades event detail for more natural first-person fiction;
 source titles, source URLs, and original keywords are never altered. The publisher
@@ -277,6 +272,11 @@ frequency is an explicit baseline that can be evaluated against other
 selection policies. It is never used to assert that a news event is factual.
 
 ## Prompt configuration and Python module invocation
+
+The writer receives **only the three dynamically selected narrative keywords**
+and an unrelated numeric seed. Source article headlines, publishers and URLs are
+stored in provenance, but are not included in the LLM prompt. There are no
+hand-written exemplar terms or named people in the production prompt.
 
 Use `NEWS_DIARY_PROMPT_PATH` to override the English news-diary prompt. The
 legacy `PROMPT_PATH` variable is deliberately ignored by this generator,
