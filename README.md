@@ -6,7 +6,9 @@
 
 An automated **English fictional picture diary** driven by RSS news headlines, local language models, and image generation.
 
-Each entry combines three keywords extracted from unrelated recent English-language news articles. A pretrained MiniLM embedding model scores combinations by semantic distance; the local LLM writes an original first-person diary, and the illustration worker draws it. Headlines are creative inspiration, **not factual claims**. The feed retains source links and distance scores for reproducibility.
+Each entry combines three keywords extracted from unrelated recent English-language news articles. A pretrained MiniLM embedding model scores combinations by semantic distance; the local LLM writes an original first-person diary, and the illustration worker draws it. Headlines are creative inspiration, **not factual claims**. The diary-writing prompt receives only the dynamically selected three terms,
+not the underlying headlines or source articles. The feed retains provenance
+and distance scores for reproducibility.
 
 **News agent setup and architecture:** [docs/NEWS_AGENT.md](docs/NEWS_AGENT.md).
 

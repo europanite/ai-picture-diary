@@ -9,11 +9,11 @@ from news_agent.selector import select_keywords
 
 NOW = datetime(2026, 10, 16, 4, tzinfo=timezone.utc)
 RSS = b'''<?xml version="1.0"?><rss version="2.0"><channel>
-<item><title>Satellite crosses coastal sky</title><link>https://example.org/a</link><pubDate>Fri, 16 Oct 2026 02:00:00 GMT</pubDate></item>
+<item><title>Glider crosses coastal sky</title><link>https://example.org/a</link><pubDate>Fri, 16 Oct 2026 02:00:00 GMT</pubDate></item>
 <item><title>Old headline ignored</title><link>https://example.org/b</link><pubDate>Mon, 05 Oct 2026 02:00:00 GMT</pubDate></item>
 </channel></rss>'''
 ATOM = b'''<feed xmlns="http://www.w3.org/2005/Atom">
-<entry><title>Harvesters gather near cabbage farms</title><link href="https://example.org/c"/><updated>2026-10-16T00:00:00Z</updated></entry>
+<entry><title>Harvesters gather near crystal farms</title><link href="https://example.org/c"/><updated>2026-10-16T00:00:00Z</updated></entry>
 </feed>'''
 
 
@@ -29,7 +29,7 @@ class FakeToken:
             self.pos_ = "DET"
         elif low in {"tiny", "coastal", "ancient", "distant", "mysterious", "massive"}:
             self.pos_ = "ADJ"
-        elif low in {"fbi", "texas", "london", "npr", "starship", "nvidia", "antarctic"}:
+        elif low in {"agencyone", "westhaven", "london", "npr", "airframe", "techworks", "farland"}:
             self.pos_ = "PROPN"
         else:
             self.pos_ = "NOUN"
@@ -87,43 +87,43 @@ def extract(articles, **kwargs):
 def test_rss_recency_and_atom_parsing():
     a = parse_feed(RSS, "Example", now=NOW)
     b = parse_feed(ATOM, "Atom", now=NOW)
-    assert len(a) == 1 and a[0].title == "Satellite crosses coastal sky"
+    assert len(a) == 1 and a[0].title == "Glider crosses coastal sky"
     assert len(b) == 1 and b[0].publisher == "Atom"
 
 
 def test_specificity_rejects_verbs_and_generic_phrases():
     articles = [
-        Article("1", "Source A", "Damage should continue as FBI investigates", "https://example.org/1", NOW.isoformat()),
-        Article("2", "Source B", "Starship rocket launches from Texas", "https://example.org/2", NOW.isoformat()),
-        Article("3", "Source C", "Mysterious cabbage virus strikes farms", "https://example.org/3", NOW.isoformat()),
+        Article("1", "Source A", "Damage should continue as Agencyone investigates", "https://example.org/1", NOW.isoformat()),
+        Article("2", "Source B", "Airframe rocket launches from Westhaven", "https://example.org/2", NOW.isoformat()),
+        Article("3", "Source C", "Mysterious crystal virus strikes farms", "https://example.org/3", NOW.isoformat()),
     ]
     candidates = extract(articles, per_article=6)
     terms = {c.text.lower() for c in candidates}
     assert "damage should" not in terms
-    assert "fbi investigates" not in terms
+    assert "agencyone investigates" not in terms
     assert "fled" not in terms
-    assert "fbi" in terms and "texas" in terms
-    assert any(term.endswith("cabbage virus") for term in terms)
+    assert "agencyone" in terms and "westhaven" in terms
+    assert any(term.endswith("crystal virus") for term in terms)
     assert all(c.kind in {"named_entity", "noun_phrase", "proper_noun"} for c in candidates)
 
 
 def test_fresh_headline_beats_old_headline_other_things_equal():
     articles = [
-        Article("old", "A", "Starship rocket launches", "https://example.org/a", "2026-10-14T04:00:00Z"),
-        Article("new", "B", "Texas rocket launches", "https://example.org/b", "2026-10-16T03:00:00Z"),
+        Article("old", "A", "Airframe rocket launches", "https://example.org/a", "2026-10-14T04:00:00Z"),
+        Article("new", "B", "Westhaven rocket launches", "https://example.org/b", "2026-10-16T03:00:00Z"),
     ]
     candidates = extract(articles, per_article=5)
-    starship = next(c for c in candidates if c.text.lower() == "starship")
-    texas = next(c for c in candidates if c.text.lower() == "texas")
-    assert texas.freshness > starship.freshness
-    assert texas.relevance > starship.relevance
+    airframe = next(c for c in candidates if c.text.lower() == "airframe")
+    westhaven = next(c for c in candidates if c.text.lower() == "westhaven")
+    assert westhaven.freshness > airframe.freshness
+    assert westhaven.relevance > airframe.relevance
 
 
 def test_keyword_extraction_has_provenance():
     articles = [
-        Article("1", "Source A", "Satellite moves above riverside farms", "https://example.org/1", NOW.isoformat()),
+        Article("1", "Source A", "Glider moves above riverside farms", "https://example.org/1", NOW.isoformat()),
         Article("2", "Source B", "Cabbage prices surprise farmers", "https://example.org/2", NOW.isoformat()),
-        Article("3", "Source C", "Tourists explore Antarctic observatory", "https://example.org/3", NOW.isoformat()),
+        Article("3", "Source C", "Tourists explore Farland observatory", "https://example.org/3", NOW.isoformat()),
     ]
     words = extract(articles, per_article=3)
     assert len(words) >= 3
@@ -133,7 +133,7 @@ def test_keyword_extraction_has_provenance():
 
 def test_selection_deterministic_cross_article_and_specific():
     articles = [
-        Article("1", "A", "Satellite crosses coastal sky", "https://example.org/1", NOW.isoformat()),
+        Article("1", "A", "Glider crosses coastal sky", "https://example.org/1", NOW.isoformat()),
         Article("2", "B", "Cabbage harvest surprises farmers", "https://example.org/2", NOW.isoformat()),
         Article("3", "C", "Tourists visit ancient lighthouse", "https://example.org/3", NOW.isoformat()),
     ]
@@ -149,7 +149,7 @@ def test_selection_deterministic_cross_article_and_specific():
 
 
 def test_insufficient_articles_fail():
-    a = [Article("1", "A", "Satellite coastal sky", "https://example.org/1", NOW.isoformat())]
+    a = [Article("1", "A", "Glider coastal sky", "https://example.org/1", NOW.isoformat())]
     with pytest.raises(ValueError, match="three"):
         select_keywords(extract(a), DeterministicEncoder(), seed=55)
 
@@ -160,7 +160,7 @@ def test_cli_offline_replay(tmp_path, monkeypatch, capsys):
     import types
     from news_agent.cli import main
     articles = [
-        Article("a", "Source A", "Satellite carries a tiny telescope", "https://example.org/a", NOW.isoformat()),
+        Article("a", "Source A", "Glider carries a tiny telescope", "https://example.org/a", NOW.isoformat()),
         Article("b", "Source B", "Cabbage harvest grows in valley", "https://example.org/b", NOW.isoformat()),
         Article("c", "Source C", "Tourists visit distant island", "https://example.org/c", NOW.isoformat()),
     ]
@@ -210,34 +210,34 @@ class OffsetSpan(list):
 def test_hyphenated_person_name_preserves_original_punctuation():
     from news_agent.keywords import _clean
 
-    name = OffsetSpan("Jordon Steele-John", [
-        OffsetToken("Jordon", 0, 0),
-        OffsetToken("Steele", 7, 1),
-        OffsetToken("-", 13, 2, "PUNCT"),
-        OffsetToken("John", 14, 3),
+    name = OffsetSpan("Arlo Wren-Kite", [
+        OffsetToken("Arlo", 0, 0),
+        OffsetToken("Wren", 5, 1),
+        OffsetToken("-", 9, 2, "PUNCT"),
+        OffsetToken("Kite", 10, 3),
     ])
-    assert _clean(name, kind="named_entity") == "Jordon Steele-John"
-    assert _clean(name, kind="proper_noun") == "Jordon Steele-John"
+    assert _clean(name, kind="named_entity") == "Arlo Wren-Kite"
+    assert _clean(name, kind="proper_noun") == "Arlo Wren-Kite"
 
 
 def test_headline_new_is_removed_without_breaking_geographic_names():
     from news_agent.keywords import _clean
 
-    boilerplate = OffsetSpan("New White House", [
+    boilerplate = OffsetSpan("New Marble Pavilion", [
         OffsetToken("New", 0, 0, "ADJ"),
-        OffsetToken("White", 4, 1),
-        OffsetToken("House", 10, 2),
+        OffsetToken("Marble", 4, 1),
+        OffsetToken("Pavilion", 11, 2),
     ], "ORG")
-    place = OffsetSpan("New York", [
-        OffsetToken("New", 0, 0), OffsetToken("York", 4, 1),
+    place = OffsetSpan("New Auria", [
+        OffsetToken("New", 0, 0), OffsetToken("Auria", 4, 1),
     ], "GPE")
-    publisher = OffsetSpan("New York Times", [
-        OffsetToken("New", 0, 0), OffsetToken("York", 4, 1),
-        OffsetToken("Times", 9, 2),
+    publisher = OffsetSpan("New Auria Review", [
+        OffsetToken("New", 0, 0), OffsetToken("Auria", 4, 1),
+        OffsetToken("Review", 10, 2),
     ], "ORG")
-    assert _clean(boilerplate, kind="named_entity") == "White House"
-    assert _clean(place, kind="named_entity") == "New York"
-    assert _clean(publisher, kind="named_entity") == "New York Times"
+    assert _clean(boilerplate, kind="named_entity") == "Marble Pavilion"
+    assert _clean(place, kind="named_entity") == "New Auria"
+    assert _clean(publisher, kind="named_entity") == "New Auria Review"
 
 
 def test_generic_medical_phrase_is_rejected_but_concrete_noun_survives():
@@ -253,13 +253,13 @@ def test_generic_medical_phrase_is_rejected_but_concrete_noun_survives():
         OffsetToken("cancer", 0, 0, "NOUN"),
         OffsetToken("diagnosis", 7, 1, "NOUN"),
     ])
-    concrete = OffsetSpan("cabbage virus", [
-        OffsetToken("cabbage", 0, 0, "NOUN"),
+    concrete = OffsetSpan("crystal virus", [
+        OffsetToken("crystal", 0, 0, "NOUN"),
         OffsetToken("virus", 8, 1, "NOUN"),
     ])
     assert _clean(generic) == ""
     assert _clean(generic2) == ""
-    assert _clean(concrete) == "cabbage virus"
+    assert _clean(concrete) == "crystal virus"
 
 
 def test_trained_ner_label_and_headline_centrality_affect_ranking():
@@ -267,10 +267,10 @@ def test_trained_ner_label_and_headline_centrality_affect_ranking():
 
     class StubDoc:
         def __init__(self, headline):
-            self.tokens = [OffsetToken("Pope", 0, 0), OffsetToken("pictured", 5, 1, "VERB"),
-                           OffsetToken("Vatican", 14, 2)]
-            self.ents = [OffsetSpan("Pope", [self.tokens[0]], "PERSON"),
-                         OffsetSpan("Vatican", [self.tokens[2]], "GPE")]
+            self.tokens = [OffsetToken("Daro", 0, 0), OffsetToken("pictured", 5, 1, "VERB"),
+                           OffsetToken("Varnico", 14, 2)]
+            self.ents = [OffsetSpan("Daro", [self.tokens[0]], "PERSON"),
+                         OffsetSpan("Varnico", [self.tokens[2]], "GPE")]
             self.noun_chunks = []
 
         def __iter__(self):
@@ -285,10 +285,10 @@ def test_trained_ner_label_and_headline_centrality_affect_ranking():
             return [StubDoc(text) for text in texts]
 
     results = extract_keywords([
-        Article("pope", "Source", "Pope pictured near Vatican", "https://example.org/p", NOW.isoformat()),
+        Article("daro", "Source", "Daro pictured near Varnico", "https://example.org/p", NOW.isoformat()),
     ], nlp=StubNLP(), now=NOW, per_article=8)
-    pope = next(x for x in results if x.text == "Pope")
-    vatican = next(x for x in results if x.text == "Vatican")
-    assert pope.entity_label == "PERSON"
-    assert pope.title_position < vatican.title_position
-    assert pope.relevance > vatican.relevance
+    daro = next(x for x in results if x.text == "Daro")
+    varnico = next(x for x in results if x.text == "Varnico")
+    assert daro.entity_label == "PERSON"
+    assert daro.title_position < varnico.title_position
+    assert daro.relevance > varnico.relevance

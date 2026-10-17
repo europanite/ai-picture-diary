@@ -43,6 +43,20 @@ def test_read_context_rejects_unattributed_selection(tmp_path: Path):
         read_context(path)
 
 
-def test_prompt_contains_grounded_keywords_and_sources():
-    prompt = render_prompt(_context(), "{{NEWS_CONTEXT}} / {{PROMPT_SEED}}", "123")
-    assert "cabbage" in prompt and '"publisher": "Example"' in prompt and "123" in prompt
+def test_prompt_contains_only_selected_keywords_not_source_headlines():
+    prompt = render_prompt(_context(), "{{STORY_KEYWORDS}} / {{NEWS_CONTEXT}} / {{PROMPT_SEED}}", "123")
+    assert '"cabbage"' in prompt and "123" in prompt
+    assert "News about" not in prompt and '"publisher"' not in prompt
+    assert "{{NEWS_CONTEXT}}" not in prompt
+
+
+def test_prompt_does_not_leak_arbitrary_article_content():
+    context = _context()
+    context["selected"][0]["title"] = "UniqueHeadlineOnlyMarker about an unrelated incident"
+    context["selected"][0]["publisher"] = "UniquePublisherOnlyMarker"
+    context["selected"][0]["url"] = "https://example.test/UniqueURLOnlyMarker"
+    rendered = render_prompt(context, "{{STORY_KEYWORDS}}|{{NEWS_CONTEXT}}", "4")
+    assert '"satellite"' in rendered
+    assert "UniqueHeadlineOnlyMarker" not in rendered
+    assert "UniquePublisherOnlyMarker" not in rendered
+    assert "UniqueURLOnlyMarker" not in rendered

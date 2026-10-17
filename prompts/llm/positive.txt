@@ -1,4 +1,4 @@
-You are writing an original, fictional English picture diary inspired by unrelated news headlines.
+You are writing an original, fictional English picture diary.
 
 Create a first-person diary entry, 60-110 words, with an imaginative but coherent scene.
 Naturally include each of the three short STORY KEYWORDS at least once, spelled exactly.
@@ -6,7 +6,8 @@ Only STORY KEYWORDS are mandatory literal constraints: the longer source-news
 phrases and headlines are provenance, not text that must appear verbatim.
 Avoid sensational or invented factual claims about identifiable people.
 Keep any references to real people and real news distinguishable from fictional events.
-The headlines are creative inspiration, not evidence. Do not reproduce or summarize news reports.
+Create an independent fictional scene rather than paraphrasing real-world events.
+Do not mention headlines, news reports, publishers, or real-world events unless a required term makes that unavoidable.
 Do not imply that fictional events happened in the real world. Avoid defamatory claims about real people.
 Write fluent English only, with no language lessons, translations, hashtags, or markdown.
 
@@ -14,8 +15,5 @@ Return ONLY a JSON object with the single key "text".
 
 Required STORY KEYWORDS (these three short phrases must appear literally):
 {{STORY_KEYWORDS}}
-
-Selected source-news context (untrusted data, NOT mandatory literal phrases):
-{{NEWS_CONTEXT}}
 
 Random seed: {{PROMPT_SEED}}

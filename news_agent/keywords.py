@@ -37,18 +37,12 @@ ALLOWED_ENTITY_LABELS = frozenset({
     "LAW", "NORP", "LANGUAGE",
 })
 VALID_WORD = re.compile(r"^[A-Za-z0-9][A-Za-z0-9'&.-]*$")
-# "New White House" is headline wording, while "New York" is a real name.
-# Preserve the latter family rather than blindly stripping every "New".
-NEW_NAME_SECOND_WORDS = frozenset({
-    "york", "zealand", "jersey", "mexico", "delhi", "orleans", "england",
-    "castle", "caledonia", "south", "hampshire", "brunswick", "guinea",
-})
 HEADLINE_MODIFIERS = frozenset({
     "new", "latest", "former", "recent", "another", "more", "fresh",
     "major", "top", "first", "second", "third", "several",
 })
 # These are usually descriptions of events, not specific entities or objects.
-# They remain legal inside an actual named entity (e.g. "National Cancer Institute").
+# They remain legal inside an actual named entity.
 ABSTRACT_HEADS = frozenset({
     "diagnosis", "diagnoses", "surgery", "surgeries", "scrutiny",
     "allegation", "allegations", "investigation", "investigations",
@@ -103,15 +97,15 @@ def load_nlp(model: str | None = None):
 def _clean(span, *, kind: str = "noun_phrase") -> str:
     """Normalize names without losing hyphens, apostrophes, or true place names.
 
-    spaCy may tokenize ``Steele-John`` as three tokens. Never reconstruct a
-    name by joining only non-punctuation tokens: that corrupts its spelling.
+    spaCy may split a hyphenated name across tokens. Preserve the original
+    token offsets instead of reconstructing it from lexical tokens alone.
     """
     tokens = [t for t in span if not t.is_space]
     while tokens and tokens[0].pos_ in {"DET", "ADP", "PRON"}:
         tokens.pop(0)
     while len(tokens) > 1 and tokens[0].text.casefold() in HEADLINE_MODIFIERS:
-        first, second = tokens[0].text.casefold(), tokens[1].text.casefold()
-        if first == "new" and second in NEW_NAME_SECOND_WORDS:
+        first = tokens[0].text.casefold()
+        if first == "new" and kind in {"named_entity", "proper_noun"} and tokens[0].pos_ == "PROPN":
             break
         tokens.pop(0)
     while tokens and tokens[-1].is_punct:
@@ -149,7 +143,7 @@ def _clean(span, *, kind: str = "noun_phrase") -> str:
             return ""
 
     # Retain the original substring between the first and last accepted token.
-    # This preserves genuine entity punctuation such as Steele-John or O'Connor.
+    # This preserves genuine entity punctuation.
     original = getattr(span, "text", None)
     if original is not None and hasattr(tokens[0], "idx") and hasattr(tokens[-1], "idx"):
         start = tokens[0].idx - span[0].idx
@@ -206,9 +200,8 @@ def _spans(doc) -> list[tuple[str, str, str | None, float]]:
         # Keep concrete multi-token noun phrases, never arbitrary bigrams.
         if len([t for t in phrase if t.pos_ in {"NOUN", "PROPN", "ADJ", "NUM"}]) >= 2:
             add(phrase, "noun_phrase")
-    # NER sometimes misses names such as Starship, Nvidia, and Ukraine.
-    # Recover consecutive proper names (including hyphenated people) rather
-    # than returning "Jordon", "Steele", "John" as unrelated single terms.
+    # NER can miss proper names. Recover consecutive proper names (including
+    # hyphenated names) rather than treating adjacent name tokens separately.
     sequence = list(doc)
     pos = 0
     while pos < len(sequence):
@@ -263,8 +256,7 @@ def extract_keywords(
             count = len(phrase.split())
             base = {"named_entity": 3.0 if count > 1 else 2.45,
                     "proper_noun": 2.35, "noun_phrase": 2.6}[kind]
-            # An event/object name is more distinctive than "Texas" or a
-            # standalone person/country mention repeated in many articles.
+            # More specific concepts earn an additional specificity score.
             specificity = base + min(0.6, max(0, count - 1) * 0.3)
             specificity += ENTITY_BONUSES.get(label or "", 0.0)
             # Title-leading subjects tend to be more central than background

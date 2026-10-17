@@ -20,9 +20,9 @@ def mock_distinctive_word_dependencies(monkeypatch):
             self.text, self.idx = text, start
             self.is_punct = False
             self.is_stop = text.lower() in {"and", "the", "of", "in"}
-            self.pos_ = ("VERB" if text.lower() in {"attack", "investigate", "faces"}
-                         else "ADJ" if text.lower() in {"israeli", "olive", "quantum", "brazilian"}
-                         else "PROPN" if text.lower() == "amazon"
+            self.pos_ = ("VERB" if text.lower() in {"arrange", "investigate", "faces"}
+                         else "ADJ" if text.lower() in {"fable", "paper", "ceramic", "verdant"}
+                         else "PROPN" if text.lower() == "valley"
                          else "NOUN")
 
     class Tagger:
@@ -30,25 +30,25 @@ def mock_distinctive_word_dependencies(monkeypatch):
             import re
             return [Token(m.group(), m.start()) for m in re.finditer(r"[A-Za-z'-]+", phrase)]
 
-    freqs = {"israeli": 4.4, "settlers": 3.5, "olive": 4.2,
-             "farmers": 4.3, "attack": 5.2, "quantum": 4.2,
-             "prototypes": 3.7, "robotics": 3.9, "company": 5.6,
-             "brazilian": 4.3, "amazon": 4.5, "deforestation": 3.3}
+    freqs = {"fable": 4.4, "artisans": 3.5, "paper": 4.2,
+             "lanterns": 4.3, "arrange": 5.2, "ceramic": 4.2,
+             "artifacts": 3.7, "artisan": 3.9, "workshop": 5.6,
+             "verdant": 4.3, "valley": 4.5, "erosion": 3.3}
     monkeypatch.setattr(generate_sentence, "_news_nlp", lambda: Tagger())
     monkeypatch.setattr(generate_sentence, "_zipf_frequency", lambda w: freqs.get(w.lower(), 4.8))
 
 
 TEXT = (
-    "I woke to discover Eva Marie Saint beside a little stage in New Delhi. "
-    "An old newspaper announced that Israeli settlers attack olive farmers, but the "
+    "I woke to discover Character Alpha beside a little stage in Place Beta. "
+    "An old newspaper announced that Fable artisans arrange paper lanterns, but the "
     "actors immediately reminded everyone it was only a prop for our fictional play. "
-    "I spent the afternoon painting paper olive trees and watching the crowded street "
+    "I spent the afternoon painting paper trees and watching the crowded street "
     "turn into an imaginary theater. No one in my dream knew what was real."
 )
 
 
 def selection():
-    keywords = ["Eva Marie Saint", "New Delhi", "Israeli settlers attack olive farmers"]
+    keywords = ["Character Alpha", "Place Beta", "Fable artisans arrange paper lanterns"]
     return {
         "keywords": keywords,
         "selected": [
@@ -91,7 +91,7 @@ def test_generator_mocked_ollama_writes_draft(tmp_path, monkeypatch, capsys):
     def fake_post(url, json, timeout):
         assert url == "http://localhost:11434/api/generate"
         assert json["format"]["required"] == ["text"]
-        assert "Eva Marie Saint" in json["prompt"]
+        assert "Character Alpha" in json["prompt"]
         return FakeResponse()
 
     monkeypatch.setattr("scripts.generate_sentence.requests.post", fake_post)
@@ -142,7 +142,7 @@ def test_news_diary_custom_prompt_path(tmp_path, monkeypatch):
 
     def fake_post(url, json, timeout):
         assert "Custom English prompt:" in json["prompt"]
-        assert "Eva Marie Saint" in json["prompt"]
+        assert "Character Alpha" in json["prompt"]
         return FakeResponse()
 
     monkeypatch.setenv("PROMPT_PATH", "scripts/prompts/llm/sentence.txt")
@@ -259,7 +259,7 @@ def test_retry_targets_missing_keyword_and_reuses_draft(tmp_path, monkeypatch, c
     selection_path.write_text(json.dumps(selection()), encoding="utf-8")
     draft_path = tmp_path / "draft.json"
     first_draft = (
-        "I visited New Delhi in my dream and saw Eva Marie Saint standing by a cardboard "
+        "I visited Place Beta in my dream and saw Character Alpha standing by a cardboard "
         "theater with painted windows. Every paper prop blew across the stage as the wind "
         "grew stronger. I followed the props through an imaginary market and found an old "
         "stage curtain hidden behind a bright red shop sign. It felt like a strange movie."
@@ -290,7 +290,7 @@ def test_retry_targets_missing_keyword_and_reuses_draft(tmp_path, monkeypatch, c
     assert json.loads(draft_path.read_text())["text"] == TEXT
     assert len(prompts) == 2
     assert "REVISION REQUIRED" in prompts[1]
-    assert 'Israeli settlers attack olive farmers' in prompts[1]
+    assert 'Fable artisans arrange paper lanterns' in prompts[1]
     assert first_draft in prompts[1]
     assert "Missing" in capsys.readouterr().err or "missing" in prompts[1].lower()
 
@@ -298,14 +298,14 @@ def test_retry_targets_missing_keyword_and_reuses_draft(tmp_path, monkeypatch, c
 def test_missing_word_error_identifies_only_absent_terms():
     from scripts.generate_sentence import MissingKeywordsError, parse_output
     partial = (
-        "I watched Eva Marie Saint wander around New Delhi in my dream, past a tiny "
+        "I watched Character Alpha wander around Place Beta in my dream, past a tiny "
         "bookshop filled with postcards and paper boats. The paper boats sailed across "
         "the shelves like colorful fish, and I wondered whether the street had turned "
         "into an enormous stage. An audience watched from behind the window in silence."
     )
     with pytest.raises(MissingKeywordsError) as error:
         parse_output(json.dumps({"text": partial}), selection()["keywords"])
-    assert error.value.missing == ["Israeli settlers attack olive farmers"]
+    assert error.value.missing == ["Fable artisans arrange paper lanterns"]
 
 
 def test_missing_keyword_retry_never_writes_unvalidated_draft(tmp_path, monkeypatch, capsys):
@@ -337,52 +337,52 @@ def test_missing_keyword_retry_never_writes_unvalidated_draft(tmp_path, monkeypa
 
 def test_rare_word_not_the_last_two_words():
     from scripts.generate_sentence import distinctive_word
-    assert distinctive_word("Israeli settlers attack olive farmers") == "settlers"
+    assert distinctive_word("Fable artisans arrange paper lanterns") == "artisans"
 
 
 def test_generic_verbs_filtered_even_if_rare():
     from scripts.generate_sentence import distinctive_word
-    assert distinctive_word("robotics company investigate quantum prototypes") == "prototypes"
+    assert distinctive_word("artisan workshop investigate ceramic artifacts") == "artifacts"
 
 
 def test_word_frequency_rather_than_last_position_controls_story_seed():
     context = selection()
     context["selected"][2]["kind"] = "noun_phrase"
-    assert story_keywords(context)[2] == "settlers"
-    assert context["keywords"][2] == "Israeli settlers attack olive farmers"
+    assert story_keywords(context)[2] == "artisans"
+    assert context["keywords"][2] == "Fable artisans arrange paper lanterns"
 
 
 def test_long_event_phrase_becomes_short_story_seed_without_losing_source():
     context = selection()
     context["selected"][2]["kind"] = "noun_phrase"
-    assert story_keywords(context) == ["Eva Marie Saint", "New Delhi", "settlers"]
-    assert context["keywords"][2] == "Israeli settlers attack olive farmers"
+    assert story_keywords(context) == ["Character Alpha", "Place Beta", "artisans"]
+    assert context["keywords"][2] == "Fable artisans arrange paper lanterns"
     prompt = render_prompt(context, "STORY: {{STORY_KEYWORDS}} / SOURCE: {{NEWS_CONTEXT}}", "42")
-    assert '"settlers"' in prompt
-    assert "Israeli settlers attack olive farmers" in prompt
+    assert '"artisans"' in prompt
+    assert "Fable artisans arrange paper lanterns" not in prompt
 
 
 def test_named_entity_stays_verbatim_even_when_long():
     context = selection()
     context["selected"][2].update({
-        "text": "International Monetary Fund", "kind": "named_entity", "entity_label": "ORG",
+        "text": "Fictional Research Assembly", "kind": "named_entity", "entity_label": "ORG",
     })
-    context["keywords"][2] = "International Monetary Fund"
-    assert story_keywords(context)[2] == "International Monetary Fund"
+    context["keywords"][2] = "Fictional Research Assembly"
+    assert story_keywords(context)[2] == "Fictional Research Assembly"
 
 
 def test_short_event_anchor_must_still_appear():
     context = selection()
     context["selected"][2]["kind"] = "noun_phrase"
-    good = ("I met Eva Marie Saint in New Delhi, where settlers and olive farmers were selling painted "
+    good = ("I met Character Alpha in Place Beta, where artisans and paper lanterns were selling painted "
             "paper fruit at a tiny theater. I wandered between strange stalls, imagining "
             "that the paper oranges were lanterns and that the streets were a stage "
             "made of colored glass. I kept the handmade ticket in my pocket as a "
             "souvenir of a very odd day.")
     assert parse_output(json.dumps({"text": good}), story_keywords(context)) == good
     from scripts.generate_sentence import MissingKeywordsError
-    with pytest.raises(MissingKeywordsError, match="settlers"):
-        parse_output(json.dumps({"text": good.replace("settlers", "vendors")}), story_keywords(context))
+    with pytest.raises(MissingKeywordsError, match="artisans"):
+        parse_output(json.dumps({"text": good.replace("artisans", "vendors")}), story_keywords(context))
 
 
 def test_writer_and_publisher_accept_short_event_anchor(tmp_path, monkeypatch):
@@ -391,8 +391,8 @@ def test_writer_and_publisher_accept_short_event_anchor(tmp_path, monkeypatch):
     selection_path = tmp_path / "selection.json"
     selection_path.write_text(json.dumps(context), encoding="utf-8")
     draft_path = tmp_path / "draft.json"
-    story = ("I visited New Delhi today and saw a poster honoring Eva Marie Saint "
-             "above a row of market stalls. Near the stalls, settlers and olive farmers were "
+    story = ("I visited Place Beta today and saw a poster honoring Character Alpha "
+             "above a row of market stalls. Near the stalls, artisans and paper lanterns were "
              "painting blue flowers onto a wall. I helped them carry paper lanterns "
              "into a courtyard, then stayed to watch a shadow puppet show. Everything "
              "looked so vivid that I forgot this was only an imaginary town.")
@@ -411,15 +411,15 @@ def test_writer_and_publisher_accept_short_event_anchor(tmp_path, monkeypatch):
                                      "--output-json", str(draft_path)])
     assert generate_main() == 0
     draft = json.loads(draft_path.read_text())
-    assert draft["keywords"][2] == "Israeli settlers attack olive farmers"
-    assert draft["story_keywords"][2] == "settlers"
+    assert draft["keywords"][2] == "Fable artisans arrange paper lanterns"
+    assert draft["story_keywords"][2] == "artisans"
     assert "Required STORY KEYWORDS" in prompts[0]
     output = publish(draft_path=draft_path, selection_path=selection_path,
                      public_dir=tmp_path / "public",
                      now=datetime(2026, 10, 17, 1, 25, tzinfo=timezone.utc))
     assert output["created"] is True
     feed = json.loads(Path(output["feed"]).read_text())["items"][0]
-    assert feed["story_keywords"][2] == "settlers"
+    assert feed["story_keywords"][2] == "artisans"
 
 
 def test_publisher_rejects_tampered_story_keywords(tmp_path):
@@ -427,8 +427,8 @@ def test_publisher_rejects_tampered_story_keywords(tmp_path):
     context["selected"][2]["kind"] = "noun_phrase"
     selection_path = tmp_path / "selection.json"
     selection_path.write_text(json.dumps(context), encoding="utf-8")
-    story = ("I visited New Delhi today and met Eva Marie Saint beside a quiet "
-             "marketplace. Nearby, settlers and olive farmers were building a colorful paper "
+    story = ("I visited Place Beta today and met Character Alpha beside a quiet "
+             "marketplace. Nearby, artisans were building a colorful paper "
              "carousel for a small theater. I spent the afternoon painting a tiny "
              "wooden door and watching people hang blue flags from the ceiling. "
              "By sunset, the market looked like a scene from a fantastic dream.")
@@ -442,49 +442,49 @@ def test_publisher_rejects_tampered_story_keywords(tmp_path):
 
 
 def test_three_word_event_phrase_uses_distinctive_word():
-    """Regresses the scheduled run failure on Brazilian Amazon deforestation."""
+    """Regresses the scheduled run failure on Verdant Valley erosion."""
     context = selection()
     context["selected"][2].update({
-        "text": "Brazilian Amazon deforestation", "kind": "noun_phrase",
+        "text": "Verdant Valley erosion", "kind": "noun_phrase",
         "entity_label": None,
     })
-    context["keywords"][2] = "Brazilian Amazon deforestation"
-    assert story_keywords(context) == ["Eva Marie Saint", "New Delhi", "deforestation"]
-    assert context["keywords"][2] == "Brazilian Amazon deforestation"
+    context["keywords"][2] = "Verdant Valley erosion"
+    assert story_keywords(context) == ["Character Alpha", "Place Beta", "erosion"]
+    assert context["keywords"][2] == "Verdant Valley erosion"
     prompt = render_prompt(context, "{{STORY_KEYWORDS}} / {{NEWS_CONTEXT}}", "42")
-    assert '"deforestation"' in prompt
-    assert "Brazilian Amazon deforestation" in prompt
+    assert '"erosion"' in prompt
+    assert "Verdant Valley erosion" not in prompt
 
 
 def test_misclassified_event_entity_is_reduced():
     context = selection()
     context["selected"][2].update({
-        "text": "Brazilian Amazon deforestation", "kind": "named_entity", "entity_label": "LOC",
+        "text": "Verdant Valley erosion", "kind": "named_entity", "entity_label": "LOC",
     })
-    context["keywords"][2] = "Brazilian Amazon deforestation"
-    assert story_keywords(context)[2] == "deforestation"
+    context["keywords"][2] = "Verdant Valley erosion"
+    assert story_keywords(context)[2] == "erosion"
 
 
 def test_short_entity_and_two_word_phrase_stay_intact():
     context = selection()
-    context["selected"][2].update({"text": "olive farmers", "kind": "noun_phrase"})
-    context["keywords"][2] = "olive farmers"
-    assert story_keywords(context)[2] == "olive farmers"
-    context["selected"][2].update({"text": "World Health Organization", "kind": "named_entity"})
-    context["keywords"][2] = "World Health Organization"
-    assert story_keywords(context)[2] == "World Health Organization"
+    context["selected"][2].update({"text": "paper lanterns", "kind": "noun_phrase"})
+    context["keywords"][2] = "paper lanterns"
+    assert story_keywords(context)[2] == "paper lanterns"
+    context["selected"][2].update({"text": "Imaginary Science Bureau", "kind": "named_entity"})
+    context["keywords"][2] = "Imaginary Science Bureau"
+    assert story_keywords(context)[2] == "Imaginary Science Bureau"
 
 
 def test_three_word_event_generated_and_published(tmp_path, monkeypatch):
     context = selection()
-    context["selected"][2].update({"text": "Brazilian Amazon deforestation", "kind": "noun_phrase"})
-    context["keywords"][2] = "Brazilian Amazon deforestation"
+    context["selected"][2].update({"text": "Verdant Valley erosion", "kind": "noun_phrase"})
+    context["keywords"][2] = "Verdant Valley erosion"
     selection_path = tmp_path / "selection.json"
     selection_path.write_text(json.dumps(context), encoding="utf-8")
     draft_path = tmp_path / "draft.json"
     story = (
-        "I met Eva Marie Saint in New Delhi, where a colorful theater displayed a "
-        "painting about deforestation. I wandered into an imaginary garden full of "
+        "I met Character Alpha in Place Beta, where a colorful theater displayed a "
+        "painting about erosion. I wandered into an imaginary garden full of "
         "paper trees, and I helped the artists hang blue lanterns from the ceiling. "
         "The exhibit was made of old newspapers and wooden boxes. After sunset, "
         "we sat together and watched shadows move across the painted walls."
@@ -502,8 +502,8 @@ def test_three_word_event_generated_and_published(tmp_path, monkeypatch):
                                       "--output-json", str(draft_path)])
     assert generate_main() == 0
     draft = json.loads(draft_path.read_text(encoding="utf-8"))
-    assert draft["keywords"][2] == "Brazilian Amazon deforestation"
-    assert draft["story_keywords"][2] == "deforestation"
+    assert draft["keywords"][2] == "Verdant Valley erosion"
+    assert draft["story_keywords"][2] == "erosion"
     output = publish(draft_path=draft_path, selection_path=selection_path,
                      public_dir=tmp_path / "public")
     assert output["created"] is True
