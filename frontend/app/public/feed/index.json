@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261018_cad67defb84a",
+      "kind": "news_diary",
+      "date": "2026-10-18",
+      "created_at": "2026-10-18T08:03:51Z",
+      "published_at": "2026-10-18T08:03:51Z",
+      "text": "Today at Silver Rail Elementary, I encountered an unexpected challenge during recess. The kids were all focused on their games, but Leo XIV's idea to turn a trash can into a solar-powered toy car caught everyone's attention. His radical thinking inspired his classmates to join in and brainstorm other inventions using recycled materials. It was refreshing to see such creativity and collaboration among the young minds at our school.",
+      "tweet": "Today at Silver Rail Elementary, I encountered an unexpected challenge during recess. The kids were all focused on their games, but Leo XIV's idea to turn a trash can into a solar-powered toy car caught everyone's attention. His radical thinking inspired his classmates to join in and brainstorm other inventions using recycled materials. It was refreshing to see such creativity and collaboration among the young minds at our school.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261018_cad67defb84a/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.npr.org/2026/10/17/nx-s1-6005814/oregon-governor-tina-kotek-reacts-to-silver-rail-elementary-school-shooting",
+        "https://www.theguardian.com/news/audio/2026/oct/18/michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty",
+        "https://www.npr.org/2026/10/17/nx-s1-6006762/pope-leo-xiv-leaves-hospital-days-after-lung-cancer-surgery"
+      ],
+      "keywords": [
+        "Silver Rail Elementary",
+        "Radical Thinking",
+        "Leo XIV"
+      ],
+      "story_keywords": [
+        "Silver Rail Elementary",
+        "Radical Thinking",
+        "Leo XIV"
+      ],
+      "source_articles": [
+        {
+          "publisher": "NPR News",
+          "title": "Oregon governor Tina Kotek reacts to Silver Rail Elementary school shooting",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6005814/oregon-governor-tina-kotek-reacts-to-silver-rail-elementary-school-shooting",
+          "published_at": "2026-10-17T22:45:25+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "‘Austerity is inevitably painful’: How Michael Gove justifies his politics | Radical Thinking with Aditya Chakrabortty",
+          "url": "https://www.theguardian.com/news/audio/2026/oct/18/michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty",
+          "published_at": "2026-10-18T07:00:53+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Pope Leo XIV leaves hospital days after lung cancer surgery",
+          "url": "https://www.npr.org/2026/10/17/nx-s1-6006762/pope-leo-xiv-leaves-hospital-days-after-lung-cancer-surgery",
+          "published_at": "2026-10-17T15:10:14+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.995972,
+        "mean_relevance": 5.198519,
+        "mean_specificity": 3.7,
+        "mean_freshness": 0.710348,
+        "mean_distance": 0.93195,
+        "pairwise_distances": [
+          0.961073,
+          0.959179,
+          0.875598
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 39109831417,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261018_cad67defb84a.png",
+      "image_url": "image/feed_20261018_cad67defb84a.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at Silver Rail Elementary, I encountered an unexpected challenge during recess. The kids were all focused on their games, but Leo XIV's idea to turn a trash can into a solar-powered toy car caught everyone's attention. His radical thi. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-18T08:05:21Z"
+    },
+    {
       "id": "feed_20261017_313b4798f1d7",
       "kind": "news_diary",
       "date": "2026-10-17",
@@ -147,7 +220,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 2,
+  "count": 3,
   "page_size": 20,
   "total_pages": 1,
   "first_feed_url": "./feed/page_000.json",
