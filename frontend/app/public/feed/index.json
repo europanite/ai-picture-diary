@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261019_43d558c440ae",
+      "kind": "news_diary",
+      "date": "2026-10-19",
+      "created_at": "2026-10-19T12:00:25Z",
+      "published_at": "2026-10-19T12:00:25Z",
+      "text": "Today, as I sat by my window watching the storm clouds gather outside, I couldn't help but think about Tiger Shroff's latest movie. Suddenly, a loud rumble echoed through the air and I realized Hurricane Trudy was approaching. It looked like we'd be stuck indoors for a while now. I remembered hearing that Anthropic had developed an AI system to predict such weather patterns, though I didn't know if they were accurate.",
+      "tweet": "Today, as I sat by my window watching the storm clouds gather outside, I couldn't help but think about Tiger Shroff's latest movie. Suddenly, a loud rumble echoed through the air and I realized Hurricane Trudy was approaching. It looked like we'd be stuck indoors for a while now. I remembered hearing that Anthropic had developed an AI system to predict such weather patterns, though I didn't know if they were accurate.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261019_43d558c440ae/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/news/2026/oct/19/hurricane-trudy-mexico-pacific-coast-greece-floods",
+        "https://www.bbc.co.uk/news/articles/c6jdmy872r7vo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/technology/2026/oct/19/ai-firm-anthropic-to-commit-shares-to-fund-for-public-good"
+      ],
+      "keywords": [
+        "Hurricane Trudy",
+        "Tiger Shroff",
+        "AI firm Anthropic"
+      ],
+      "story_keywords": [
+        "Hurricane Trudy",
+        "Tiger Shroff",
+        "Anthropic"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Hurricane Trudy menaces Mexico’s Pacific coast and Greece hit by deadly floods",
+          "url": "https://www.theguardian.com/news/2026/oct/19/hurricane-trudy-mexico-pacific-coast-greece-floods",
+          "published_at": "2026-10-19T10:07:09+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Bollywood actor Tiger Shroff survives shooting attempt in Mumbai",
+          "url": "https://www.bbc.co.uk/news/articles/c6jdmy872r7vo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-10-19T07:35:06+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "AI firm Anthropic to commit 5% of shares to fund for ‘public good’",
+          "url": "https://www.theguardian.com/technology/2026/oct/19/ai-firm-anthropic-to-commit-shares-to-fund-for-public-good",
+          "published_at": "2026-10-19T11:10:34+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.995726,
+        "mean_relevance": 5.27115,
+        "mean_specificity": 3.5,
+        "mean_freshness": 0.907879,
+        "mean_distance": 0.929698,
+        "pairwise_distances": [
+          0.76376,
+          0.941638,
+          1.083697
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 39248356772,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261019_43d558c440ae.png",
+      "image_url": "image/feed_20261019_43d558c440ae.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, as I sat by my window watching the storm clouds gather outside, I couldn't help but think about Tiger Shroff's latest movie. Suddenly, a loud rumble echoed through the air and I realized Hurricane Trudy was approaching. It looked lik. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-19T12:02:09Z"
+    },
+    {
       "id": "feed_20261018_cad67defb84a",
       "kind": "news_diary",
       "date": "2026-10-18",
@@ -220,7 +293,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 3,
+  "count": 4,
   "page_size": 20,
   "total_pages": 1,
   "first_feed_url": "./feed/page_000.json",
