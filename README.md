@@ -1,8 +1,21 @@
 # [ai-picture-diary](https://github.com/europanite/ai-picture-diary "ai-picture-diary")
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![OS](https://img.shields.io/badge/OS-Linux%20%7C%20macOS%20%7C%20Windows-blue)
+[![Python](https://img.shields.io/badge/python-3.10%20|%203.11|%203.12|%203.13-blue)](https://www.python.org/)
+
 [![Feed](https://github.com/europanite/ai-picture-diary/actions/workflows/feed.yml/badge.svg)](https://github.com/europanite/ai-picture-diary/actions/workflows/feed.yml)
 [![Pages](https://github.com/europanite/ai-picture-diary/actions/workflows/pages.yml/badge.svg)](https://github.com/europanite/ai-picture-diary/actions/workflows/pages.yml)
 [![News Agent Tests](https://github.com/europanite/ai-picture-diary/actions/workflows/news-agent-tests.yml/badge.svg)](https://github.com/europanite/ai-picture-diary/actions/workflows/news-agent-tests.yml)
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37)
+
 
 An automated **English fictional picture diary** driven by RSS news headlines, local language models, and image generation.
 
