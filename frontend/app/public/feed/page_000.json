@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261021_1644d1e2683b",
+      "kind": "news_diary",
+      "date": "2026-10-21",
+      "created_at": "2026-10-21T10:11:59Z",
+      "published_at": "2026-10-21T10:11:59Z",
+      "text": "Today, I woke up to find Stephen Hubbard had posted an article about LeBron James' new venture. It was a perfect day for introspection, so I decided to start my morning jog around the neighborhood park. As I ran past the grownups playing chess and feeding pigeons, I couldn't help but feel like this adult world was far from where I wanted to be. Instead, I looked forward to the day when I could return to the simple joys of childhood, much like LeBron's young fans do with him. I realized that sometimes being a 'grownup' meant taking time for myself and appreciating the beauty in things that are often overlooked.",
+      "tweet": "Today, I woke up to find Stephen Hubbard had posted an article about LeBron James' new venture. It was a perfect day for introspection, so I decided to start my morning jog around the neighborhood park. As I ran past the grownups playing chess and feeding pigeons, I couldn't help but feel like this adult world was far from where I wanted to be. Instead, I looked forward to the day when I could return to the simple joys of childhood, much like LeBron's young fans do with him. I realized that sometimes being a 'grownup' meant taking time for myself and appreciating the beauty in things that are often overlooked.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261021_1644d1e2683b/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.bbc.co.uk/news/articles/c6m24l9v3745o?at_medium=RSS&at_campaign=rss",
+        "https://www.npr.org/2026/10/21/nx-s1-6010350/lebron-knicks-76ers",
+        "https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/21/jackdaw-approval-step-towards-grownup-north-sea-policy"
+      ],
+      "keywords": [
+        "Stephen Hubbard",
+        "LeBron James",
+        "grownup North Sea policy"
+      ],
+      "story_keywords": [
+        "Stephen Hubbard",
+        "LeBron James",
+        "grownup"
+      ],
+      "source_articles": [
+        {
+          "publisher": "BBC World",
+          "title": "Russia frees US citizen Stephen Hubbard, state media reports",
+          "url": "https://www.bbc.co.uk/news/articles/c6m24l9v3745o?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-10-21T09:22:23+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "LeBron James talks smack with Knicks fans in victorious 76ers debut",
+          "url": "https://www.npr.org/2026/10/21/nx-s1-6010350/lebron-knicks-76ers",
+          "published_at": "2026-10-21T06:07:16+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Jackdaw approval is a step towards a grownup North Sea policy",
+          "url": "https://www.theguardian.com/business/nils-pratley-on-finance/2026/oct/21/jackdaw-approval-step-towards-grownup-north-sea-policy",
+          "published_at": "2026-10-21T09:59:48+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.996059,
+        "mean_relevance": 5.205573,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.934336,
+        "mean_distance": 0.931282,
+        "pairwise_distances": [
+          0.78382,
+          1.031849,
+          0.978176
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 39582402800,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261021_1644d1e2683b.png",
+      "image_url": "image/feed_20261021_1644d1e2683b.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I woke up to find Stephen Hubbard had posted an article about LeBron James' new venture. It was a perfect day for introspection, so I decided to start my morning jog around the neighborhood park. As I ran past the grownups playing ch. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-21T10:13:27Z"
+    },
+    {
       "id": "feed_20261020_536968e200b6",
       "kind": "news_diary",
       "date": "2026-10-20",
@@ -366,10 +439,10 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 5,
+  "count": 6,
   "page": 0,
   "page_size": 20,
-  "total_items": 5,
+  "total_items": 6,
   "total_pages": 1,
   "next_feed_url": ""
 }
