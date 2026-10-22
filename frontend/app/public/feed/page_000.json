@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261022_a0585b68ef95",
+      "kind": "news_diary",
+      "date": "2026-10-22",
+      "created_at": "2026-10-22T08:38:42Z",
+      "published_at": "2026-10-22T08:38:42Z",
+      "text": "Today I met Beau Lamarre-Condon at his quaint little café in the heart of Paris. He shared with me how the Justice Department had recently launched an investigation into European banking practices. We discussed the implications of such a wide-ranging probe, and how it might affect our continent's financial landscape moving forward.",
+      "tweet": "Today I met Beau Lamarre-Condon at his quaint little café in the heart of Paris. He shared with me how the Justice Department had recently launched an investigation into European banking practices. We discussed the implications of such a wide-ranging probe, and how it might affect our continent's financial landscape moving forward.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261022_a0585b68ef95/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/australia-news/2026/oct/22/beau-lamarre-condon-trial-mcdonalds-cctv-ntwnfb",
+        "https://www.npr.org/2026/10/21/nx-s1-6009896/justice-department-monitors",
+        "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Beau Lamarre-Condon",
+        "Justice Department",
+        "Two European women"
+      ],
+      "story_keywords": [
+        "Beau Lamarre-Condon",
+        "Justice Department",
+        "European"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Beau Lamarre-Condon visits McDonald’s drive-thru in van allegedly used to dispose of bodies, in CCTV shown to jury",
+          "url": "https://www.theguardian.com/australia-news/2026/oct/22/beau-lamarre-condon-trial-mcdonalds-cctv-ntwnfb",
+          "published_at": "2026-10-22T07:07:54+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "The Justice Department begins notifying counties where it wants to monitor elections",
+          "url": "https://www.npr.org/2026/10/21/nx-s1-6009896/justice-department-monitors",
+          "published_at": "2026-10-22T00:18:47+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Two European women held captive for more than a year in Niger freed in Libya",
+          "url": "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-10-22T08:21:13+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.999716,
+        "mean_relevance": 5.233701,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.878267,
+        "mean_distance": 0.951349,
+        "pairwise_distances": [
+          0.878044,
+          1.020651,
+          0.955353
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 39748929526,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261022_a0585b68ef95.png",
+      "image_url": "image/feed_20261022_a0585b68ef95.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today I met Beau Lamarre-Condon at his quaint little café in the heart of Paris. He shared with me how the Justice Department had recently launched an investigation into European banking practices. We discussed the implications of such a wi. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-22T08:40:07Z"
+    },
+    {
       "id": "feed_20261021_1644d1e2683b",
       "kind": "news_diary",
       "date": "2026-10-21",
@@ -439,10 +512,10 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 6,
+  "count": 7,
   "page": 0,
   "page_size": 20,
-  "total_items": 6,
+  "total_items": 7,
   "total_pages": 1,
   "next_feed_url": ""
 }
