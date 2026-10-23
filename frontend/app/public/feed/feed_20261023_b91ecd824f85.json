@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-10-23T08:34:41Z",
+  "items": [
+    {
+      "id": "feed_20261023_b91ecd824f85",
+      "kind": "news_diary",
+      "date": "2026-10-23",
+      "created_at": "2026-10-23T08:34:41Z",
+      "published_at": "2026-10-23T08:34:41Z",
+      "text": "Today in my lab, I was called to assist the Department of Justice on a consumer safety issue. We discovered some dangerous products could spread Ebola, but after thorough testing and containment measures, all seemed under control. The incident brought home just how interconnected our daily lives are with global health crises.",
+      "tweet": "Today in my lab, I was called to assist the Department of Justice on a consumer safety issue. We discovered some dangerous products could spread Ebola, but after thorough testing and containment measures, all seemed under control. The incident brought home just how interconnected our daily lives are with global health crises.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261023_b91ecd824f85",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/us-news/2026/oct/22/corey-lewandowski-trump-criminal-investigation",
+        "https://www.theguardian.com/business/2026/oct/23/uk-consumer-confidence-falls-fastest-since-covid-cost-of-living",
+        "https://www.bbc.co.uk/news/articles/cmwy4wlzqz3zo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Department of Justice",
+        "UK consumer confidence",
+        "Kenya Ebola patients"
+      ],
+      "story_keywords": [
+        "Department of Justice",
+        "consumer",
+        "Ebola"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Department of Justice opens criminal investigation into Corey Lewandowski",
+          "url": "https://www.theguardian.com/us-news/2026/oct/22/corey-lewandowski-trump-criminal-investigation",
+          "published_at": "2026-10-23T00:55:02+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "UK consumer confidence falls at fastest rate since Brexit vote as cost of living bites",
+          "url": "https://www.theguardian.com/business/2026/oct/23/uk-consumer-confidence-falls-fastest-since-covid-cost-of-living",
+          "published_at": "2026-10-23T07:25:57+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Nigeria and Kenya Ebola patients may have crossed paths at Uganda airport, officials say",
+          "url": "https://www.bbc.co.uk/news/articles/cmwy4wlzqz3zo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-10-23T08:00:07+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.998202,
+        "mean_relevance": 5.193927,
+        "mean_specificity": 3.433333,
+        "mean_freshness": 0.885897,
+        "mean_distance": 0.945899,
+        "pairwise_distances": [
+          1.011807,
+          0.955808,
+          0.870084
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 39925273096,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261023_b91ecd824f85.png",
+      "image_url": "image/feed_20261023_b91ecd824f85.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today in my lab, I was called to assist the Department of Justice on a consumer safety issue. We discovered some dangerous products could spread Ebola, but after thorough testing and containment measures, all seemed under control. The incid. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-23T08:36:23Z"
+    }
+  ]
+}
