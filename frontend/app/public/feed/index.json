@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261024_5a6e5a8a4182",
+      "kind": "news_diary",
+      "date": "2026-10-24",
+      "created_at": "2026-10-24T08:09:52Z",
+      "published_at": "2026-10-24T08:09:52Z",
+      "text": "Today, as Typhoon Champi approached our coastal town, I found myself drawn into a small community effort to help James Graham, the elderly neighbor who had recently lost his wife. The winds were howling and rain was drenching us all as we worked together to shore up his house's foundation, which seemed to be just teetering on the brink of collapse. As the storm battered our efforts, I couldn't help but feel that despite its ferocity, this moment brought a tiny glimmer of hope amidst the tumult. James Graham’s home was slowly dwindle back into safety.",
+      "tweet": "Today, as Typhoon Champi approached our coastal town, I found myself drawn into a small community effort to help James Graham, the elderly neighbor who had recently lost his wife. The winds were howling and rain was drenching us all as we worked together to shore up his house's foundation, which seemed to be just teetering on the brink of collapse. As the storm battered our efforts, I couldn't help but feel that despite its ferocity, this moment brought a tiny glimmer of hope amidst the tumult. James Graham’s home was slowly dwindle back into safety.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261024_5a6e5a8a4182/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/world/2026/oct/24/typhoon-champi-kills-one-and-injures-more-than-500-in-taiwan-as-it-heads-to-china",
+        "https://www.theguardian.com/politics/commentisfree/audio/2026/oct/24/culture-is-stagnant-so-politics-is-stuck-playwright-james-graham-radical-thinking-podcast",
+        "https://www.npr.org/2026/10/24/g-s1-149729/drinking-water-supplies-dwindle-in-yemeni-city-besieged-by-houthi-rebels"
+      ],
+      "keywords": [
+        "Typhoon Champi",
+        "James Graham",
+        "Drinking water supplies dwindle"
+      ],
+      "story_keywords": [
+        "Typhoon Champi",
+        "James Graham",
+        "dwindle"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Typhoon Champi kills one and injures more than 500 in Taiwan as it heads to China",
+          "url": "https://www.theguardian.com/world/2026/oct/24/typhoon-champi-kills-one-and-injures-more-than-500-in-taiwan-as-it-heads-to-china",
+          "published_at": "2026-10-24T02:22:32+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "“Culture is stagnant, so politics is stuck” – playwright James Graham | Radical Thinking – podcast",
+          "url": "https://www.theguardian.com/politics/commentisfree/audio/2026/oct/24/culture-is-stagnant-so-politics-is-stuck-playwright-james-graham-radical-thinking-podcast",
+          "published_at": "2026-10-24T06:45:26+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels",
+          "url": "https://www.npr.org/2026/10/24/g-s1-149729/drinking-water-supplies-dwindle-in-yemeni-city-besieged-by-houthi-rebels",
+          "published_at": "2026-10-24T07:04:13+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.998278,
+        "mean_relevance": 5.227458,
+        "mean_specificity": 3.5,
+        "mean_freshness": 0.895215,
+        "mean_distance": 0.941822,
+        "pairwise_distances": [
+          0.932452,
+          1.019893,
+          0.873122
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 40076775417,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261024_5a6e5a8a4182.png",
+      "image_url": "image/feed_20261024_5a6e5a8a4182.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, as Typhoon Champi approached our coastal town, I found myself drawn into a small community effort to help James Graham, the elderly neighbor who had recently lost his wife. The winds were howling and rain was drenching us all as we w. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-24T08:11:19Z"
+    },
+    {
       "id": "feed_20261023_b91ecd824f85",
       "kind": "news_diary",
       "date": "2026-10-23",
@@ -585,7 +658,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 8,
+  "count": 9,
   "page_size": 20,
   "total_pages": 1,
   "first_feed_url": "./feed/page_000.json",
