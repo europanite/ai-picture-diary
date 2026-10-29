@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-10-29T09:59:49Z",
+  "items": [
+    {
+      "id": "feed_20261029_09dc8132722e",
+      "kind": "news_diary",
+      "date": "2026-10-29",
+      "created_at": "2026-10-29T09:59:49Z",
+      "published_at": "2026-10-29T09:59:49Z",
+      "text": "Today in my spare time, I indulged in some gaming as usual. After the long-awaited Call of Duty battle royale ended without a clear winner, I decided to dive into the Reader Q&A section online. It's always fascinating to see how people interpret complex issues and solutions. The election deadlock had everyone on edge, and these Q&As offered varied perspectives that kept me engaged for hours.",
+      "tweet": "Today in my spare time, I indulged in some gaming as usual. After the long-awaited Call of Duty battle royale ended without a clear winner, I decided to dive into the Reader Q&A section online. It's always fascinating to see how people interpret complex issues and solutions. The election deadlock had everyone on edge, and these Q&As offered varied perspectives that kept me engaged for hours.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261029_09dc8132722e",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/world/2026/oct/29/call-of-duty-seoul-crowd-crush-video-footage",
+        "https://www.theguardian.com/uk-news/live/2026/oct/29/budget-2026-reader-questions-john-healey-chancellor-hilary-osborne-heather-stewart",
+        "https://www.bbc.co.uk/news/articles/cm62y46d97wwo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Call of Duty",
+        "Reader Q&A",
+        "election deadlock"
+      ],
+      "story_keywords": [
+        "Call of Duty",
+        "Reader Q&A",
+        "election deadlock"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Outcry after Call of Duty maker uses real footage of deadly Seoul crowd crush in new video game",
+          "url": "https://www.theguardian.com/world/2026/oct/29/call-of-duty-seoul-crowd-crush-video-footage",
+          "published_at": "2026-10-29T04:41:41+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Reader Q&A: Our money and economics correspondents answer your Budget 2026 questions",
+          "url": "https://www.theguardian.com/uk-news/live/2026/oct/29/budget-2026-reader-questions-john-healey-chancellor-hilary-osborne-heather-stewart",
+          "published_at": "2026-10-29T08:00:27+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "How could Israel break election deadlock? Here are four scenarios",
+          "url": "https://www.bbc.co.uk/news/articles/cm62y46d97wwo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-10-29T09:06:48+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.999361,
+        "mean_relevance": 5.207706,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.895783,
+        "mean_distance": 0.953034,
+        "pairwise_distances": [
+          0.929526,
+          0.988707,
+          0.940869
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 40853621661,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261029_09dc8132722e.png",
+      "image_url": "image/feed_20261029_09dc8132722e.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today in my spare time, I indulged in some gaming as usual. After the long-awaited Call of Duty battle royale ended without a clear winner, I decided to dive into the Reader Q&A section online. It's always fascinating to see how people inte. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-10-29T10:01:24Z"
+    }
+  ]
+}
