@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261101_cbf0501befd9",
+      "kind": "news_diary",
+      "date": "2026-11-01",
+      "created_at": "2026-11-01T10:30:00Z",
+      "published_at": "2026-11-01T10:30:00Z",
+      "text": "Today in Sydney I wandered through the Sydney Opera House under a bright blue sky. The forecast predicted clear skies, so it was perfect for walking around and taking photos. Rachel Reeves, our guide today, shared interesting stories about past performances. We strolled by the harbor where swans glided gracefully on calm waters before us. It felt like I had discovered something beautiful all my own.",
+      "tweet": "Today in Sydney I wandered through the Sydney Opera House under a bright blue sky. The forecast predicted clear skies, so it was perfect for walking around and taking photos. Rachel Reeves, our guide today, shared interesting stories about past performances. We strolled by the harbor where swans glided gracefully on calm waters before us. It felt like I had discovered something beautiful all my own.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261101_cbf0501befd9/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/world/2026/nov/01/jacinda-ardern-sydney-opera-house-talk-advises-politicians-to-rebuild-trust",
+        "https://www.theguardian.com/politics/2026/nov/01/rachel-reeves-uk-future-is-in-eu-andy-burnham-brexit",
+        "https://www.npr.org/2026/10/31/nx-s1-6022285/mixed-economic-forecast-weighs-heavy-ahead-of-midterms"
+      ],
+      "keywords": [
+        "Sydney Opera House",
+        "Rachel Reeves",
+        "Mixed economic forecast"
+      ],
+      "story_keywords": [
+        "Sydney Opera House",
+        "Rachel Reeves",
+        "forecast"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Jacinda Ardern in Sydney Opera House talk advises politicians to ‘rebuild trust by building financial security’",
+          "url": "https://www.theguardian.com/world/2026/nov/01/jacinda-ardern-sydney-opera-house-talk-advises-politicians-to-rebuild-trust",
+          "published_at": "2026-11-01T06:53:22+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Rachel Reeves says UK’s future is in EU as she backs Andy Burnham on Brexit",
+          "url": "https://www.theguardian.com/politics/2026/nov/01/rachel-reeves-uk-future-is-in-eu-andy-burnham-brexit",
+          "published_at": "2026-11-01T09:55:20+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Mixed economic forecast weighs heavy ahead of midterms",
+          "url": "https://www.npr.org/2026/10/31/nx-s1-6022285/mixed-economic-forecast-weighs-heavy-ahead-of-midterms",
+          "published_at": "2026-10-31T21:14:35+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.999821,
+        "mean_relevance": 5.248184,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.804446,
+        "mean_distance": 0.950849,
+        "pairwise_distances": [
+          0.914882,
+          1.03454,
+          0.903127
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 41297475294,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261101_cbf0501befd9.png",
+      "image_url": "image/feed_20261101_cbf0501befd9.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today in Sydney I wandered through the Sydney Opera House under a bright blue sky. The forecast predicted clear skies, so it was perfect for walking around and taking photos. Rachel Reeves, our guide today, shared interesting stories about . Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-01T10:32:38Z"
+    },
+    {
       "id": "feed_20261031_27bec5ba9205",
       "kind": "news_diary",
       "date": "2026-10-31",
@@ -1023,10 +1096,10 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 14,
+  "count": 15,
   "page": 0,
   "page_size": 20,
-  "total_items": 14,
+  "total_items": 15,
   "total_pages": 1,
   "next_feed_url": ""
 }
