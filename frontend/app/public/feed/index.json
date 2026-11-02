@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261102_af4a6e39688c",
+      "kind": "news_diary",
+      "date": "2026-11-02",
+      "created_at": "2026-11-02T11:08:07Z",
+      "published_at": "2026-11-02T11:08:07Z",
+      "text": "Today, I woke up to the sound of my computer humming quietly beside me. As I scrolled through emails, a new job posting caught my eye: Palantir AI was looking for a talented engineer like myself. My heart raced as I read about the bid process and the potential impact on our industry. John Leeson had always been an inspiration in tech ethics; now, he might be leading something truly groundbreaking.",
+      "tweet": "Today, I woke up to the sound of my computer humming quietly beside me. As I scrolled through emails, a new job posting caught my eye: Palantir AI was looking for a talented engineer like myself. My heart raced as I read about the bid process and the potential impact on our industry. John Leeson had always been an inspiration in tech ethics; now, he might be leading something truly groundbreaking.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261102_af4a6e39688c/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/technology/2026/nov/02/palantir-unused-nhs-hospital-trusts",
+        "https://www.theguardian.com/tv-and-radio/2026/nov/02/john-leeson-doctor-who-k9-dies",
+        "https://www.npr.org/2026/11/02/nx-s1-6023159/what-vances-midterm-push-reveals-about-his-potential-2028-bid"
+      ],
+      "keywords": [
+        "Palantir AI",
+        "John Leeson",
+        "potential 2028 bid"
+      ],
+      "story_keywords": [
+        "Palantir AI",
+        "John Leeson",
+        "bid"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Palantir AI tech unused or little used by 29 NHS trusts said to be benefiting from it",
+          "url": "https://www.theguardian.com/technology/2026/nov/02/palantir-unused-nhs-hospital-trusts",
+          "published_at": "2026-11-02T10:19:46+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "John Leeson, voice behind Doctor Who’s K9, dies at 83",
+          "url": "https://www.theguardian.com/tv-and-radio/2026/nov/02/john-leeson-doctor-who-k9-dies",
+          "published_at": "2026-11-02T09:13:42+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "What Vance's midterm push reveals about his potential 2028 bid",
+          "url": "https://www.npr.org/2026/11/02/nx-s1-6023159/what-vances-midterm-push-reveals-about-his-potential-2028-bid",
+          "published_at": "2026-11-02T10:00:00+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.996643,
+        "mean_relevance": 5.240308,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.948993,
+        "mean_distance": 0.934056,
+        "pairwise_distances": [
+          0.981347,
+          0.939701,
+          0.881118
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 41433710661,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261102_af4a6e39688c.png",
+      "image_url": "image/feed_20261102_af4a6e39688c.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I woke up to the sound of my computer humming quietly beside me. As I scrolled through emails, a new job posting caught my eye: Palantir AI was looking for a talented engineer like myself. My heart raced as I read about the bid proce. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-02T11:10:47Z"
+    },
+    {
       "id": "feed_20261101_cbf0501befd9",
       "kind": "news_diary",
       "date": "2026-11-01",
@@ -1096,7 +1169,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 15,
+  "count": 16,
   "page_size": 20,
   "total_pages": 1,
   "first_feed_url": "./feed/page_000.json",
