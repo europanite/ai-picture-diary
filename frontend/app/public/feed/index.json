@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261105_44ad6e4649f4",
+      "kind": "news_diary",
+      "date": "2026-11-05",
+      "created_at": "2026-11-05T10:58:39Z",
+      "published_at": "2026-11-05T10:58:39Z",
+      "text": "Today, I woke up to the sound of birds chirping outside my window in Mississippi. It was a beautiful day for a walk around the neighborhood before heading into the Mississippi Senate for an important meeting with Beau Lamarre-Condon. Afterward, I decided to explore some new places in East Asia, looking forward to experiencing different cultures and cuisines there.",
+      "tweet": "Today, I woke up to the sound of birds chirping outside my window in Mississippi. It was a beautiful day for a walk around the neighborhood before heading into the Mississippi Senate for an important meeting with Beau Lamarre-Condon. Afterward, I decided to explore some new places in East Asia, looking forward to experiencing different cultures and cuisines there.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261105_44ad6e4649f4/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/australia-news/2026/nov/05/beau-lamarre-condon-witness-trial-ntwnfb",
+        "https://www.theguardian.com/us-news/live/2026/nov/05/midterm-elections-live-latest-updates-mississippi-senate-race",
+        "https://www.bbc.co.uk/news/articles/cw33kgj7nkemo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Beau Lamarre-Condon",
+        "Mississippi Senate",
+        "East Asia"
+      ],
+      "story_keywords": [
+        "Beau Lamarre-Condon",
+        "Mississippi Senate",
+        "East Asia"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Beau Lamarre-Condon tells double murder trial he went through Jesse Baird’s phone and poured water into his fuel tank",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/05/beau-lamarre-condon-witness-trial-ntwnfb",
+          "published_at": "2026-11-05T06:56:01+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "US midterm elections 2026 live: Democrats eye historic upset in Mississippi Senate race as Republican blame game begins",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/05/midterm-elections-live-latest-updates-mississippi-senate-race",
+          "published_at": "2026-11-05T10:46:37+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Typhoons batter East Asia as El Niño makes Pacific 'burn with fever'",
+          "url": "https://www.bbc.co.uk/news/articles/cw33kgj7nkemo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-04T23:12:47+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.989557,
+        "mean_relevance": 5.146874,
+        "mean_specificity": 3.5,
+        "mean_freshness": 0.817018,
+        "mean_distance": 0.939221,
+        "pairwise_distances": [
+          0.807257,
+          0.981345,
+          1.029061
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 42014530897,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261105_44ad6e4649f4.png",
+      "image_url": "image/feed_20261105_44ad6e4649f4.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I woke up to the sound of birds chirping outside my window in Mississippi. It was a beautiful day for a walk around the neighborhood before heading into the Mississippi Senate for an important meeting with Beau Lamarre-Condon. Afterw. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-05T11:01:16Z"
+    },
+    {
       "id": "feed_20261104_aed14b7fc37b",
       "kind": "news_diary",
       "date": "2026-11-04",
@@ -1315,7 +1388,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 18,
+  "count": 19,
   "page_size": 20,
   "total_pages": 1,
   "first_feed_url": "./feed/page_000.json",
