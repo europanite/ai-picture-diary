@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261107_49d3d94912b5",
+      "kind": "news_diary",
+      "date": "2026-11-07",
+      "created_at": "2026-11-07T10:08:44Z",
+      "published_at": "2026-11-07T10:08:44Z",
+      "text": "Today I woke up in my cozy little apartment, feeling surprisingly at home after a week-long trip to South America. The thought of the Home Office seemed miles away as I flipped through old magazines and watched reruns of Russell Brand's latest comedy show on the tablet by the window. It was moments like these that reminded me how much I loved coming back to my real life and all its quirks.",
+      "tweet": "Today I woke up in my cozy little apartment, feeling surprisingly at home after a week-long trip to South America. The thought of the Home Office seemed miles away as I flipped through old magazines and watched reruns of Russell Brand's latest comedy show on the tablet by the window. It was moments like these that reminded me how much I loved coming back to my real life and all its quirks.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261107_49d3d94912b5/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled",
+        "https://www.theguardian.com/culture/2026/nov/06/russell-brand-barrister-ian-winter-reports-himself-bar-watchdog-confronting-sunday-times-journalist",
+        "https://www.npr.org/2026/11/06/nx-s1-6026702/pope-leo-begins-12-day-3-country-tour-after-cancer-surgery"
+      ],
+      "keywords": [
+        "Home Office",
+        "Russell Brand",
+        "South America"
+      ],
+      "story_keywords": [
+        "Home Office",
+        "Russell Brand",
+        "South America"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Home Office sued after stripping almost 1,500 EU citizens of right to live in UK",
+          "url": "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled",
+          "published_at": "2026-11-07T09:15:35+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Russell Brand barrister reports himself to watchdog over clash with journalist",
+          "url": "https://www.theguardian.com/culture/2026/nov/06/russell-brand-barrister-ian-winter-reports-himself-bar-watchdog-confronting-sunday-times-journalist",
+          "published_at": "2026-11-07T08:49:43+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Pope Leo begins a 12-day, 3-country South America tour after his cancer surgery",
+          "url": "https://www.npr.org/2026/11/06/nx-s1-6026702/pope-leo-begins-12-day-3-country-tour-after-cancer-surgery",
+          "published_at": "2026-11-06T19:13:06+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.979433,
+        "mean_relevance": 5.20833,
+        "mean_specificity": 3.55,
+        "mean_freshness": 0.815985,
+        "mean_distance": 0.852305,
+        "pairwise_distances": [
+          0.815456,
+          0.928117,
+          0.813343
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 42362466636,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261107_49d3d94912b5.png",
+      "image_url": "image/feed_20261107_49d3d94912b5.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today I woke up in my cozy little apartment, feeling surprisingly at home after a week-long trip to South America. The thought of the Home Office seemed miles away as I flipped through old magazines and watched reruns of Russell Brand's lat. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-07T10:10:52Z"
+    },
+    {
       "id": "feed_20261106_c89a1b7db071",
       "kind": "news_diary",
       "date": "2026-11-06",
@@ -1461,11 +1534,12 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 20,
+  "count": 21,
   "page_size": 20,
-  "total_pages": 1,
+  "total_pages": 2,
   "first_feed_url": "./feed/page_000.json",
   "pages": [
-    "./feed/page_000.json"
+    "./feed/page_000.json",
+    "./feed/page_001.json"
   ]
 }
