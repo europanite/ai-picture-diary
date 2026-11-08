@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-11-08T10:37:14Z",
+  "items": [
+    {
+      "id": "feed_20261108_78a36b90221e",
+      "kind": "news_diary",
+      "date": "2026-11-08",
+      "created_at": "2026-11-08T10:37:14Z",
+      "published_at": "2026-11-08T10:37:14Z",
+      "text": "Today at Victoria Barracks, I met Andy Burnham, a veteran commander who had recently retired. He shared stories of his time in Gen service with me, his voice tinged with pride and weariness from the years passed. It was an enlightening conversation that left me pondering different facets of military life.",
+      "tweet": "Today at Victoria Barracks, I met Andy Burnham, a veteran commander who had recently retired. He shared stories of his time in Gen service with me, his voice tinged with pride and weariness from the years passed. It was an enlightening conversation that left me pondering different facets of military life.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261108_78a36b90221e",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/politics/2026/nov/08/andy-burnham-social-media-traditional-media-scrutiny-at-risk",
+        "https://www.theguardian.com/australia-news/2026/nov/08/victoria-barracks-sydney-and-melbourne-remain-in-public-hands-backtrack-defence-property-sale-albanese-marles",
+        "https://www.npr.org/2026/11/08/nx-s1-6032829/gen-z-voters-midterm-elections"
+      ],
+      "keywords": [
+        "Andy Burnham",
+        "Victoria Barracks",
+        "Gen Z voters"
+      ],
+      "story_keywords": [
+        "Andy Burnham",
+        "Victoria Barracks",
+        "Gen"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Does Andy Burnham’s pivot from press to social media put scrutiny at risk?",
+          "url": "https://www.theguardian.com/politics/2026/nov/08/andy-burnham-social-media-traditional-media-scrutiny-at-risk",
+          "published_at": "2026-11-08T06:00:32+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Victoria Barracks in Sydney and Melbourne to remain in public hands after partial backtrack on defence property selloff",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/08/victoria-barracks-sydney-and-melbourne-remain-in-public-hands-backtrack-defence-property-sale-albanese-marles",
+          "published_at": "2026-11-08T00:17:28+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "How Gen Z voters helped fuel a blue wave for Democrats",
+          "url": "https://www.npr.org/2026/11/08/nx-s1-6032829/gen-z-voters-midterm-elections",
+          "published_at": "2026-11-08T10:00:00+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.986373,
+        "mean_relevance": 5.162791,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.817057,
+        "mean_distance": 0.912461,
+        "pairwise_distances": [
+          0.876733,
+          1.05199,
+          0.808659
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 42471898557,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261108_78a36b90221e.png",
+      "image_url": "image/feed_20261108_78a36b90221e.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at Victoria Barracks, I met Andy Burnham, a veteran commander who had recently retired. He shared stories of his time in Gen service with me, his voice tinged with pride and weariness from the years passed. It was an enlightening conv. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-08T10:39:58Z"
+    }
+  ]
+}
