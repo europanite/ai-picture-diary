@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261109_8c9b34002452",
+      "kind": "news_diary",
+      "date": "2026-11-09",
+      "created_at": "2026-11-09T11:33:07Z",
+      "published_at": "2026-11-09T11:33:07Z",
+      "text": "Today, I spent hours poring over Supreme Court decisions for clues about Medicaid reform. Jim Chalmers' advocacy on the matter caught my attention, so I decided to learn more about his role and how it might influence the court's rulings.",
+      "tweet": "Today, I spent hours poring over Supreme Court decisions for clues about Medicaid reform. Jim Chalmers' advocacy on the matter caught my attention, so I decided to learn more about his role and how it might influence the court's rulings.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261109_8c9b34002452/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.npr.org/2026/11/09/nx-s1-6013575/supreme-court-federal-law-enforcement-prison-rights",
+        "https://www.theguardian.com/uk-news/2026/nov/09/stop-undermining-treasurer-jim-chalmers-environment-minister-urges-colleagues",
+        "https://www.npr.org/2026/11/09/nx-s1-6032732/trump-medicaid-health-nebraska-work-insurance"
+      ],
+      "keywords": [
+        "Supreme Court",
+        "Jim Chalmers",
+        "Medicaid work rules"
+      ],
+      "story_keywords": [
+        "Supreme Court",
+        "Jim Chalmers",
+        "Medicaid"
+      ],
+      "source_articles": [
+        {
+          "publisher": "NPR News",
+          "title": "Supreme Court weighs effort to shield federal law enforcement as ICE complaints rise",
+          "url": "https://www.npr.org/2026/11/09/nx-s1-6013575/supreme-court-federal-law-enforcement-prison-rights",
+          "published_at": "2026-11-09T10:00:00+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Stop undermining Jim Chalmers, environment minister urges Labor colleagues",
+          "url": "https://www.theguardian.com/uk-news/2026/nov/09/stop-undermining-treasurer-jim-chalmers-environment-minister-urges-colleagues",
+          "published_at": "2026-11-09T05:47:49+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "Nebraska rushed Medicaid work rules. Then a cancer patient was told he'd lost coverage",
+          "url": "https://www.npr.org/2026/11/09/nx-s1-6032732/trump-medicaid-health-nebraska-work-insurance",
+          "published_at": "2026-11-09T10:00:00+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.994641,
+        "mean_relevance": 5.212344,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.887619,
+        "mean_distance": 0.924546,
+        "pairwise_distances": [
+          0.802101,
+          1.038856,
+          0.932681
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 42609410748,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261109_8c9b34002452.png",
+      "image_url": "image/feed_20261109_8c9b34002452.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I spent hours poring over Supreme Court decisions for clues about Medicaid reform. Jim Chalmers' advocacy on the matter caught my attention, so I decided to learn more about his role and how it might influence the court's rulings.. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-09T11:35:45Z"
+    },
+    {
       "id": "feed_20261108_78a36b90221e",
       "kind": "news_diary",
       "date": "2026-11-08",
@@ -1386,85 +1459,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sd-turbo",
       "image_generated_at": "2026-10-19T12:02:09Z"
-    },
-    {
-      "id": "feed_20261018_cad67defb84a",
-      "kind": "news_diary",
-      "date": "2026-10-18",
-      "created_at": "2026-10-18T08:03:51Z",
-      "published_at": "2026-10-18T08:03:51Z",
-      "text": "Today at Silver Rail Elementary, I encountered an unexpected challenge during recess. The kids were all focused on their games, but Leo XIV's idea to turn a trash can into a solar-powered toy car caught everyone's attention. His radical thinking inspired his classmates to join in and brainstorm other inventions using recycled materials. It was refreshing to see such creativity and collaboration among the young minds at our school.",
-      "tweet": "Today at Silver Rail Elementary, I encountered an unexpected challenge during recess. The kids were all focused on their games, but Leo XIV's idea to turn a trash can into a solar-powered toy car caught everyone's attention. His radical thinking inspired his classmates to join in and brainstorm other inventions using recycled materials. It was refreshing to see such creativity and collaboration among the young minds at our school.",
-      "place": "",
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261018_cad67defb84a/index.html",
-      "fictional": true,
-      "links": [
-        "https://www.npr.org/2026/10/17/nx-s1-6005814/oregon-governor-tina-kotek-reacts-to-silver-rail-elementary-school-shooting",
-        "https://www.theguardian.com/news/audio/2026/oct/18/michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty",
-        "https://www.npr.org/2026/10/17/nx-s1-6006762/pope-leo-xiv-leaves-hospital-days-after-lung-cancer-surgery"
-      ],
-      "keywords": [
-        "Silver Rail Elementary",
-        "Radical Thinking",
-        "Leo XIV"
-      ],
-      "story_keywords": [
-        "Silver Rail Elementary",
-        "Radical Thinking",
-        "Leo XIV"
-      ],
-      "source_articles": [
-        {
-          "publisher": "NPR News",
-          "title": "Oregon governor Tina Kotek reacts to Silver Rail Elementary school shooting",
-          "url": "https://www.npr.org/2026/10/17/nx-s1-6005814/oregon-governor-tina-kotek-reacts-to-silver-rail-elementary-school-shooting",
-          "published_at": "2026-10-17T22:45:25+00:00"
-        },
-        {
-          "publisher": "The Guardian World",
-          "title": "‘Austerity is inevitably painful’: How Michael Gove justifies his politics | Radical Thinking with Aditya Chakrabortty",
-          "url": "https://www.theguardian.com/news/audio/2026/oct/18/michael-gove-justifies-his-politics-radical-thinking-with-aditya-chakrabortty",
-          "published_at": "2026-10-18T07:00:53+00:00"
-        },
-        {
-          "publisher": "NPR News",
-          "title": "Pope Leo XIV leaves hospital days after lung cancer surgery",
-          "url": "https://www.npr.org/2026/10/17/nx-s1-6006762/pope-leo-xiv-leaves-hospital-days-after-lung-cancer-surgery",
-          "published_at": "2026-10-17T15:10:14+00:00"
-        }
-      ],
-      "selection": {
-        "method": "balanced",
-        "metric": "weighted_specificity_recency_and_cosine_distance",
-        "rank_score": 0.995972,
-        "mean_relevance": 5.198519,
-        "mean_specificity": 3.7,
-        "mean_freshness": 0.710348,
-        "mean_distance": 0.93195,
-        "pairwise_distances": [
-          0.961073,
-          0.959179,
-          0.875598
-        ],
-        "candidates": 90,
-        "eligible_triples_sampled": 30000,
-        "seed": 39109831417,
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
-      },
-      "image": "image/feed_20261018_cad67defb84a.png",
-      "image_url": "image/feed_20261018_cad67defb84a.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at Silver Rail Elementary, I encountered an unexpected challenge during recess. The kids were all focused on their games, but Leo XIV's idea to turn a trash can into a solar-powered toy car caught everyone's attention. His radical thi. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sd-turbo",
-      "image_generated_at": "2026-10-18T08:05:21Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 22,
+  "total_items": 23,
   "total_pages": 2,
   "next_feed_url": "./feed/page_001.json"
 }
