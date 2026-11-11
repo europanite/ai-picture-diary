@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-11-11T10:59:21Z",
+  "items": [
+    {
+      "id": "feed_20261111_3839ff5cdf62",
+      "kind": "news_diary",
+      "date": "2026-11-11",
+      "created_at": "2026-11-11T10:59:21Z",
+      "published_at": "2026-11-11T10:59:21Z",
+      "text": "Today at the University of Mississippi, I met Nima Momeni who's a friend of my brother. He was visiting to give a talk about his research in computational biology. Afterward, we decided to take a walk around campus and he mentioned that he used to live in our house back in 2015 when he was just starting out at the university. It was surreal to see where he had begun his academic journey, feeling grateful for the place I'm currently living now.",
+      "tweet": "Today at the University of Mississippi, I met Nima Momeni who's a friend of my brother. He was visiting to give a talk about his research in computational biology. Afterward, we decided to take a walk around campus and he mentioned that he used to live in our house back in 2015 when he was just starting out at the university. It was surreal to see where he had begun his academic journey, feeling grateful for the place I'm currently living now.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261111_3839ff5cdf62",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/us-news/2026/nov/10/university-of-mississippi-white-students-monkey-gestures",
+        "https://www.theguardian.com/us-news/2026/nov/10/bob-lee-cash-app-nima-momeni-sentenced",
+        "https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "University of Mississippi",
+        "Nima Momeni",
+        "US House blocks"
+      ],
+      "story_keywords": [
+        "University of Mississippi",
+        "Nima Momeni",
+        "House"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Two white students at University of Mississippi make monkey gestures in Ring video",
+          "url": "https://www.theguardian.com/us-news/2026/nov/10/university-of-mississippi-white-students-monkey-gestures",
+          "published_at": "2026-11-11T02:26:10+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Nima Momeni sentenced to 16 years to life in murder of Cash App founder Bob Lee",
+          "url": "https://www.theguardian.com/us-news/2026/nov/10/bob-lee-cash-app-nima-momeni-sentenced",
+          "published_at": "2026-11-11T01:53:38+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "US House blocks bid to impeach Defence Secretary Pete Hegseth, for now",
+          "url": "https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-11T10:15:12+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.997234,
+        "mean_relevance": 5.220348,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.785272,
+        "mean_distance": 0.936861,
+        "pairwise_distances": [
+          0.836967,
+          0.980965,
+          0.992651
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 43007646165,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261111_3839ff5cdf62.png",
+      "image_url": "image/feed_20261111_3839ff5cdf62.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at the University of Mississippi, I met Nima Momeni who's a friend of my brother. He was visiting to give a talk about his research in computational biology. Afterward, we decided to take a walk around campus and he mentioned that he . Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-11T11:01:59Z"
+    }
+  ]
+}
