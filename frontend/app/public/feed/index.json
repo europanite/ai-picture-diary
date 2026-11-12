@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261112_d555e7c8f1ec",
+      "kind": "news_diary",
+      "date": "2026-11-12",
+      "created_at": "2026-11-12T11:56:53Z",
+      "published_at": "2026-11-12T11:56:53Z",
+      "text": "Today in New York, I met with Jensen Huang from Nvidia. He showed me their new AI chip that can do fewer calculations while maintaining performance. It's like magic to see such advancements, and it leaves room for more creativity and less reliance on processing power.",
+      "tweet": "Today in New York, I met with Jensen Huang from Nvidia. He showed me their new AI chip that can do fewer calculations while maintaining performance. It's like magic to see such advancements, and it leaves room for more creativity and less reliance on processing power.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261112_d555e7c8f1ec/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.bbc.co.uk/news/articles/c8zx964glvwxo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/technology/live/2026/nov/12/nvidia-ceo-jensen-huang-affairs-share-price-plunges-live-latest",
+        "https://www.theguardian.com/politics/live/2026/nov/12/milburn-review-neets-young-people-welfare-work-latest-news-updates"
+      ],
+      "keywords": [
+        "New York",
+        "Jensen Huang",
+        "fewer welfare benefits"
+      ],
+      "story_keywords": [
+        "New York",
+        "Jensen Huang",
+        "fewer"
+      ],
+      "source_articles": [
+        {
+          "publisher": "BBC World",
+          "title": "New York building collapse kills at least four people",
+          "url": "https://www.bbc.co.uk/news/articles/c8zx964glvwxo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-12T11:48:14+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Nvidia board reportedly meets to decide CEO Jensen Huang’s future as chip giant’s share price plunges – follow live",
+          "url": "https://www.theguardian.com/technology/live/2026/nov/12/nvidia-ceo-jensen-huang-affairs-share-price-plunges-live-latest",
+          "published_at": "2026-11-12T11:25:49+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Young people should get fewer welfare benefits, according to Milburn review on the workforce – UK politics live",
+          "url": "https://www.theguardian.com/politics/live/2026/nov/12/milburn-review-neets-young-people-welfare-work-latest-news-updates",
+          "published_at": "2026-11-12T11:35:02+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.99543,
+        "mean_relevance": 5.201901,
+        "mean_specificity": 3.416667,
+        "mean_freshness": 0.986188,
+        "mean_distance": 0.97171,
+        "pairwise_distances": [
+          0.953983,
+          0.984363,
+          0.976784
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 43213017689,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261112_d555e7c8f1ec.png",
+      "image_url": "image/feed_20261112_d555e7c8f1ec.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today in New York, I met with Jensen Huang from Nvidia. He showed me their new AI chip that can do fewer calculations while maintaining performance. It's like magic to see such advancements, and it leaves room for more creativity and less r. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-12T11:59:08Z"
+    },
+    {
       "id": "feed_20261111_3839ff5cdf62",
       "kind": "news_diary",
       "date": "2026-11-11",
@@ -1826,7 +1899,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 25,
+  "count": 26,
   "page_size": 20,
   "total_pages": 2,
   "first_feed_url": "./feed/page_000.json",
