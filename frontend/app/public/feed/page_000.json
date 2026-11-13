@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261113_aa05f02e5e2a",
+      "kind": "news_diary",
+      "date": "2026-11-13",
+      "created_at": "2026-11-13T11:01:08Z",
+      "published_at": "2026-11-13T11:01:08Z",
+      "text": "Today, I woke up to the news of an outage at RAF Fairford and Chris Van Hollen's office being hit by a tech glitch. As if that wasn't enough, my morning coffee machine decided to go on strike. It was one of those days where everything seems to be out of sync, but somehow I found myself laughing it off with a cup of tea instead.",
+      "tweet": "Today, I woke up to the news of an outage at RAF Fairford and Chris Van Hollen's office being hit by a tech glitch. As if that wasn't enough, my morning coffee machine decided to go on strike. It was one of those days where everything seems to be out of sync, but somehow I found myself laughing it off with a cup of tea instead.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261113_aa05f02e5e2a/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/us-news/live/2026/nov/12/mississippi-scott-colom-ukraine-donald-trump",
+        "https://www.theguardian.com/uk-news/2026/nov/13/us-terror-case-raf-fairford-arrests",
+        "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Chris Van Hollen",
+        "RAF Fairford",
+        "global Microsoft outage"
+      ],
+      "story_keywords": [
+        "Chris Van Hollen",
+        "RAF Fairford",
+        "outage"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Chris Van Hollen says he will run for Senate majority leader, challenging fellow Democrat Chuck Schumer – as it happened",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/12/mississippi-scott-colom-ukraine-donald-trump",
+          "published_at": "2026-11-13T03:04:16+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "US terrorism case sheds light on RAF Fairford arrests mystery",
+          "url": "https://www.theguardian.com/uk-news/2026/nov/13/us-terror-case-raf-fairford-arrests",
+          "published_at": "2026-11-13T07:55:56+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "What we know about the global Microsoft outage",
+          "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-13T10:53:40+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.997957,
+        "mean_relevance": 5.19285,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.864653,
+        "mean_distance": 0.954481,
+        "pairwise_distances": [
+          0.801976,
+          1.042083,
+          1.019383
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 43413067114,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261113_aa05f02e5e2a.png",
+      "image_url": "image/feed_20261113_aa05f02e5e2a.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I woke up to the news of an outage at RAF Fairford and Chris Van Hollen's office being hit by a tech glitch. As if that wasn't enough, my morning coffee machine decided to go on strike. It was one of those days where everything seems. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-13T11:03:50Z"
+    },
+    {
       "id": "feed_20261112_d555e7c8f1ec",
       "kind": "news_diary",
       "date": "2026-11-12",
@@ -1386,85 +1459,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sd-turbo",
       "image_generated_at": "2026-10-23T08:36:23Z"
-    },
-    {
-      "id": "feed_20261022_a0585b68ef95",
-      "kind": "news_diary",
-      "date": "2026-10-22",
-      "created_at": "2026-10-22T08:38:42Z",
-      "published_at": "2026-10-22T08:38:42Z",
-      "text": "Today I met Beau Lamarre-Condon at his quaint little café in the heart of Paris. He shared with me how the Justice Department had recently launched an investigation into European banking practices. We discussed the implications of such a wide-ranging probe, and how it might affect our continent's financial landscape moving forward.",
-      "tweet": "Today I met Beau Lamarre-Condon at his quaint little café in the heart of Paris. He shared with me how the Justice Department had recently launched an investigation into European banking practices. We discussed the implications of such a wide-ranging probe, and how it might affect our continent's financial landscape moving forward.",
-      "place": "",
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261022_a0585b68ef95/index.html",
-      "fictional": true,
-      "links": [
-        "https://www.theguardian.com/australia-news/2026/oct/22/beau-lamarre-condon-trial-mcdonalds-cctv-ntwnfb",
-        "https://www.npr.org/2026/10/21/nx-s1-6009896/justice-department-monitors",
-        "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss"
-      ],
-      "keywords": [
-        "Beau Lamarre-Condon",
-        "Justice Department",
-        "Two European women"
-      ],
-      "story_keywords": [
-        "Beau Lamarre-Condon",
-        "Justice Department",
-        "European"
-      ],
-      "source_articles": [
-        {
-          "publisher": "The Guardian World",
-          "title": "Beau Lamarre-Condon visits McDonald’s drive-thru in van allegedly used to dispose of bodies, in CCTV shown to jury",
-          "url": "https://www.theguardian.com/australia-news/2026/oct/22/beau-lamarre-condon-trial-mcdonalds-cctv-ntwnfb",
-          "published_at": "2026-10-22T07:07:54+00:00"
-        },
-        {
-          "publisher": "NPR News",
-          "title": "The Justice Department begins notifying counties where it wants to monitor elections",
-          "url": "https://www.npr.org/2026/10/21/nx-s1-6009896/justice-department-monitors",
-          "published_at": "2026-10-22T00:18:47+00:00"
-        },
-        {
-          "publisher": "BBC World",
-          "title": "Two European women held captive for more than a year in Niger freed in Libya",
-          "url": "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss",
-          "published_at": "2026-10-22T08:21:13+00:00"
-        }
-      ],
-      "selection": {
-        "method": "balanced",
-        "metric": "weighted_specificity_recency_and_cosine_distance",
-        "rank_score": 0.999716,
-        "mean_relevance": 5.233701,
-        "mean_specificity": 3.466667,
-        "mean_freshness": 0.878267,
-        "mean_distance": 0.951349,
-        "pairwise_distances": [
-          0.878044,
-          1.020651,
-          0.955353
-        ],
-        "candidates": 90,
-        "eligible_triples_sampled": 30000,
-        "seed": 39748929526,
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
-      },
-      "image": "image/feed_20261022_a0585b68ef95.png",
-      "image_url": "image/feed_20261022_a0585b68ef95.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today I met Beau Lamarre-Condon at his quaint little café in the heart of Paris. He shared with me how the Justice Department had recently launched an investigation into European banking practices. We discussed the implications of such a wi. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sd-turbo",
-      "image_generated_at": "2026-10-22T08:40:07Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 26,
+  "total_items": 27,
   "total_pages": 2,
   "next_feed_url": "./feed/page_001.json"
 }
