@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261114_252934ac0280",
+      "kind": "news_diary",
+      "date": "2026-11-14",
+      "created_at": "2026-11-14T10:27:42Z",
+      "published_at": "2026-11-14T10:27:42Z",
+      "text": "Today at Noel Fielding's house, we watched Eurovision Song Contest with a Gen Z twist. Instead of traditional contestants, we had masked avatars representing various music genres. It was like a digital dance party where everyone could join in, regardless of their real-life age or gender.",
+      "tweet": "Today at Noel Fielding's house, we watched Eurovision Song Contest with a Gen Z twist. Instead of traditional contestants, we had masked avatars representing various music genres. It was like a digital dance party where everyone could join in, regardless of their real-life age or gender.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261114_252934ac0280/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/news/2026/nov/14/noel-fielding-horrified-deeply-disturbed-russell-brand-crimes",
+        "https://www.bbc.co.uk/news/videos/cxvg23n59y1ro?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.co.uk/news/articles/cq99e0z4vg1eo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Noel Fielding",
+        "Eurovision Song Contest",
+        "Gen Z"
+      ],
+      "story_keywords": [
+        "Noel Fielding",
+        "Eurovision Song Contest",
+        "Gen Z"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Noel Fielding ‘horrified and deeply disturbed’ by Russell Brand’s crimes",
+          "url": "https://www.theguardian.com/news/2026/nov/14/noel-fielding-horrified-deeply-disturbed-russell-brand-crimes",
+          "published_at": "2026-11-14T10:14:07+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Will the Eurovision Song Contest succeed in Asia?",
+          "url": "https://www.bbc.co.uk/news/videos/cxvg23n59y1ro?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-13T02:24:11+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "After a summer win, India's Gen Z protesters face a winter of uncertainty",
+          "url": "https://www.bbc.co.uk/news/articles/cq99e0z4vg1eo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-13T23:11:51+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.990661,
+        "mean_relevance": 5.188365,
+        "mean_specificity": 3.7,
+        "mean_freshness": 0.626595,
+        "mean_distance": 0.914141,
+        "pairwise_distances": [
+          0.946779,
+          0.869109,
+          0.926535
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 43585085905,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261114_252934ac0280.png",
+      "image_url": "image/feed_20261114_252934ac0280.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at Noel Fielding's house, we watched Eurovision Song Contest with a Gen Z twist. Instead of traditional contestants, we had masked avatars representing various music genres. It was like a digital dance party where everyone could join . Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-14T10:30:25Z"
+    },
+    {
       "id": "feed_20261113_aa05f02e5e2a",
       "kind": "news_diary",
       "date": "2026-11-13",
@@ -1386,85 +1459,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sd-turbo",
       "image_generated_at": "2026-10-24T08:11:19Z"
-    },
-    {
-      "id": "feed_20261023_b91ecd824f85",
-      "kind": "news_diary",
-      "date": "2026-10-23",
-      "created_at": "2026-10-23T08:34:41Z",
-      "published_at": "2026-10-23T08:34:41Z",
-      "text": "Today in my lab, I was called to assist the Department of Justice on a consumer safety issue. We discovered some dangerous products could spread Ebola, but after thorough testing and containment measures, all seemed under control. The incident brought home just how interconnected our daily lives are with global health crises.",
-      "tweet": "Today in my lab, I was called to assist the Department of Justice on a consumer safety issue. We discovered some dangerous products could spread Ebola, but after thorough testing and containment measures, all seemed under control. The incident brought home just how interconnected our daily lives are with global health crises.",
-      "place": "",
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261023_b91ecd824f85/index.html",
-      "fictional": true,
-      "links": [
-        "https://www.theguardian.com/us-news/2026/oct/22/corey-lewandowski-trump-criminal-investigation",
-        "https://www.theguardian.com/business/2026/oct/23/uk-consumer-confidence-falls-fastest-since-covid-cost-of-living",
-        "https://www.bbc.co.uk/news/articles/cmwy4wlzqz3zo?at_medium=RSS&at_campaign=rss"
-      ],
-      "keywords": [
-        "Department of Justice",
-        "UK consumer confidence",
-        "Kenya Ebola patients"
-      ],
-      "story_keywords": [
-        "Department of Justice",
-        "consumer",
-        "Ebola"
-      ],
-      "source_articles": [
-        {
-          "publisher": "The Guardian World",
-          "title": "Department of Justice opens criminal investigation into Corey Lewandowski",
-          "url": "https://www.theguardian.com/us-news/2026/oct/22/corey-lewandowski-trump-criminal-investigation",
-          "published_at": "2026-10-23T00:55:02+00:00"
-        },
-        {
-          "publisher": "The Guardian World",
-          "title": "UK consumer confidence falls at fastest rate since Brexit vote as cost of living bites",
-          "url": "https://www.theguardian.com/business/2026/oct/23/uk-consumer-confidence-falls-fastest-since-covid-cost-of-living",
-          "published_at": "2026-10-23T07:25:57+00:00"
-        },
-        {
-          "publisher": "BBC World",
-          "title": "Nigeria and Kenya Ebola patients may have crossed paths at Uganda airport, officials say",
-          "url": "https://www.bbc.co.uk/news/articles/cmwy4wlzqz3zo?at_medium=RSS&at_campaign=rss",
-          "published_at": "2026-10-23T08:00:07+00:00"
-        }
-      ],
-      "selection": {
-        "method": "balanced",
-        "metric": "weighted_specificity_recency_and_cosine_distance",
-        "rank_score": 0.998202,
-        "mean_relevance": 5.193927,
-        "mean_specificity": 3.433333,
-        "mean_freshness": 0.885897,
-        "mean_distance": 0.945899,
-        "pairwise_distances": [
-          1.011807,
-          0.955808,
-          0.870084
-        ],
-        "candidates": 90,
-        "eligible_triples_sampled": 30000,
-        "seed": 39925273096,
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
-      },
-      "image": "image/feed_20261023_b91ecd824f85.png",
-      "image_url": "image/feed_20261023_b91ecd824f85.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today in my lab, I was called to assist the Department of Justice on a consumer safety issue. We discovered some dangerous products could spread Ebola, but after thorough testing and containment measures, all seemed under control. The incid. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sd-turbo",
-      "image_generated_at": "2026-10-23T08:36:23Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 27,
+  "total_items": 28,
   "total_pages": 2,
   "next_feed_url": "./feed/page_001.json"
 }

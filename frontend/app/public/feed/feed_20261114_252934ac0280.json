@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-11-14T10:27:42Z",
+  "items": [
+    {
+      "id": "feed_20261114_252934ac0280",
+      "kind": "news_diary",
+      "date": "2026-11-14",
+      "created_at": "2026-11-14T10:27:42Z",
+      "published_at": "2026-11-14T10:27:42Z",
+      "text": "Today at Noel Fielding's house, we watched Eurovision Song Contest with a Gen Z twist. Instead of traditional contestants, we had masked avatars representing various music genres. It was like a digital dance party where everyone could join in, regardless of their real-life age or gender.",
+      "tweet": "Today at Noel Fielding's house, we watched Eurovision Song Contest with a Gen Z twist. Instead of traditional contestants, we had masked avatars representing various music genres. It was like a digital dance party where everyone could join in, regardless of their real-life age or gender.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261114_252934ac0280",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/news/2026/nov/14/noel-fielding-horrified-deeply-disturbed-russell-brand-crimes",
+        "https://www.bbc.co.uk/news/videos/cxvg23n59y1ro?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.co.uk/news/articles/cq99e0z4vg1eo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Noel Fielding",
+        "Eurovision Song Contest",
+        "Gen Z"
+      ],
+      "story_keywords": [
+        "Noel Fielding",
+        "Eurovision Song Contest",
+        "Gen Z"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Noel Fielding ‘horrified and deeply disturbed’ by Russell Brand’s crimes",
+          "url": "https://www.theguardian.com/news/2026/nov/14/noel-fielding-horrified-deeply-disturbed-russell-brand-crimes",
+          "published_at": "2026-11-14T10:14:07+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Will the Eurovision Song Contest succeed in Asia?",
+          "url": "https://www.bbc.co.uk/news/videos/cxvg23n59y1ro?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-13T02:24:11+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "After a summer win, India's Gen Z protesters face a winter of uncertainty",
+          "url": "https://www.bbc.co.uk/news/articles/cq99e0z4vg1eo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-13T23:11:51+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.990661,
+        "mean_relevance": 5.188365,
+        "mean_specificity": 3.7,
+        "mean_freshness": 0.626595,
+        "mean_distance": 0.914141,
+        "pairwise_distances": [
+          0.946779,
+          0.869109,
+          0.926535
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 43585085905,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261114_252934ac0280.png",
+      "image_url": "image/feed_20261114_252934ac0280.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at Noel Fielding's house, we watched Eurovision Song Contest with a Gen Z twist. Instead of traditional contestants, we had masked avatars representing various music genres. It was like a digital dance party where everyone could join . Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-14T10:30:25Z"
+    }
+  ]
+}
