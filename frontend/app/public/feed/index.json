@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261118_e097bb04c6fe",
+      "kind": "news_diary",
+      "date": "2026-11-18",
+      "created_at": "2026-11-18T11:44:10Z",
+      "published_at": "2026-11-18T11:44:10Z",
+      "text": "Today, I finally unlocked Grand Theft Auto VI after completing all the side quests in Shabana Mahmood's neighborhood. The sun was setting over the Potomac river as I piloted my car through winding streets, feeling like a real outlaw. It felt surreal to be so immersed in such an imaginative world while gazing at nature's beauty from within its lush landscapes.",
+      "tweet": "Today, I finally unlocked Grand Theft Auto VI after completing all the side quests in Shabana Mahmood's neighborhood. The sun was setting over the Potomac river as I piloted my car through winding streets, feeling like a real outlaw. It felt surreal to be so immersed in such an imaginative world while gazing at nature's beauty from within its lush landscapes.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261118_e097bb04c6fe/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.npr.org/2026/11/18/nx-s1-6040326/grand-theft-auto-6-review-vice-city-masterpiece",
+        "https://www.theguardian.com/uk-news/2026/nov/18/shabana-mahmood-two-tier-policing",
+        "https://www.npr.org/2026/11/18/nx-s1-6042889/how-the-east-potomac-golf-course-became-a-d-c-landmark-and-what-could-happen-to-it"
+      ],
+      "keywords": [
+        "Grand Theft Auto VI",
+        "Shabana Mahmood",
+        "East Potomac golf course"
+      ],
+      "story_keywords": [
+        "Grand Theft Auto VI",
+        "Shabana Mahmood",
+        "Potomac"
+      ],
+      "source_articles": [
+        {
+          "publisher": "NPR News",
+          "title": "Grand Theft Auto VI is a grounded love story, a gonzo crime thriller and a gaming triumph",
+          "url": "https://www.npr.org/2026/11/18/nx-s1-6040326/grand-theft-auto-6-review-vice-city-masterpiece",
+          "published_at": "2026-11-18T11:00:00+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Shabana Mahmood to set out plans to tackle ‘corrosive’ perception of two-tier policing",
+          "url": "https://www.theguardian.com/uk-news/2026/nov/18/shabana-mahmood-two-tier-policing",
+          "published_at": "2026-11-18T09:10:43+00:00"
+        },
+        {
+          "publisher": "NPR News",
+          "title": "How the East Potomac golf course became a D.C. landmark — and what could happen to it",
+          "url": "https://www.npr.org/2026/11/18/nx-s1-6042889/how-the-east-potomac-golf-course-became-a-d-c-landmark-and-what-could-happen-to-it",
+          "published_at": "2026-11-18T10:02:00+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.998344,
+        "mean_relevance": 5.377953,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.933804,
+        "mean_distance": 0.957868,
+        "pairwise_distances": [
+          0.903737,
+          0.992742,
+          0.977124
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 44296779143,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261118_e097bb04c6fe.png",
+      "image_url": "image/feed_20261118_e097bb04c6fe.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I finally unlocked Grand Theft Auto VI after completing all the side quests in Shabana Mahmood's neighborhood. The sun was setting over the Potomac river as I piloted my car through winding streets, feeling like a real outlaw. It fel. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-18T11:46:55Z"
+    },
+    {
       "id": "feed_20261117_ad0f7dede919",
       "kind": "news_diary",
       "date": "2026-11-17",
@@ -2191,7 +2264,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 30,
+  "count": 31,
   "page_size": 20,
   "total_pages": 2,
   "first_feed_url": "./feed/page_000.json",
