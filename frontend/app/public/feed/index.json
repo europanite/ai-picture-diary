@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261119_061ce1feaaa6",
+      "kind": "news_diary",
+      "date": "2026-11-19",
+      "created_at": "2026-11-19T11:41:55Z",
+      "published_at": "2026-11-19T11:41:55Z",
+      "text": "Today, as I was walking along the Crimean Bridge, my thoughts wandered to Hannah Lillith Assadi and her disappearance. The bridge seemed particularly imposing under the moonlight, a stark contrast to the eerie silence that enveloped me. Suddenly, a figure emerged from the shadows, their face obscured by a hood. They vanished into thin air just as quickly as they appeared, leaving behind only an unsettling sensation that lingered long after I crossed back over the bridge on my way home in Africa and across the vast African savanna.",
+      "tweet": "Today, as I was walking along the Crimean Bridge, my thoughts wandered to Hannah Lillith Assadi and her disappearance. The bridge seemed particularly imposing under the moonlight, a stark contrast to the eerie silence that enveloped me. Suddenly, a figure emerged from the shadows, their face obscured by a hood. They vanished into thin air just as quickly as they appeared, leaving behind only an unsettling sensation that lingered long after I crossed back over the bridge on my way home in Africa and across the vast African savanna.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261119_061ce1feaaa6/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/books/2026/nov/19/hannah-lillith-assadi-paradiso-17-wins-national-book-award",
+        "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.co.uk/news/articles/crx20q3qy0vxo?at_medium=RSS&at_campaign=rss"
+      ],
+      "keywords": [
+        "Hannah Lillith Assadi",
+        "Crimean Bridge",
+        "South African DJ"
+      ],
+      "story_keywords": [
+        "Hannah Lillith Assadi",
+        "Crimean Bridge",
+        "African"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Hannah Lillith Assadi wins US National book award for ‘visionary’ novel Paradiso 17",
+          "url": "https://www.theguardian.com/books/2026/nov/19/hannah-lillith-assadi-paradiso-17-wins-national-book-award",
+          "published_at": "2026-11-19T04:54:13+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Crimean Bridge attacked again, Russia says",
+          "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-19T07:32:06+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "'It's a dream come true' – South African DJ celebrates featuring in GTA 6",
+          "url": "https://www.bbc.co.uk/news/articles/crx20q3qy0vxo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-19T10:32:10+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.995962,
+        "mean_relevance": 5.264134,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.849554,
+        "mean_distance": 0.930821,
+        "pairwise_distances": [
+          1.012865,
+          0.934033,
+          0.845565
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 44516504227,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261119_061ce1feaaa6.png",
+      "image_url": "image/feed_20261119_061ce1feaaa6.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, as I was walking along the Crimean Bridge, my thoughts wandered to Hannah Lillith Assadi and her disappearance. The bridge seemed particularly imposing under the moonlight, a stark contrast to the eerie silence that enveloped me. Sud. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-19T11:44:37Z"
+    },
+    {
       "id": "feed_20261118_e097bb04c6fe",
       "kind": "news_diary",
       "date": "2026-11-18",
@@ -2264,7 +2337,7 @@
       "image_generated_at": "2026-10-17T01:33:07Z"
     }
   ],
-  "count": 31,
+  "count": 32,
   "page_size": 20,
   "total_pages": 2,
   "first_feed_url": "./feed/page_000.json",
