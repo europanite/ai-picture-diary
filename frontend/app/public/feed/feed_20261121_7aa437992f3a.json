@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-11-21T11:03:25Z",
+  "items": [
+    {
+      "id": "feed_20261121_7aa437992f3a",
+      "kind": "news_diary",
+      "date": "2026-11-21",
+      "created_at": "2026-11-21T11:03:25Z",
+      "published_at": "2026-11-21T11:03:25Z",
+      "text": "Today was Black Friday and I found myself wandering through Trafalgar Square, the lights flickering like ghostly reflections in the cold winter air. People were busy with their shopping, but a group of miners from a nearby coalmine caught my eye. They had set up a booth to sell handmade crafts and tell stories about life underground. It was surreal seeing these folks now, sharing tales under an eerie canopy of stars above the square.",
+      "tweet": "Today was Black Friday and I found myself wandering through Trafalgar Square, the lights flickering like ghostly reflections in the cold winter air. People were busy with their shopping, but a group of miners from a nearby coalmine caught my eye. They had set up a booth to sell handmade crafts and tell stories about life underground. It was surreal seeing these folks now, sharing tales under an eerie canopy of stars above the square.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261121_7aa437992f3a",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/lifeandstyle/2026/nov/21/black-friday-deals-liquid-brazilian-butt-lifts-criticised-safety-fears",
+        "https://www.bbc.co.uk/news/articles/cx8dv4327dnpo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/australia-news/2026/nov/21/nsw-passes-hunter-valley-coalmine-law-as-greens-claim-change-an-attempt-to-head-off-one-nation-ntwnfb"
+      ],
+      "keywords": [
+        "Black Friday",
+        "Trafalgar Square",
+        "Mount Pleasant coalmine law"
+      ],
+      "story_keywords": [
+        "Black Friday",
+        "Trafalgar Square",
+        "coalmine"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Black Friday deals for liquid Brazilian butt lifts criticised over safety fears",
+          "url": "https://www.theguardian.com/lifeandstyle/2026/nov/21/black-friday-deals-liquid-brazilian-butt-lifts-criticised-safety-fears",
+          "published_at": "2026-11-21T09:52:52+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Trafalgar Square Christmas tree felled in Norway",
+          "url": "https://www.bbc.co.uk/news/articles/cx8dv4327dnpo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-21T08:10:03+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "NSW passes Mount Pleasant coalmine law as Greens claim change an attempt to head off One Nation",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/21/nsw-passes-hunter-valley-coalmine-law-as-greens-claim-change-an-attempt-to-head-off-one-nation-ntwnfb",
+          "published_at": "2026-11-20T23:09:57+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.997824,
+        "mean_relevance": 5.199357,
+        "mean_specificity": 3.5,
+        "mean_freshness": 0.816405,
+        "mean_distance": 0.959866,
+        "pairwise_distances": [
+          0.897429,
+          0.947511,
+          1.034659
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 44896899956,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261121_7aa437992f3a.png",
+      "image_url": "image/feed_20261121_7aa437992f3a.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today was Black Friday and I found myself wandering through Trafalgar Square, the lights flickering like ghostly reflections in the cold winter air. People were busy with their shopping, but a group of miners from a nearby coalmine caught m. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-21T11:06:18Z"
+    }
+  ]
+}
