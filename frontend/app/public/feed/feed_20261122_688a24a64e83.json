@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-11-22T11:26:18Z",
+  "items": [
+    {
+      "id": "feed_20261122_688a24a64e83",
+      "kind": "news_diary",
+      "date": "2026-11-22",
+      "created_at": "2026-11-22T11:26:18Z",
+      "published_at": "2026-11-22T11:26:18Z",
+      "text": "Today at lunch, I overheard a conversation about the Bank of England. Paolo Bulgari mentioned how he plans to expand his business internationally, but the Conservative media seems skeptical. Their reports imply it's too risky given current market conditions. I decided to read up on recent economic trends instead of jumping into any hasty decisions.",
+      "tweet": "Today at lunch, I overheard a conversation about the Bank of England. Paolo Bulgari mentioned how he plans to expand his business internationally, but the Conservative media seems skeptical. Their reports imply it's too risky given current market conditions. I decided to read up on recent economic trends instead of jumping into any hasty decisions.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261122_688a24a64e83",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/news/2026/nov/22/bank-of-england-directors-illegally-profited-enslavement-cuba",
+        "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/us-news/2026/nov/22/conservative-media-trump-midterm-elections-results"
+      ],
+      "keywords": [
+        "Bank of England",
+        "Paolo Bulgari",
+        "Conservative media"
+      ],
+      "story_keywords": [
+        "Bank of England",
+        "Paolo Bulgari",
+        "Conservative media"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Bank of England directors illegally profited from post-abolition enslavement in Cuba",
+          "url": "https://www.theguardian.com/news/2026/nov/22/bank-of-england-directors-illegally-profited-enslavement-cuba",
+          "published_at": "2026-11-22T08:00:22+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
+          "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-22T07:12:41+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Conservative media weighs its future as cracks emerge in Trump’s movement",
+          "url": "https://www.theguardian.com/us-news/2026/nov/22/conservative-media-trump-midterm-elections-results",
+          "published_at": "2026-11-22T11:00:26+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.994366,
+        "mean_relevance": 5.210121,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.896208,
+        "mean_distance": 0.92324,
+        "pairwise_distances": [
+          0.840655,
+          0.951352,
+          0.977713
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 45017005164,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261122_688a24a64e83.png",
+      "image_url": "image/feed_20261122_688a24a64e83.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today at lunch, I overheard a conversation about the Bank of England. Paolo Bulgari mentioned how he plans to expand his business internationally, but the Conservative media seems skeptical. Their reports imply it's too risky given current . Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-22T11:29:00Z"
+    }
+  ]
+}
