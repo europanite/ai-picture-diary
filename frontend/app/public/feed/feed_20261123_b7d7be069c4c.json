@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-11-23T12:39:58Z",
+  "items": [
+    {
+      "id": "feed_20261123_b7d7be069c4c",
+      "kind": "news_diary",
+      "date": "2026-11-23",
+      "created_at": "2026-11-23T12:39:58Z",
+      "published_at": "2026-11-23T12:39:58Z",
+      "text": "Today, I found myself in DR Congo during my travels for work. Rishi Sunak, our new Prime Minister, was unexpectedly invited to speak at a conference here. It felt surreal being in such an important setting with high-ranking officials from around the world. The presidential atmosphere made it clear how significant this event truly is.",
+      "tweet": "Today, I found myself in DR Congo during my travels for work. Rishi Sunak, our new Prime Minister, was unexpectedly invited to speak at a conference here. It felt surreal being in such an important setting with high-ranking officials from around the world. The presidential atmosphere made it clear how significant this event truly is.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./?post=feed_20261123_b7d7be069c4c",
+      "fictional": true,
+      "links": [
+        "https://www.theguardian.com/politics/live/2026/nov/23/andy-burnham-brexit-europe-eu-uk-summit-deal-commons-cbi-farage-badenoch-haigh-politics-latest-news-updates",
+        "https://www.bbc.co.uk/news/articles/cmvg2qnn95vro?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/us-news/live/2026/nov/23/donald-trump-democrats-republicans-presidential-primary-midterms-house-latest-news-updates"
+      ],
+      "keywords": [
+        "Rishi Sunak",
+        "DR Congo",
+        "2028 presidential primary"
+      ],
+      "story_keywords": [
+        "Rishi Sunak",
+        "DR Congo",
+        "presidential"
+      ],
+      "source_articles": [
+        {
+          "publisher": "The Guardian World",
+          "title": "Rishi Sunak joins list of former Tory PMs saying Burnham wrong to open debate on rejoining EU – UK politics live",
+          "url": "https://www.theguardian.com/politics/live/2026/nov/23/andy-burnham-brexit-europe-eu-uk-summit-deal-commons-cbi-farage-badenoch-haigh-politics-latest-news-updates",
+          "published_at": "2026-11-23T12:20:54+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "Kenya and DR Congo agree to restore ties after tensions over conflict",
+          "url": "https://www.bbc.co.uk/news/articles/cmvg2qnn95vro?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-23T08:53:01+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Democrats reveal details for 2028 presidential primary following midterm victories – US politics live",
+          "url": "https://www.theguardian.com/us-news/live/2026/nov/23/donald-trump-democrats-republicans-presidential-primary-midterms-house-latest-news-updates",
+          "published_at": "2026-11-23T12:15:52+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.998265,
+        "mean_relevance": 5.24929,
+        "mean_specificity": 3.466667,
+        "mean_freshness": 0.941938,
+        "mean_distance": 0.941757,
+        "pairwise_distances": [
+          0.971955,
+          0.872581,
+          0.980737
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 45175831065,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261123_b7d7be069c4c.png",
+      "image_url": "image/feed_20261123_b7d7be069c4c.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I found myself in DR Congo during my travels for work. Rishi Sunak, our new Prime Minister, was unexpectedly invited to speak at a conference here. It felt surreal being in such an important setting with high-ranking officials from a. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-23T12:42:40Z"
+    }
+  ]
+}
