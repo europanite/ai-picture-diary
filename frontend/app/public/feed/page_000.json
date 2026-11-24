@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261124_b615dfd0c065",
+      "kind": "news_diary",
+      "date": "2026-11-24",
+      "created_at": "2026-11-24T13:44:58Z",
+      "published_at": "2026-11-24T13:44:58Z",
+      "text": "Today I decided to create a meme about DR Congo's recent melanoma research breakthrough. It turned out to be more relatable than I expected, with people from all over sharing and discussing the implications on social media. It made me realize how interconnected our global community really is.",
+      "tweet": "Today I decided to create a meme about DR Congo's recent melanoma research breakthrough. It turned out to be more relatable than I expected, with people from all over sharing and discussing the implications on social media. It made me realize how interconnected our global community really is.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261124_b615dfd0c065/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.npr.org/2026/11/24/nx-s1-6051604/trump-crypto-corruption-meme-coin-dinner",
+        "https://www.bbc.co.uk/news/articles/cwy7r5z8gg65o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/australia-news/2026/nov/24/georgina-long-melanoma-anthony-thomas-2026-prime-ministers-prizes-for-science"
+      ],
+      "keywords": [
+        "meme coin dinner",
+        "DR Congo",
+        "melanoma survival rates"
+      ],
+      "story_keywords": [
+        "meme",
+        "DR Congo",
+        "melanoma"
+      ],
+      "source_articles": [
+        {
+          "publisher": "NPR News",
+          "title": "They attended Trump's meme coin dinner. It didn't go well",
+          "url": "https://www.npr.org/2026/11/24/nx-s1-6051604/trump-crypto-corruption-meme-coin-dinner",
+          "published_at": "2026-11-24T10:00:00+00:00"
+        },
+        {
+          "publisher": "BBC World",
+          "title": "DR Congo says military aircraft missing as rebels claim to shoot down plane",
+          "url": "https://www.bbc.co.uk/news/articles/cwy7r5z8gg65o?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-24T10:48:27+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Researcher who helped improve melanoma survival rates among winners of top Australian science prize",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/24/georgina-long-melanoma-anthony-thomas-2026-prime-ministers-prizes-for-science",
+          "published_at": "2026-11-24T11:00:45+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.997278,
+        "mean_relevance": 5.282571,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.877811,
+        "mean_distance": 0.937069,
+        "pairwise_distances": [
+          0.923166,
+          0.873452,
+          1.014588
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 45405989758,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261124_b615dfd0c065.png",
+      "image_url": "image/feed_20261124_b615dfd0c065.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today I decided to create a meme about DR Congo's recent melanoma research breakthrough. It turned out to be more relatable than I expected, with people from all over sharing and discussing the implications on social media. It made me reali. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-24T13:47:36Z"
+    },
+    {
       "id": "feed_20261123_b7d7be069c4c",
       "kind": "news_diary",
       "date": "2026-11-23",
@@ -1386,85 +1459,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sd-turbo",
       "image_generated_at": "2026-11-04T11:49:36Z"
-    },
-    {
-      "id": "feed_20261104_ce08cf0dfd4c",
-      "kind": "news_diary",
-      "date": "2026-11-04",
-      "created_at": "2026-11-04T01:57:14Z",
-      "published_at": "2026-11-04T01:57:14Z",
-      "text": "Today in New Hampshire Senate, I couldn't shake the feeling of Ashley Moody's decline as we debated the state budget. It felt like a personal loss to me, watching someone so passionate and influential lose their voice on the floor. The room was quiet, everyone focused but with an underlying tension that spoke volumes about our changing times.",
-      "tweet": "Today in New Hampshire Senate, I couldn't shake the feeling of Ashley Moody's decline as we debated the state budget. It felt like a personal loss to me, watching someone so passionate and influential lose their voice on the floor. The room was quiet, everyone focused but with an underlying tension that spoke volumes about our changing times.",
-      "place": "",
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261104_ce08cf0dfd4c/index.html",
-      "fictional": true,
-      "links": [
-        "https://www.theguardian.com/us-news/2026/nov/03/new-hampshire-senate-chris-pappas-john-sununu",
-        "https://www.theguardian.com/us-news/2026/nov/03/ashley-moody-wins-florida-senate-race",
-        "https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo?at_medium=RSS&at_campaign=rss"
-      ],
-      "keywords": [
-        "New Hampshire Senate",
-        "Ashley Moody",
-        "South Africa decline"
-      ],
-      "story_keywords": [
-        "New Hampshire Senate",
-        "Ashley Moody",
-        "decline"
-      ],
-      "source_articles": [
-        {
-          "publisher": "The Guardian World",
-          "title": "Democrat Chris Pappas wins New Hampshire Senate race to become first out gay senator",
-          "url": "https://www.theguardian.com/us-news/2026/nov/03/new-hampshire-senate-chris-pappas-john-sununu",
-          "published_at": "2026-11-04T01:34:31+00:00"
-        },
-        {
-          "publisher": "The Guardian World",
-          "title": "Republican Ashley Moody defeats progressive Angie Nixon in Florida Senate race",
-          "url": "https://www.theguardian.com/us-news/2026/nov/03/ashley-moody-wins-florida-senate-race",
-          "published_at": "2026-11-04T01:41:54+00:00"
-        },
-        {
-          "publisher": "BBC World",
-          "title": "ANC under pressure to reverse South Africa decline",
-          "url": "https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo?at_medium=RSS&at_campaign=rss",
-          "published_at": "2026-11-04T00:03:19+00:00"
-        }
-      ],
-      "selection": {
-        "method": "balanced",
-        "metric": "weighted_specificity_recency_and_cosine_distance",
-        "rank_score": 0.999329,
-        "mean_relevance": 5.327374,
-        "mean_specificity": 3.566667,
-        "mean_freshness": 0.966421,
-        "mean_distance": 0.946815,
-        "pairwise_distances": [
-          0.86616,
-          0.994225,
-          0.980061
-        ],
-        "candidates": 90,
-        "eligible_triples_sampled": 30000,
-        "seed": 41757090045,
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
-      },
-      "image": "image/feed_20261104_ce08cf0dfd4c.png",
-      "image_url": "image/feed_20261104_ce08cf0dfd4c.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today in New Hampshire Senate, I couldn't shake the feeling of Ashley Moody's decline as we debated the state budget. It felt like a personal loss to me, watching someone so passionate and influential lose their voice on the floor. The room. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sd-turbo",
-      "image_generated_at": "2026-11-04T01:59:35Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 36,
+  "total_items": 37,
   "total_pages": 2,
   "next_feed_url": "./feed/page_001.json"
 }
