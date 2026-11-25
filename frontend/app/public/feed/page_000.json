@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "id": "feed_20261125_811ac584ab65",
+      "kind": "news_diary",
+      "date": "2026-11-25",
+      "created_at": "2026-11-25T12:56:13Z",
+      "published_at": "2026-11-25T12:56:13Z",
+      "text": "Today, as I worked on my dissertation involving complex algorithms, a peculiar Indian cockroach scurried across my desk. It was fascinating to observe its movements, almost like it knew something important. Suddenly, a message popped up from the Veteran Nigerian Nollywood community, inviting me for an interview. They seemed excited about the idea of collaborating with someone who combines academic rigor with a unique flair. Now I had to remember to mention tuition when they asked about my fees.",
+      "tweet": "Today, as I worked on my dissertation involving complex algorithms, a peculiar Indian cockroach scurried across my desk. It was fascinating to observe its movements, almost like it knew something important. Suddenly, a message popped up from the Veteran Nigerian Nollywood community, inviting me for an interview. They seemed excited about the idea of collaborating with someone who combines academic rigor with a unique flair. Now I had to remember to mention tuition when they asked about my fees.",
+      "place": "",
+      "avatar_image": "image/avatar/normal.png",
+      "permalink": "./posts/feed_20261125_811ac584ab65/index.html",
+      "fictional": true,
+      "links": [
+        "https://www.bbc.co.uk/news/articles/cqwy0rr4rr4yo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/world/2026/nov/25/indian-cockroach-movement-leader-asks-court-for-permission-to-fly-to-uk",
+        "https://www.theguardian.com/politics/live/2026/nov/25/andy-burnham-kemi-badenoch-pmqs-energy-bills-tiktok-welfare-benefits-timms-reform-brexit-devolution-latest-news-updates"
+      ],
+      "keywords": [
+        "Veteran Nigerian Nollywood",
+        "Indian Cockroach",
+        "tuition fee bill"
+      ],
+      "story_keywords": [
+        "Veteran Nigerian Nollywood",
+        "Indian Cockroach",
+        "tuition"
+      ],
+      "source_articles": [
+        {
+          "publisher": "BBC World",
+          "title": "Veteran Nigerian Nollywood actor Pete Edochie dies aged 79",
+          "url": "https://www.bbc.co.uk/news/articles/cqwy0rr4rr4yo?at_medium=RSS&at_campaign=rss",
+          "published_at": "2026-11-25T12:24:12+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Indian Cockroach movement leader asks court for permission to fly to UK",
+          "url": "https://www.theguardian.com/world/2026/nov/25/indian-cockroach-movement-leader-asks-court-for-permission-to-fly-to-uk",
+          "published_at": "2026-11-25T11:15:35+00:00"
+        },
+        {
+          "publisher": "The Guardian World",
+          "title": "Badenoch quizzes Burnham at PMQs over tuition fee bill in deal with EU – UK politics live",
+          "url": "https://www.theguardian.com/politics/live/2026/nov/25/andy-burnham-kemi-badenoch-pmqs-energy-bills-tiktok-welfare-benefits-timms-reform-brexit-devolution-latest-news-updates",
+          "published_at": "2026-11-25T12:38:09+00:00"
+        }
+      ],
+      "selection": {
+        "method": "balanced",
+        "metric": "weighted_specificity_recency_and_cosine_distance",
+        "rank_score": 0.993163,
+        "mean_relevance": 5.383528,
+        "mean_specificity": 3.566667,
+        "mean_freshness": 0.966536,
+        "mean_distance": 0.917524,
+        "pairwise_distances": [
+          0.816914,
+          0.976124,
+          0.959533
+        ],
+        "candidates": 90,
+        "eligible_triples_sampled": 30000,
+        "seed": 45617921672,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "image": "image/feed_20261125_811ac584ab65.png",
+      "image_url": "image/feed_20261125_811ac584ab65.png",
+      "avatar_url": "image/avatar/normal.png",
+      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, as I worked on my dissertation involving complex algorithms, a peculiar Indian cockroach scurried across my desk. It was fascinating to observe its movements, almost like it knew something important. Suddenly, a message popped up fro. Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
+      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
+      "image_model": "stabilityai/sd-turbo",
+      "image_generated_at": "2026-11-25T12:59:51Z"
+    },
+    {
       "id": "feed_20261124_b615dfd0c065",
       "kind": "news_diary",
       "date": "2026-11-24",
@@ -1386,85 +1459,12 @@
       "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
       "image_model": "stabilityai/sd-turbo",
       "image_generated_at": "2026-11-05T11:01:16Z"
-    },
-    {
-      "id": "feed_20261104_aed14b7fc37b",
-      "kind": "news_diary",
-      "date": "2026-11-04",
-      "created_at": "2026-11-04T11:46:46Z",
-      "published_at": "2026-11-04T11:46:46Z",
-      "text": "Today, I found myself wandering through the bustling streets of Delhi, imagining the vibrant conversations that might be happening in this city. Suddenly, Hakeem Jeffries and Jordon Steele-John walked by, their presence blending seamlessly with the crowd's diversity. We exchanged glances, and before we knew it, a conversation about justice and equality blossomed spontaneously. It was an unexpected moment of connection, reminding me how important these conversations are in our shared humanity.",
-      "tweet": "Today, I found myself wandering through the bustling streets of Delhi, imagining the vibrant conversations that might be happening in this city. Suddenly, Hakeem Jeffries and Jordon Steele-John walked by, their presence blending seamlessly with the crowd's diversity. We exchanged glances, and before we knew it, a conversation about justice and equality blossomed spontaneously. It was an unexpected moment of connection, reminding me how important these conversations are in our shared humanity.",
-      "place": "",
-      "avatar_image": "image/avatar/normal.png",
-      "permalink": "./posts/feed_20261104_aed14b7fc37b/index.html",
-      "fictional": true,
-      "links": [
-        "https://www.npr.org/2026/11/04/g-s1-150030/hakeem-jeffries-speaker-of-the-house-midterms",
-        "https://www.theguardian.com/australia-news/2026/nov/04/jordon-steele-john-woman-charged-alleged-stalking-attempted-extortion-greens-senator-court-ntwnfb",
-        "https://www.bbc.co.uk/news/articles/c699z8792n7ro?at_medium=RSS&at_campaign=rss"
-      ],
-      "keywords": [
-        "Hakeem Jeffries",
-        "Jordon Steele-John",
-        "Delhi air quality"
-      ],
-      "story_keywords": [
-        "Hakeem Jeffries",
-        "Jordon Steele-John",
-        "Delhi"
-      ],
-      "source_articles": [
-        {
-          "publisher": "NPR News",
-          "title": "Hakeem Jeffries is poised to become the first Black speaker of the House",
-          "url": "https://www.npr.org/2026/11/04/g-s1-150030/hakeem-jeffries-speaker-of-the-house-midterms",
-          "published_at": "2026-11-04T10:00:00+00:00"
-        },
-        {
-          "publisher": "The Guardian World",
-          "title": "Woman charged over alleged stalking and attempted extortion of Greens senator Jordon Steele-John",
-          "url": "https://www.theguardian.com/australia-news/2026/nov/04/jordon-steele-john-woman-charged-alleged-stalking-attempted-extortion-greens-senator-court-ntwnfb",
-          "published_at": "2026-11-04T11:07:10+00:00"
-        },
-        {
-          "publisher": "BBC World",
-          "title": "Delhi air quality worsens ahead of Diwali as firework restrictions enter force",
-          "url": "https://www.bbc.co.uk/news/articles/c699z8792n7ro?at_medium=RSS&at_campaign=rss",
-          "published_at": "2026-11-04T07:39:38+00:00"
-        }
-      ],
-      "selection": {
-        "method": "balanced",
-        "metric": "weighted_specificity_recency_and_cosine_distance",
-        "rank_score": 0.994269,
-        "mean_relevance": 5.169098,
-        "mean_specificity": 3.466667,
-        "mean_freshness": 0.914976,
-        "mean_distance": 0.945361,
-        "pairwise_distances": [
-          0.73341,
-          1.095026,
-          1.007647
-        ],
-        "candidates": 90,
-        "eligible_triples_sampled": 30000,
-        "seed": 41823137980,
-        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
-      },
-      "image": "image/feed_20261104_aed14b7fc37b.png",
-      "image_url": "image/feed_20261104_aed14b7fc37b.png",
-      "avatar_url": "image/avatar/normal.png",
-      "image_prompt": "Hand-painted gouache and watercolor storybook illustration of a fictional diary scene: Today, I found myself wandering through the bustling streets of Delhi, imagining the vibrant conversations that might be happening in this city. Suddenly, Hakeem Jeffries and Jordon Steele-John walked by, their presence blending seamlessly . Dreamlike, visually coherent composition, symbolic rather than documentary, no recognizable real people., plain illustration only, no readable text, no letters, no captions, no speech bubbles, no signs, no posters, no labels, no handwriting",
-      "image_negative": "photorealistic, low quality, blurry, underexposed, too dark, text, letters, words, captions, speech bubbles, dialogue balloons, signs, posters, labels, handwriting, watermark, logo",
-      "image_model": "stabilityai/sd-turbo",
-      "image_generated_at": "2026-11-04T11:49:36Z"
     }
   ],
   "count": 20,
   "page": 0,
   "page_size": 20,
-  "total_items": 37,
+  "total_items": 38,
   "total_pages": 2,
   "next_feed_url": "./feed/page_001.json"
 }
